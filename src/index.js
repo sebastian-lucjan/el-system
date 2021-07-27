@@ -1,12 +1,10 @@
-console.log('test-webpack');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Root from './components/pages/Root';
 
-class Hero extends Array {
-  constructor(name) {
-    super();
-    this.name = name;
-  }
-}
-
-const heroSpider = new Hero('Spiderman');
-
-console.log(heroSpider);
+ReactDOM.render(
+  <React.StrictMode>
+    <Root />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

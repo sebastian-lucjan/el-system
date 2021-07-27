@@ -23,6 +23,8 @@
       { "endOfLine": "auto", "singleQuote": true }
     ],
     "no-unused-vars": "warn",
-    "no-use-before-define": ["error", { "functions": false, "classes": false }]
+    "no-use-before-define": ["error", { "functions": false, "classes": false }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "comma-dangle": ["error", "always-multiline"]
   }
 }

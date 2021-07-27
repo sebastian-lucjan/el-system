@@ -115,5 +115,3 @@ export const websiteData = {
     sliderBtn: 'Skontaktuj się',
   },
 };
-
-// todo: all texts from emails
