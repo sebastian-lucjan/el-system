@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../Header/Header';
+import Page from './Page';
 import GlobalStyle from '../../assets/styles/globalStyles';
 
 const Root = () => (
   <div>
     <GlobalStyle />
-    <Header />
+    <Page />
   </div>
 );
 
