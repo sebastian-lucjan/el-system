@@ -1,5 +1,6 @@
 import React from 'react';
-import { websiteData } from '../data/appTextData';
+import { websiteData } from '../../data/appTextData';
+import { StyledNavigation } from './Navigation.styles';
 
 const Navigation = () => {
   const { navigation: buttonTitles } = websiteData;
@@ -9,7 +10,7 @@ const Navigation = () => {
     </div>
   ));
 
-  return navButtons;
+  return <StyledNavigation>{navButtons}</StyledNavigation>;
 };
 
 export default Navigation;

@@ -1,9 +1,4 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
   "extends": [
     "plugin:react/recommended",
     "plugin:prettier/recommended",
@@ -25,6 +20,12 @@
     "no-unused-vars": "warn",
     "no-use-before-define": ["error", { "functions": false, "classes": false }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "comma-dangle": ["error", "always-multiline"]
+    "comma-dangle": ["error", "only-multiline"],
+    "import/prefer-default-export": "off"
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
   }
 }
