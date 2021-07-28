@@ -10,7 +10,8 @@ export const StyledNavigation = styled.div`
 
   .navigation__button {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     margin: 20px;
+    //text-transform: uppercase;
   }
 `;

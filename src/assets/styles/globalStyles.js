@@ -5,17 +5,19 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
   }
+
   *, *::after, *::before {
-    box-sizing: inherit;
-  }
-  body {
-    font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff;
-    background-color: #040705;
-    
+    box-sizing: inherit;
   }
+
+  body {
+    font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
+    color: ${(props) => props.theme.colors.white};
+    background-color: ${(props) => props.theme.colors.black};
+  }
+
   a, button {
     font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
   }
