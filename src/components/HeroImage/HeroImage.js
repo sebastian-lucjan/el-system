@@ -1,9 +1,11 @@
 import React from 'react';
+import StyledHeroImage from './HeroImage.styles';
 
 const HeroImage = () => (
-  <>
-    <img src="public/images/photovoltaic-power.jpeg" alt="test" />
-  </>
+  <StyledHeroImage>
+    {/* <img src="public/images/photovoltaic-power.jpeg" alt="test" /> */}
+    <div className="imgPlaceholder" />
+  </StyledHeroImage>
 );
 
 export default HeroImage;

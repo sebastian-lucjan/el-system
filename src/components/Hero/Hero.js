@@ -1,6 +1,7 @@
 import React from 'react';
 import StyledHero from './Hero.styles';
 import HeroImage from '../HeroImage/HeroImage';
+import HeroInfo from '../HeroInfo/HeroInfo';
 
 const Hero = () => (
   <StyledHero>

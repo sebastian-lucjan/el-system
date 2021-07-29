@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledHero = styled.div`
+const StyledHero = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,6 @@ const StyledHero = styled.div`
   top: 25vh;
   width: 100vw;
   height: 50vh;
-  background-color: darkgrey;
 `;
 
 export default StyledHero;
