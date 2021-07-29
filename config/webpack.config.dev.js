@@ -12,13 +12,27 @@ module.exports = {
   },
   devServer: {
     open: true,
-    contentBase: path.join(__dirname, '../public'),
+    contentBase: path.resolve(__dirname, '../public'),
+    port: 5001,
+    hot: true,
+    liveReload: true,
   },
   module: {
     rules: [
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
       },
       {
         test: /\.(js|jsx)$/,
