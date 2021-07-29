@@ -16,7 +16,10 @@ const Root = () => (
 
 export default Root;
 
-// TODO: wydzielić komponent Button w nawigacji, dodać ::after z mini animacją i cursorem pointerem
+// TODO: zrobić placeholder dla Slidera zeby "skonczyc" stronę startową
+// TODO: merge firs-page branch to main
 // TODO: zrobić "O firmie"
+// TODO: wydzielić komponent Button w nawigacji, dodać ::after z mini animacją i cursorem pointerem
 // TODO: sciagnac wszystkie ikony potrzebne do zrobienia dzialu oferta
+
 // TODO: jak zrobić tutaj switcha żeby przejść do specyficznego miejsca w stronie (po id ?)

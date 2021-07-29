@@ -6,4 +6,5 @@ export const Wrapper = styled.header`
   position: fixed;
   height: 64px;
   width: 100vw;
+  //background-color: #ab3d3d;
 `;
