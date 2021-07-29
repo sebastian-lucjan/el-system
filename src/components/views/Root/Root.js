@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../../assets/styles/theme';
-import Page from '../Page';
+import StartPage from '../StartPage';
 import GlobalStyle from '../../../assets/styles/globalStyles';
 import { Wrapper } from './Root.styles';
 
@@ -9,7 +9,7 @@ const Root = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     <Wrapper>
-      <Page />
+      <StartPage />
     </Wrapper>
   </ThemeProvider>
 );

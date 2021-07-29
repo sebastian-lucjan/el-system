@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from '../Header/Header';
+import Hero from '../Hero/Hero';
 
-const Page = () => (
+const StartPage = () => (
   <>
     <Header />
+    <Hero />
   </>
 );
 
-export default Page;
+export default StartPage;
 
 // todo: slider component
