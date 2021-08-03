@@ -9,8 +9,8 @@ export const theme = {
   fontSize: {
     s: '12px',
     m: '16px',
-    l: '18px',
     logo: '24px',
+    l: '28px',
     xl: '36px',
     xxl: '48px',
   },
