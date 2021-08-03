@@ -12,6 +12,7 @@ export const theme = {
     l: '18px',
     logo: '24px',
     xl: '36px',
+    xxl: '48px',
   },
 };
 
