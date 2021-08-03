@@ -9,62 +9,65 @@ export const elSystemInfo = {
       'Serdecznie zachęcamy Państwa do zapoznania się z informacjami o naszej działalności lub złożenia konkretnego zapytania dotyczącego oferty. Skontaktujemy się z Państwem tak szybko jak to będzie możliwe.',
     ],
   },
-  offers: [
-    {
-      headline:
-        'Projektowanie i wykonawstwo sieci, instalacji i urządzeń elektroenergetycznych oraz  Instalacji teletechnicznych',
-      description:
-        'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO . Świadczymy usługi dla sektora energetyki zawodowej, przemysłu i budownictwa ogólnego (budynki handlowe, użyteczności publicznej, budynki mieszkalne).',
-    },
-    {
-      headline:
-        'Kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych',
-      description:
-        'Wykonujemy badania odbiorcze i okresowe instalacji i urządzeń elektroenergetycznych oraz instalacji odgromowych.',
-    },
-    {
-      headline: 'Automatyka budynkowa.',
-      description:
-        'Projektujemy i wdrażamy rozwiązania z zakresu automatyki budynkowej dopasowane do potrzeb i oczekiwań klienta.',
-    },
-    {
-      headline: 'Rozwiązania dla przemysłu',
-      description:
-        'Projektujemy i wdrażamy rozwiązania z zakresu automatyki przemysłowej dopasowane do potrzeb i oczekiwań klienta.',
-    },
-    {
-      headline: 'Dworactwo techniczne, nadzory inwestorskie',
-      description:
-        'Oferujemy kompleksowy i fachowy nadzór nad wszelkiego rodzaju pracami elektroinstalacyjnymi. Świadczymy usługi w zakresie pełnienia nadzoru inwestorskiego i kierowania robotami budowlanymi.',
-    },
-    {
-      headline: 'Analizy techniczne',
-      description:
-        'Wykonujemy analizy techniczne obejmujące m.in. możliwości przyłączania odnawialnych źródeł energii (OZE) oraz analizy współpracy źródeł z siecią (analizy napięciowe, koordynacja zabezpieczeń).',
-    },
-    {
-      headline: 'Automatyka elektroenergetyczna',
-      description:
-        'Zajmujemy się projektowaniem układów automatyki elektroenergetycznej i układów telemechaniki dla potrzeb OZE i innych obiektów elektroenergetycznych.',
-    },
-    {
-      headline: 'Instalacje fotowoltaiczne',
-      description:
-        'Projektujemy i wdrażamy rozwiązania z zakresu instalacji fotowoltaicznych – od mikroinstalacji do farm fotowoltaicznych.',
-    },
-    {
-      headline: 'Inne usługi:',
-      description: '',
-      others: [
-        'Analiza jakości energii,',
-        'Analiza możliwości optymalizacji kosztów energii,',
-        'Projektowanie układów kompensacji mocy biernej,',
-        'Adaptacja i optymalizacja projektów typowych.',
-      ],
-    },
-  ],
-  cooperation: {
+  offer: {
     headline: 'Oferta',
+    offers: [
+      {
+        headline:
+          'Projektowanie i wykonawstwo sieci, instalacji i urządzeń elektroenergetycznych oraz  Instalacji teletechnicznych',
+        description:
+          'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO . Świadczymy usługi dla sektora energetyki zawodowej, przemysłu i budownictwa ogólnego (budynki handlowe, użyteczności publicznej, budynki mieszkalne).',
+      },
+      {
+        headline:
+          'Kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych',
+        description:
+          'Wykonujemy badania odbiorcze i okresowe instalacji i urządzeń elektroenergetycznych oraz instalacji odgromowych.',
+      },
+      {
+        headline: 'Automatyka budynkowa.',
+        description:
+          'Projektujemy i wdrażamy rozwiązania z zakresu automatyki budynkowej dopasowane do potrzeb i oczekiwań klienta.',
+      },
+      {
+        headline: 'Rozwiązania dla przemysłu',
+        description:
+          'Projektujemy i wdrażamy rozwiązania z zakresu automatyki przemysłowej dopasowane do potrzeb i oczekiwań klienta.',
+      },
+      {
+        headline: 'Dworactwo techniczne, nadzory inwestorskie',
+        description:
+          'Oferujemy kompleksowy i fachowy nadzór nad wszelkiego rodzaju pracami elektroinstalacyjnymi. Świadczymy usługi w zakresie pełnienia nadzoru inwestorskiego i kierowania robotami budowlanymi.',
+      },
+      {
+        headline: 'Analizy techniczne',
+        description:
+          'Wykonujemy analizy techniczne obejmujące m.in. możliwości przyłączania odnawialnych źródeł energii (OZE) oraz analizy współpracy źródeł z siecią (analizy napięciowe, koordynacja zabezpieczeń).',
+      },
+      {
+        headline: 'Automatyka elektroenergetyczna',
+        description:
+          'Zajmujemy się projektowaniem układów automatyki elektroenergetycznej i układów telemechaniki dla potrzeb OZE i innych obiektów elektroenergetycznych.',
+      },
+      {
+        headline: 'Instalacje fotowoltaiczne',
+        description:
+          'Projektujemy i wdrażamy rozwiązania z zakresu instalacji fotowoltaicznych – od mikroinstalacji do farm fotowoltaicznych.',
+      },
+      {
+        headline: 'Inne usługi:',
+        description: '',
+        others: [
+          'Analiza jakości energii,',
+          'Analiza możliwości optymalizacji kosztów energii,',
+          'Projektowanie układów kompensacji mocy biernej,',
+          'Adaptacja i optymalizacja projektów typowych.',
+        ],
+      },
+    ],
+  },
+  cooperation: {
+    headline: 'Współpraca',
     companies: [
       'PGE Dystrybucja S.A',
       'MPWiK Sp. z o.o. Lublin',

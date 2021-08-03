@@ -5,6 +5,9 @@ import StartPage from '../views/StartPage/StartPage';
 import GlobalStyle from '../../assets/styles/globalStyles';
 import { Wrapper } from './Root.styles';
 import AboutPage from '../views/AboutPage/AboutPage';
+import Offer from '../views/Offer/Offer';
+import Cooperation from '../views/Cooperation/Cooperation';
+import Contact from '../views/Contact/Contact';
 
 const Root = () => (
   <ThemeProvider theme={theme}>
@@ -12,6 +15,9 @@ const Root = () => (
     <Wrapper>
       <StartPage />
       <AboutPage />
+      <Offer />
+      <Cooperation />
+      <Contact />
     </Wrapper>
   </ThemeProvider>
 );
