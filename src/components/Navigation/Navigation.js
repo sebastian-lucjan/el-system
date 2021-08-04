@@ -1,13 +1,18 @@
 import React from 'react';
 import { websiteData } from '../../data/appTextData';
 import { StyledNavigation } from './Navigation.styles';
+import Button from '../Button/Button';
 
 const Navigation = () => {
   const { navigation: buttonTitles } = websiteData;
   const navButtons = buttonTitles.map((buttonTitle) => (
-    <div key={buttonTitle} className="navigation__button">
+    <Button
+      key={buttonTitle}
+      title={buttonTitle}
+      className="navigation__button"
+    >
       {buttonTitle}
-    </div>
+    </Button>
   ));
 
   return <StyledNavigation>{navButtons}</StyledNavigation>;

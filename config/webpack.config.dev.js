@@ -15,7 +15,6 @@ module.exports = {
     contentBase: path.resolve(__dirname, '../public'),
     port: 5001,
     hot: true,
-    liveReload: true,
   },
   module: {
     rules: [
