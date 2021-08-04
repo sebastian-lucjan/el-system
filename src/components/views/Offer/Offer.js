@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
 import { StyledOffer, Wrapper } from './Offer.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
@@ -23,12 +24,61 @@ const OfferPage = () => {
         <Title title={contentTitle} />
         <ContentDivider />
         {/* {offers} */}
+        <Icon icon="clarity:design-line" />
+
+        <Icon icon="si-glyph:magnifier" />
+
+        <Icon icon="fluent:device-meeting-room-remote-32-regular" />
+
+        <Icon icon="mdi-light:factory" />
+
+        <Icon icon="mdi:help-network-outline" />
+
+        <Icon icon="mdi:select-search" />
+
+        <Icon icon="mdi:robot-industrial" />
+
+        <Icon icon="mdi:solar-power" />
+
+        <Icon icon="fluent:document-bullet-list-20-regular" />
       </Wrapper>
     </StyledOffer>
   );
 };
 
 export default OfferPage;
+
+/*
+//TODO: icons to add
+import { Icon } from '@iconify/react';
+ekierka
+<Icon icon="clarity:design-line" />
+
+lupa
+<Icon icon="si-glyph:magnifier" />
+
+atomatyka
+fluent:device-meeting-room-remote-32-regular
+
+fabryka
+<Icon icon="mdi-light:factory" />
+
+doradztwo
+<Icon icon="mdi:help-network-outline" />
+
+analizy
+<Icon icon="mdi:select-search" />
+
+automatyka
+<Icon icon="mdi:robot-industrial" />
+
+instalacje foto
+<Icon icon="mdi:solar-power" />
+
+inne
+<Icon icon="fluent:document-bullet-list-20-regular" />
+
+*/
 
 /*
  offer: {

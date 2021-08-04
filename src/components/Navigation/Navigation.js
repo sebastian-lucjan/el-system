@@ -9,6 +9,7 @@ const Navigation = () => {
     <Button
       key={buttonTitle}
       title={buttonTitle}
+      path="test"
       className="navigation__button"
     >
       {buttonTitle}
@@ -19,3 +20,5 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+// TODO: change path

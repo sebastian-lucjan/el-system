@@ -27,7 +27,6 @@ const Root = () => (
 
 export default Root;
 
-<<<<<<< HEAD
 // DONE: zrobić placeholder dla Slidera zeby "skonczyc" stronę startową
 // DONE: merge firs-page branch to main
 // DONE: zrobić "O firmie"
@@ -41,21 +40,10 @@ export default Root;
 
 // czwartek
 // TODO: zrobić "Kontakt"
-=======
-// TODO: zrobić placeholder dla Slidera zeby "skonczyc" stronę startową
-// DONEz: merge firs-page branch to main
-// TODO: zrobić "O firmie"
->>>>>>> parent of 0dae07a... Done Cooperation view, add component CompaniesList
-// TODO: zrobić component Title którego forma zależna jest od propsów (subpage title i hero title)
-// TODO: wydzielić komponent Button w nawigacji, dodać ::after z mini animacją i cursorem pointerem
-// TODO: sciagnac wszystkie ikony potrzebne do zrobienia dzialu oferta
-// TODO: zrobić "Oferta"
-// TODO: dodać ::after z mini animacją i cursorem pointerem
-// TODO: wydzielić komponent Button w nawigacji,
 
 // piątek
 // TODO: jak zrobić tutaj switcha żeby przejść do specyficznego miejsca w stronie (po id ?)
-<<<<<<< HEAD
+// TODO: zrobić component Title którego forma zależna jest od propsów (subpage title i hero title)
 // TODO: add BEM classes
 // TODO: ?
 
@@ -63,5 +51,3 @@ export default Root;
 // TODO: ?
 // TODO: ?
 // TODO: ?
-=======
->>>>>>> parent of 0dae07a... Done Cooperation view, add component CompaniesList
