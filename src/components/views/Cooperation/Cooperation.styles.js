@@ -8,17 +8,11 @@ export const StyledCooperation = styled.div`
   align-items: center;
   //background-color: blue;
 `;
-
+//
 export const Wrapper = styled.div`
   width: 900px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
-
-  //.paragraph {
-  //  margin-bottom: 20px;
-  //  font-weight: 300;
-  //  text-align: justify;
-  //}
 `;

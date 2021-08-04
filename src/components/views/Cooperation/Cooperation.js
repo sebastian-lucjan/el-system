@@ -3,26 +3,19 @@ import { StyledCooperation, Wrapper } from './Cooperation.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
 import { elSystemInfo } from '../../../data/appTextData';
+import CompaniesList from '../../CompaniesList/CompaniesList';
 
 const Cooperation = () => {
   const { cooperation } = elSystemInfo;
   const contentTitle = cooperation.headline.toUpperCase();
-  // const paragraphs = textParagraphs.map((paragraph, index) => {
-  //   const key = `paragraph-${index + 1}`;
-  //
-  //   return (
-  //     <div className="paragraph" key={key}>
-  //       {paragraph}
-  //     </div>
-  //   );
-  // });
+  const companiesList = cooperation.companies;
 
   return (
     <StyledCooperation>
       <Wrapper>
         <Title title={contentTitle} />
         <ContentDivider />
-        {/* {offers} */}
+        <CompaniesList companiesList={companiesList} />
       </Wrapper>
     </StyledCooperation>
   );

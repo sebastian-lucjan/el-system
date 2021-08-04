@@ -49,6 +49,9 @@ export default Root;
 // TODO: zrobić component Title którego forma zależna jest od propsów (subpage title i hero title)
 // TODO: wydzielić komponent Button w nawigacji, dodać ::after z mini animacją i cursorem pointerem
 // TODO: sciagnac wszystkie ikony potrzebne do zrobienia dzialu oferta
+// TODO: zrobić "Oferta"
+// TODO: dodać ::after z mini animacją i cursorem pointerem
+// TODO: wydzielić komponent Button w nawigacji,
 
 // piątek
 // TODO: jak zrobić tutaj switcha żeby przejść do specyficznego miejsca w stronie (po id ?)
