@@ -35,7 +35,7 @@ export default Root;
 // środa
 // DONE: wydzielić komponent Button w nawigacji,
 // DONE: dodać ::after z mini animacją i cursorem pointerem
-// TODO: sciagnac wszystkie ikony potrzebne do zrobienia dzialu oferta
+// DONE: sciagnac wszystkie ikony potrzebne do zrobienia dzialu oferta
 // TODO: zrobić "Oferta"
 
 // czwartek
