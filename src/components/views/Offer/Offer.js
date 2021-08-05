@@ -6,12 +6,20 @@ import { elSystemInfo } from '../../../data/appTextData';
 import OfferItem from '../../OfferItem/OfferItem';
 
 const OfferPage = () => {
-  const { offer } = elSystemInfo;
-  const contentTitle = offer.headline.toUpperCase();
-  const offers = offer.offers.map((offer, index) => {
+  const { offer: offersData } = elSystemInfo;
+  const contentTitle = offersData.headline.toUpperCase();
+  const offers = offersData.offers.map((offer, index) => {
     const key = `offer-nr-${index + 1}`;
-    const { iconName } = offer;
-    return <OfferItem key={key} iconName={iconName} />;
+    const { iconName, headline, description, others } = offer;
+    return (
+      <OfferItem
+        key={key}
+        title={headline}
+        iconName={iconName}
+        description={description}
+        othersArray={others}
+      />
+    );
   });
 
   return (
@@ -26,5 +34,3 @@ const OfferPage = () => {
 };
 
 export default OfferPage;
-
-// TODO: icons to add
