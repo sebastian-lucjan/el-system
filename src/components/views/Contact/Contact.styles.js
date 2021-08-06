@@ -5,8 +5,9 @@ export const StyledContact = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
-  //background-color: blue;
+  align-items: flex-start;
+  padding: 70px;
+  //background-color: #000054;
 `;
 
 export const Wrapper = styled.div`

@@ -98,6 +98,8 @@ export const elSystemInfo = {
         postalCode: '20-781',
         city: 'Lublin',
       },
+      phoneNrs: ['603 095 642', '535 920 293'],
+      email: 'podany jak będzie domena',
     },
     companiesData: {
       headline: 'Dane Firmy',
