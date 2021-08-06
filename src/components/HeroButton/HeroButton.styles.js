@@ -13,6 +13,15 @@ const StyledHeroImageButton = styled.button`
   text-transform: uppercase;
   font-family: 'Red Hat Display', sans-serif;
   font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    //background-color: #475ad7;
+    background-color: #47a6ff;
+    //background-color: #19647e;
+    color: white;
+  }
 `;
 
 export default StyledHeroImageButton;

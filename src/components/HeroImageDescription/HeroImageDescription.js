@@ -4,7 +4,7 @@ import StyledHeroImageDescription from './HeroImageDescription.styles';
 
 const HeroImageDescription = () => (
   <StyledHeroImageDescription>
-    {elSystemInfo.offers[7].description}
+    {elSystemInfo.offer.offers[7].description}
   </StyledHeroImageDescription>
 );
 

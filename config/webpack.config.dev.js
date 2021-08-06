@@ -12,10 +12,9 @@ module.exports = {
   },
   devServer: {
     open: true,
-    contentBase: path.resolve(__dirname, '../public'),
-    port: 5001,
+    contentBase: path.resolve(__dirname, '../dist'),
+    port: 8080,
     hot: true,
-    liveReload: true,
   },
   module: {
     rules: [

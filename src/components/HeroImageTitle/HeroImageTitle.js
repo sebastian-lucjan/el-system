@@ -4,7 +4,7 @@ import StyledHeroImageTitle from './HeroImageTitle.styles';
 
 const HeroImageTitle = () => (
   <StyledHeroImageTitle>
-    {elSystemInfo.offers[7].headline.toUpperCase()}
+    {elSystemInfo.offer.offers[7].headline.toUpperCase()}
   </StyledHeroImageTitle>
 );
 
