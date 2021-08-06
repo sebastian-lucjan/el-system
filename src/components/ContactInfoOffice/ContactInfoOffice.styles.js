@@ -24,6 +24,3 @@ const StyledContactOffice = styled.section`
 `;
 
 export default StyledContactOffice;
-
-// "contact-info__title"
-// "contact-info__details"
