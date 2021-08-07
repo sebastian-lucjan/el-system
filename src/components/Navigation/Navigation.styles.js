@@ -1,10 +1,42 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const StyledNavigation = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  //width: 100%;
   height: 100%;
-  //background-color: green;
+`;
+
+const activeClassName = 'active-link';
+
+export const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
+  font-size: 16px;
+  font-weight: 300;
+  margin: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  color: white;
+  text-decoration: none;
+
+  &::after {
+    display: block;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform: translateX(-110%);
+    transition: 0.3s;
+  }
+  &:hover {
+    &::after {
+      transform: translateX(0%);
+    }
+  }
+
+  &.${activeClassName} {
+    &::after {
+      transform: translateX(0%);
+    }
+  }
 `;

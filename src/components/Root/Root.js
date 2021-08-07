@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-// import { Router } from 'react-router';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { theme } from '../../assets/styles/theme';
 import StartPage from '../views/StartPage/StartPage';
 import GlobalStyle from '../../assets/styles/globalStyles';
@@ -29,19 +29,21 @@ const Root = () => {
   window.onscroll = handleScroll;
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Wrapper>
-        {/* <Router> */}
-        <StartPage />
-        <AboutPage />
-        <Offer />
-        <Cooperation />
-        <Contact />
-        {/* </Router> */}
-        {pageY > 100 && <ScrollToTop onClick={handleClick} />}
-      </Wrapper>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Wrapper>
+          <Route path="/">
+            <StartPage />
+            <AboutPage />
+            <Offer />
+            <Cooperation />
+            <Contact />
+            {pageY > 100 && <ScrollToTop onClick={handleClick} />}
+          </Route>
+        </Wrapper>
+      </ThemeProvider>
+    </Router>
   );
 };
 
