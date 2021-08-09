@@ -1,10 +1,11 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import { StyledAbout, Wrapper } from './AboutPage.styles';
+import { StyledParagraph } from './AboutPage.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
 import { elSystemInfo } from '../../../data/appTextData';
-import Cooperation from '../Cooperation/Cooperation';
+import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
+import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
 
 const AboutPage = ({ name }) => {
   const {
@@ -16,20 +17,20 @@ const AboutPage = ({ name }) => {
     const key = `paragraph-${index + 1}`;
 
     return (
-      <div className="paragraph" key={key}>
+      <StyledParagraph className="paragraph" key={key}>
         {paragraph}
-      </div>
+      </StyledParagraph>
     );
   });
 
   return (
-    <StyledAbout name={name}>
-      <Wrapper>
+    <ViewWrapper name={name}>
+      <ContentWrapper>
         <Title title={contentTitle} />
         <ContentDivider />
         {paragraphs}
-      </Wrapper>
-    </StyledAbout>
+      </ContentWrapper>
+    </ViewWrapper>
   );
 };
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import { StyledOffer, Wrapper } from './Offer.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
 import { elSystemInfo } from '../../../data/appTextData';
 import OfferItem from '../../OfferItem/OfferItem';
+import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
+import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
 
 const OfferPage = ({ name }) => {
   const { offer: offersData } = elSystemInfo;
@@ -24,13 +25,13 @@ const OfferPage = ({ name }) => {
   });
 
   return (
-    <StyledOffer name={name}>
-      <Wrapper>
+    <ViewWrapper name={name}>
+      <ContentWrapper>
         <Title title={contentTitle} />
         <ContentDivider />
         {offers}
-      </Wrapper>
-    </StyledOffer>
+      </ContentWrapper>
+    </ViewWrapper>
   );
 };
 

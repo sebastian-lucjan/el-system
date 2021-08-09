@@ -1,10 +1,11 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import { StyledCooperation, Wrapper } from './Cooperation.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
 import { elSystemInfo } from '../../../data/appTextData';
 import CompaniesList from '../../CompaniesList/CompaniesList';
+import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
+import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
 
 const Cooperation = ({ name }) => {
   const { cooperation } = elSystemInfo;
@@ -12,13 +13,13 @@ const Cooperation = ({ name }) => {
   const companiesList = cooperation.companies;
 
   return (
-    <StyledCooperation name={name}>
-      <Wrapper>
+    <ViewWrapper name={name}>
+      <ContentWrapper>
         <Title title={contentTitle} />
         <ContentDivider />
         <CompaniesList companiesList={companiesList} />
-      </Wrapper>
-    </StyledCooperation>
+      </ContentWrapper>
+    </ViewWrapper>
   );
 };
 

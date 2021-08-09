@@ -1,10 +1,11 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import { StyledContact, Wrapper } from './Contact.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
 import { elSystemInfo, websiteData } from '../../../data/appTextData';
 import ContactInfoOffice from '../../ContactInfoOffice/ContactInfoOffice';
+import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
+import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
 
 const Contact = ({ name }) => {
   const {
@@ -36,8 +37,8 @@ const Contact = ({ name }) => {
   const contentTitle = headline.toUpperCase();
 
   return (
-    <StyledContact name={name}>
-      <Wrapper>
+    <ViewWrapper name={name}>
+      <ContentWrapper>
         <Title title={contentTitle} />
         <ContentDivider />
         <ContactInfoOffice
@@ -58,8 +59,8 @@ const Contact = ({ name }) => {
           accountHeadline={accountHeadline}
           accountNumber={accountNumber}
         />
-      </Wrapper>
-    </StyledContact>
+      </ContentWrapper>
+    </ViewWrapper>
   );
 };
 
