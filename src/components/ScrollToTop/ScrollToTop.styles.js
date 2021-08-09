@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 
 const StyledIcon = styled(Link)`

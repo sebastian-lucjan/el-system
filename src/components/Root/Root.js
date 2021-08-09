@@ -10,6 +10,7 @@ import Offer from '../views/Offer/Offer';
 import Cooperation from '../views/Cooperation/Cooperation';
 import Contact from '../views/Contact/Contact';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
+import Header from '../Header/Header';
 
 // const AppDataContext = React.createContext({});
 
@@ -28,6 +29,7 @@ const Root = () => {
       <GlobalStyle />
       <Wrapper>
         {/* <Route> */}
+        <Header />
         <StartPage name="home" />
         <AboutPage name="company" />
         <Offer name="offer" />
