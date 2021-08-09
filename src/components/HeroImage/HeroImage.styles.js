@@ -16,5 +16,3 @@ const StyledHeroImage = styled.div`
 `;
 
 export default StyledHeroImage;
-
-// TODO: delete imgPlaceholder when handle with imgs

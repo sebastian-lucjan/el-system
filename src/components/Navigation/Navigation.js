@@ -4,8 +4,8 @@ import { StyledNavigation, StyledNavLink } from './Navigation.styles';
 
 const Navigation = () => {
   const { navigation: buttonsDataArray } = websiteData;
-  const navButtons = buttonsDataArray.map(({ buttonText, path }) => (
-    <StyledNavLink exact to={path} key={buttonText}>
+  const navButtons = buttonsDataArray.map(({ buttonText, path, name }) => (
+    <StyledNavLink to={name} spy smooth duration={800} key={buttonText}>
       {buttonText}
     </StyledNavLink>
   ));

@@ -125,10 +125,10 @@ export const elSystemInfo = {
 export const websiteData = {
   logo: 'el system',
   navigation: [
-    { buttonText: 'O firmie', path: '/firma' },
-    { buttonText: 'Oferta', path: '/oferta' },
-    { buttonText: 'Współpraca', path: '/wspolpraca' },
-    { buttonText: 'Kontakt', path: '/kontakt' },
+    { buttonText: 'O firmie', name: 'company', path: '/firma' },
+    { buttonText: 'Oferta', name: 'offer', path: '/oferta' },
+    { buttonText: 'Współpraca', name: 'cooperation', path: '/wspolpraca' },
+    { buttonText: 'Kontakt', name: 'contact', path: '/kontakt' },
   ],
   buttons: {
     sliderBtn: 'Skontaktuj się',

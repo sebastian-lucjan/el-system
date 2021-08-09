@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 export const StyledNavigation = styled.div`
   display: flex;
@@ -8,9 +9,9 @@ export const StyledNavigation = styled.div`
   height: 100%;
 `;
 
-const activeClassName = 'active-link';
+const activeClass = 'active-link';
 
-export const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
+export const StyledNavLink = styled(Link).attrs({ activeClass })`
   font-size: 16px;
   font-weight: 300;
   margin: 20px;
@@ -34,7 +35,7 @@ export const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
     }
   }
 
-  &.${activeClassName} {
+  &.${activeClass} {
     &::after {
       transform: translateX(0%);
     }

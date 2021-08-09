@@ -1,10 +1,12 @@
 import React from 'react';
+import * as PropTypes from 'prop-types';
 import { StyledAbout, Wrapper } from './AboutPage.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
 import { elSystemInfo } from '../../../data/appTextData';
+import Cooperation from '../Cooperation/Cooperation';
 
-const AboutPage = () => {
+const AboutPage = ({ name }) => {
   const {
     companyInfo,
     companyInfo: { textParagraphs },
@@ -21,7 +23,7 @@ const AboutPage = () => {
   });
 
   return (
-    <StyledAbout>
+    <StyledAbout name={name}>
       <Wrapper>
         <Title title={contentTitle} />
         <ContentDivider />
@@ -30,5 +32,7 @@ const AboutPage = () => {
     </StyledAbout>
   );
 };
+
+AboutPage.propTypes = { name: PropTypes.string.isRequired };
 
 export default AboutPage;

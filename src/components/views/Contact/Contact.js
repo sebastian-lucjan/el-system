@@ -1,11 +1,12 @@
 import React from 'react';
+import * as PropTypes from 'prop-types';
 import { StyledContact, Wrapper } from './Contact.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
-import { elSystemInfo } from '../../../data/appTextData';
+import { elSystemInfo, websiteData } from '../../../data/appTextData';
 import ContactInfoOffice from '../../ContactInfoOffice/ContactInfoOffice';
 
-const Contact = () => {
+const Contact = ({ name }) => {
   const {
     contact: {
       headline,
@@ -29,10 +30,13 @@ const Contact = () => {
       },
     },
   } = elSystemInfo;
+
+  // const { name: nameToScroller } = websiteData;
+
   const contentTitle = headline.toUpperCase();
 
   return (
-    <StyledContact>
+    <StyledContact name={name}>
       <Wrapper>
         <Title title={contentTitle} />
         <ContentDivider />
@@ -59,25 +63,6 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+Contact.propTypes = { name: PropTypes.string.isRequired };
 
-// contact: {
-//   companiesData: {
-//     headline: 'Dane Firmy',
-//       name: {
-//       suffix: 'Przedsiębiorstwo Techniczno-Usługowe',
-//         mainName: 'Elsystem Tomasz Pietras',
-//     },
-//     address: 'ul. Guliwera 11, 20-714 Lublin',
-//     nip: '712-286-95-53',
-//     regon: '060674447',
-//     bankAccount: {
-//       headline: 'konto bankowe:',
-//       name: 'ING Bank Śląski S.A.',
-//       account: {
-//       headline: 'nr konta:',
-//       number: '67 1050 1461 1000 0090 7599 2967',
-//     },
-//     },
-//   },
-// },
+export default Contact;

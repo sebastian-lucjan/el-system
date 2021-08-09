@@ -1,11 +1,12 @@
 import React from 'react';
+import * as PropTypes from 'prop-types';
 import { StyledOffer, Wrapper } from './Offer.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
 import { elSystemInfo } from '../../../data/appTextData';
 import OfferItem from '../../OfferItem/OfferItem';
 
-const OfferPage = () => {
+const OfferPage = ({ name }) => {
   const { offer: offersData } = elSystemInfo;
   const contentTitle = offersData.headline.toUpperCase();
   const offers = offersData.offers.map((offer, index) => {
@@ -23,7 +24,7 @@ const OfferPage = () => {
   });
 
   return (
-    <StyledOffer>
+    <StyledOffer name={name}>
       <Wrapper>
         <Title title={contentTitle} />
         <ContentDivider />
@@ -32,5 +33,7 @@ const OfferPage = () => {
     </StyledOffer>
   );
 };
+
+OfferPage.propTypes = { name: PropTypes.string.isRequired };
 
 export default OfferPage;
