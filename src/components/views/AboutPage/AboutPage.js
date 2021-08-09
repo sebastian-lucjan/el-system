@@ -1,10 +1,13 @@
 import React from 'react';
-import { StyledAbout, Wrapper } from './AboutPage.styles';
+import * as PropTypes from 'prop-types';
+import { StyledParagraph } from './AboutPage.styles';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
 import { elSystemInfo } from '../../../data/appTextData';
+import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
+import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
 
-const AboutPage = () => {
+const AboutPage = ({ name }) => {
   const {
     companyInfo,
     companyInfo: { textParagraphs },
@@ -14,21 +17,23 @@ const AboutPage = () => {
     const key = `paragraph-${index + 1}`;
 
     return (
-      <div className="paragraph" key={key}>
+      <StyledParagraph className="paragraph" key={key}>
         {paragraph}
-      </div>
+      </StyledParagraph>
     );
   });
 
   return (
-    <StyledAbout>
-      <Wrapper>
+    <ViewWrapper name={name}>
+      <ContentWrapper>
         <Title title={contentTitle} />
         <ContentDivider />
         {paragraphs}
-      </Wrapper>
-    </StyledAbout>
+      </ContentWrapper>
+    </ViewWrapper>
   );
 };
+
+AboutPage.propTypes = { name: PropTypes.string.isRequired };
 
 export default AboutPage;

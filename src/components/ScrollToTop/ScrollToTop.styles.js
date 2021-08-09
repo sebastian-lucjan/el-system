@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
-const StyledIcon = styled.div`
+const StyledIcon = styled(Link)`
   position: fixed;
   bottom: 20px;
   right: 20px;
+  color: white;
 
   .scrollToTopIcon {
     width: 30px;

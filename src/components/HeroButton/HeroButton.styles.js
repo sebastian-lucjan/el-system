@@ -17,13 +17,9 @@ const StyledHeroImageButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    //background-color: #475ad7;
-    background-color: #47a6ff;
-    //background-color: #19647e;
+    background-color: ${({ theme }) => theme.colors.blue};
     color: white;
   }
 `;
 
 export default StyledHeroImageButton;
-
-// todo: theme colours

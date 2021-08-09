@@ -1,15 +1,14 @@
 import React from 'react';
-import Header from '../../Header/Header';
+import * as PropTypes from 'prop-types';
 import Hero from '../../Hero/Hero';
 import { StyledStartPage } from './StartPage.styles';
 
-const StartPage = () => (
-  <StyledStartPage>
-    <Header />
+const StartPage = ({ name }) => (
+  <StyledStartPage name={name}>
     <Hero />
   </StyledStartPage>
 );
 
-export default StartPage;
+StartPage.propTypes = { name: PropTypes.string.isRequired };
 
-// todo: slider component
+export default StartPage;
