@@ -28,9 +28,9 @@ const HeroImageButton = () => {
     setIsClicked(false);
   };
 
-  useEffect(() => {
-    console.log(isClicked);
-  }, [isClicked]);
+  // useEffect(() => {
+  //   console.log(isClicked);
+  // }, [isClicked]);
 
   return (
     <StyledButtonContainer>
