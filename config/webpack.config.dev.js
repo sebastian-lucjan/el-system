@@ -42,23 +42,17 @@ module.exports = {
         },
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        use: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              bypassOnDebug: true, // webpack@1.x
-              disable: true, // webpack@2.x and newer
-            },
-          },
-        ],
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: ['url-loader?limit=10000', 'img-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpg|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
           },
         ],
       },
