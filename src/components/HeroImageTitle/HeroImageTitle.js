@@ -1,11 +1,9 @@
 import React from 'react';
-import { elSystemInfo } from '../../data/appTextData';
+// import { elSystemInfo } from '../../data/appTextData';
 import StyledHeroImageTitle from './HeroImageTitle.styles';
 
-const HeroImageTitle = () => (
-  <StyledHeroImageTitle>
-    {elSystemInfo.offer.offers[7].headline.toUpperCase()}
-  </StyledHeroImageTitle>
+const HeroImageTitle = ({ headline }) => (
+  <StyledHeroImageTitle>{headline.toUpperCase()}</StyledHeroImageTitle>
 );
 
 export default HeroImageTitle;

@@ -5,11 +5,11 @@ import { websiteData } from '../../data/appTextData';
 import ShortContact from '../ShortContact/ShortContact';
 
 const StyledButtonContainer = styled.div`
-  position: absolute;
+  position: relative;
   width: 700px;
   height: 60px;
-  bottom: 140px;
-  left: 140px;
+  //bottom: 130px;
+  //left: 130px;
   z-index: 2;
   overflow: hidden;
 `;
