@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledHeroImageDescription = styled.div`
   //padding-top: 30px;
+  //padding-left: 20px;
   width: 80%;
   font-size: ${({ theme }) => theme.fontSize.m};
   letter-spacing: 0.5px;

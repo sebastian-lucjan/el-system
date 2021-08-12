@@ -8,8 +8,6 @@ const StyledButtonContainer = styled.div`
   position: relative;
   width: 700px;
   height: 60px;
-  //bottom: 130px;
-  //left: 130px;
   z-index: 2;
   overflow: hidden;
 `;
