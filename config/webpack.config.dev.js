@@ -1,7 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -64,6 +64,11 @@ module.exports = {
       title: 'el-system strona firmowa',
       template: 'src/templates/template.html',
     }),
-    new CopyPlugin({ patterns: [{ from: 'public/images', to: 'images' }] }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public/images', to: 'images' },
+        { from: 'public/icons', to: 'icons' },
+      ],
+    }),
   ],
 };
