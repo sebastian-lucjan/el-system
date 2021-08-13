@@ -1,7 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -41,6 +41,21 @@ module.exports = {
           presets: ['@babel/preset-env', '@babel/preset-react'],
         },
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: ['url-loader?limit=10000', 'img-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -49,6 +64,11 @@ module.exports = {
       title: 'el-system strona firmowa',
       template: 'src/templates/template.html',
     }),
-    new CopyPlugin({ patterns: [{ from: 'public/images', to: 'images' }] }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public/images', to: 'images' },
+        { from: 'public/icons', to: 'icons' },
+      ],
+    }),
   ],
 };

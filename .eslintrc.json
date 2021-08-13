@@ -21,8 +21,12 @@
     "no-use-before-define": ["error", { "functions": false, "classes": false }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "comma-dangle": ["error", "only-multiline"],
+    "implicit-arrow-linebreak": "off",
+    "no-confusing-arrow": "off",
     "import/prefer-default-export": "off",
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }] // for iconify
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/no-cycle": [2, { "maxDepth": 1 }]
+    //    "react/jsx-props-no-spreading": [{ "exceptions": ["Slider", "img"] }]
   },
   "env": {
     "browser": true,

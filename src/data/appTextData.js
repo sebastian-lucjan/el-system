@@ -31,6 +31,7 @@ export const elSystemInfo = {
         iconName: 'mdi:solar-power',
         description:
           'Projektujemy i wdrażamy rozwiązania z zakresu instalacji fotowoltaicznych – od mikroinstalacji do farm fotowoltaicznych.',
+        sliderImgName: 'photovoltaic-power.jpeg',
       },
       {
         headline: 'Automatyka budynkowa.',
@@ -43,12 +44,14 @@ export const elSystemInfo = {
         iconName: 'mdi-light:factory',
         description:
           'Projektujemy i wdrażamy rozwiązania z zakresu automatyki przemysłowej dopasowane do potrzeb i oczekiwań klienta.',
+        sliderImgName: 'factory.jpeg',
       },
       {
         headline: 'Dworactwo techniczne, nadzory inwestorskie',
         iconName: 'mdi:help-network-outline',
         description:
           'Oferujemy kompleksowy i fachowy nadzór nad wszelkiego rodzaju pracami elektroinstalacyjnymi. Świadczymy usługi w zakresie pełnienia nadzoru inwestorskiego i kierowania robotami budowlanymi.',
+        sliderImgName: 'inspection-person.jpeg',
       },
       {
         headline: 'Analizy techniczne',
@@ -99,7 +102,7 @@ export const elSystemInfo = {
         city: 'Lublin',
       },
       phoneNrs: ['603 095 642', '535 920 293'],
-      email: 'podany jak będzie domena',
+      email: 'podany.jak@będzie.domena',
     },
     companiesData: {
       headline: 'Dane Firmy',
