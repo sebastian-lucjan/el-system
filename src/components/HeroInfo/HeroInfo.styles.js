@@ -4,7 +4,10 @@ const Wrapper = styled.div`
   position: relative;
   width: 50vw;
   height: 50vh;
-  //margin: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 130px;
 `;
 
 export default Wrapper;

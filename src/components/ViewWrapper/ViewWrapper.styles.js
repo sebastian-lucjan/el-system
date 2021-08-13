@@ -5,6 +5,6 @@ export const ViewWrapper = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: 70px;
+  align-items: ${({ centered }) => (centered ? 'centered' : 'flex-start')};
+  padding: 100px;
 `;

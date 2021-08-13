@@ -5,11 +5,9 @@ import { websiteData } from '../../data/appTextData';
 import ShortContact from '../ShortContact/ShortContact';
 
 const StyledButtonContainer = styled.div`
-  position: absolute;
+  position: relative;
   width: 700px;
   height: 60px;
-  bottom: 140px;
-  left: 140px;
   z-index: 2;
   overflow: hidden;
 `;
@@ -28,9 +26,9 @@ const HeroImageButton = () => {
     setIsClicked(false);
   };
 
-  useEffect(() => {
-    console.log(isClicked);
-  }, [isClicked]);
+  // useEffect(() => {
+  //   console.log(isClicked);
+  // }, [isClicked]);
 
   return (
     <StyledButtonContainer>
