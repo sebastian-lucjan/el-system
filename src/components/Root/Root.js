@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 // import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { theme } from '../../assets/styles/theme';
@@ -14,8 +14,30 @@ import Header from '../Header/Header';
 
 // const AppDataContext = React.createContext({});
 
+const borderMediaValue = 576;
+
+const checkNeedBurgerMenu = () => window.innerWidth < borderMediaValue;
+console.log(checkNeedBurgerMenu());
+
 const Root = () => {
   const [pageY, setPageY] = useState(0);
+  const [visibleHamburger, setVisibleHamburger] = useState(checkNeedBurgerMenu);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(`(min-width: ${borderMediaValue}px)`);
+
+    // const handleCrossDeviceBorder = () => setVisibleHamburger;
+
+    mediaQuery.addEventListener('change', () =>
+      setVisibleHamburger(checkNeedBurgerMenu())
+    );
+
+    return () => {
+      mediaQuery.removeEventListener('change', () =>
+        setVisibleHamburger(checkNeedBurgerMenu())
+      );
+    };
+  }, [visibleHamburger]);
 
   const handleScroll = () => {
     setPageY(window.pageYOffset);
@@ -29,8 +51,8 @@ const Root = () => {
       <GlobalStyle />
       <Wrapper>
         {/* <Route> */}
-        <Header />
-        <StartPage name="home" />
+        <Header visibleHamburger={visibleHamburger} />
+        <StartPage name="home" visibleSlider={visibleHamburger} />
         <AboutPage name="company" />
         <Offer name="offer" />
         <Cooperation name="cooperation" />
@@ -44,5 +66,3 @@ const Root = () => {
 };
 
 export default Root;
-
-// TODO: replace by react-scroll method
