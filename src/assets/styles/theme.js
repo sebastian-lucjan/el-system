@@ -21,7 +21,12 @@ export const theme = {
     xl: 'min-width: 1200px',
     xxl: 'min-width: 1400px',
   },
-  zIndex: {},
+  zIndex: {
+    base: '0',
+    priority: '1',
+    highPriority: '2',
+    superiorPriority: '3',
+  },
 };
 
 // media (min-width: 576px) { ... }
