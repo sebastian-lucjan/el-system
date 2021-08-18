@@ -10,6 +10,7 @@ import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
 const OfferPage = ({ name, mobile }) => {
   const { offer: offersData } = elSystemInfo;
   const contentTitle = offersData.headline.toUpperCase();
+
   const offers = offersData.offers.map((offer, index) => {
     const key = `offer-nr-${index + 1}`;
     const { iconName, headline, description, others } = offer;
@@ -20,6 +21,9 @@ const OfferPage = ({ name, mobile }) => {
         iconName={iconName}
         description={description}
         othersArray={others}
+        mobile={mobile}
+        activeDescription={!mobile}
+        // toggleDescription={handleToggleDescription}
       />
     );
   });
@@ -35,6 +39,10 @@ const OfferPage = ({ name, mobile }) => {
   );
 };
 
-OfferPage.propTypes = { name: PropTypes.string.isRequired };
+OfferPage.defaultProps = { mobile: false };
+OfferPage.propTypes = {
+  name: PropTypes.string.isRequired,
+  mobile: PropTypes.bool,
+};
 
 export default OfferPage;

@@ -5,32 +5,45 @@ import { StyledOfferItem } from './OfferItem.styles';
 import OfferItemTitle from '../OfferItemTitle/OfferItemTitle';
 import OfferItemDescription from '../OfferItemDescription/OfferItemDescription';
 
-const OfferItem = ({ title, iconName, description, othersArray, mobile }) => {
-  const [activeOffer, setActiveOffer] = useState(false);
+const OfferItem = ({
+  title,
+  iconName,
+  description,
+  othersArray,
+  activeDescription,
+  mobile,
+}) => {
+  const [activeOfferDescription, setActiveOfferDescription] =
+    useState(activeDescription);
+
   const handleClickOfferItem = () => {
-    setActiveOffer(!activeOffer);
+    setActiveOfferDescription(!activeOfferDescription);
   };
 
   return (
     <StyledOfferItem>
       <div className="offerItem__headline">
         {mobile ? (
-          <Icon className="offerItem__icon" icon={iconName} />
-        ) : (
           <Icon
             style={{
               width: '20px',
               height: '15px',
               marginRight: '10px',
               flexShrink: '0',
-              color: '#777',
+              color: `${activeOfferDescription ? '#fff' : '#777'}`,
             }}
-            icon="ph:caret-down-bold"
+            icon={`ph:caret-${activeOfferDescription ? 'down' : 'up'}-bold`}
           />
+        ) : (
+          <Icon className="offerItem__icon" icon={iconName} />
         )}
-        <OfferItemTitle title={title} />
+        <OfferItemTitle
+          activeOfferDescription={activeOfferDescription}
+          title={title}
+          onClick={handleClickOfferItem}
+        />
       </div>
-      {mobile && (
+      {activeOfferDescription && (
         <OfferItemDescription
           description={description}
           othersArray={othersArray}
@@ -42,6 +55,7 @@ const OfferItem = ({ title, iconName, description, othersArray, mobile }) => {
 
 OfferItem.defaultProps = {
   othersArray: [],
+  activeDescription: false,
   mobile: false,
 };
 
@@ -50,6 +64,7 @@ OfferItem.propTypes = {
   iconName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   othersArray: PropTypes.instanceOf(Array),
+  activeDescription: PropTypes.bool,
   mobile: PropTypes.bool,
 };
 

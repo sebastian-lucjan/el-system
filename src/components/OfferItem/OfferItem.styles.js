@@ -2,12 +2,25 @@ import styled from 'styled-components';
 
 export const StyledOfferItem = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   text-align: justify;
   margin-bottom: 20px;
   font-size: ${({ theme }) => theme.fontSize.xs};
   line-height: 16px;
   width: 100%;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+    margin-top: 10px;
+    height: 1px;
+    width: calc(100% - 30px);
+    background-color: #777;
+  }
 
   .offerItem__icon {
     height: 70px;
