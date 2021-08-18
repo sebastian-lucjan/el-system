@@ -7,7 +7,7 @@ import OfferItem from '../../OfferItem/OfferItem';
 import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
 import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
 
-const OfferPage = ({ name }) => {
+const OfferPage = ({ name, mobile }) => {
   const { offer: offersData } = elSystemInfo;
   const contentTitle = offersData.headline.toUpperCase();
   const offers = offersData.offers.map((offer, index) => {

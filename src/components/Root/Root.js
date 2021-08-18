@@ -62,7 +62,7 @@ const Root = () => {
           handleChangeActiveMobileNav={handleChangeActiveMobileNav}
         />
         <AboutPage name="company" />
-        <Offer name="offer" />
+        <Offer name="offer" mobile={visibleHamburger} />
         <Cooperation name="cooperation" />
         <Contact name="contact" />
         {pageY > 100 && <ScrollToTop mobile={visibleHamburger} to="" />}

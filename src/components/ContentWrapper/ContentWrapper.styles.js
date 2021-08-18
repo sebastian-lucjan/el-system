@@ -5,10 +5,11 @@ export const ContentWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   @media (${({ theme }) => theme.breakpoints.xxl}) {
     width: 900px;
+    justify-content: center;
   }
 `;

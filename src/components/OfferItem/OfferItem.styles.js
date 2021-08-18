@@ -3,9 +3,11 @@ import styled from 'styled-components';
 export const StyledOfferItem = styled.div`
   display: flex;
   flex-direction: column;
-  width: 900px;
   text-align: justify;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  font-size: ${({ theme }) => theme.fontSize.xs};
+  line-height: 16px;
+  width: 100%;
 
   .offerItem__icon {
     height: 70px;
@@ -15,6 +17,16 @@ export const StyledOfferItem = styled.div`
 
   .offerItem__headline {
     display: flex;
-    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media (${({ theme }) => theme.breakpoints.xxl}) {
+    width: 900px;
+    margin-bottom: 50px;
+    font-size: ${({ theme }) => theme.fontSize.m};
+    line-height: 24px;
   }
 `;

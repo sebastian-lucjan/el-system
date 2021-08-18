@@ -1,9 +1,22 @@
 import styled from 'styled-components';
 
 const StyledOfferItemTitle = styled.div`
-  font-size: ${({ theme }) => theme.fontSize.m};
+  //flex-grow: 1;
   font-weight: 400;
-  padding-bottom: 10px;
+  width: 100%;
+  cursor: pointer;
+  //media()
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+    margin-top: 10px;
+    height: 1px;
+    width: calc(100% - 30px);
+    background-color: #777;
+  }
 `;
 
 export default StyledOfferItemTitle;
