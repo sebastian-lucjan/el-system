@@ -35,8 +35,8 @@ const Navigation = ({
         <HamburgerSqueeze
           barColor="white"
           isActive={isActiveMobileNav}
-          buttonHeight={24}
-          buttonStyle={{ padding: '20px' }}
+          buttonWidth={32}
+          buttonStyle={{ padding: '20px 20px' }}
           onClick={() => {
             handleChangeActiveMobileNav();
             setIsActiveMobileNav(!isActiveMobileNav);
