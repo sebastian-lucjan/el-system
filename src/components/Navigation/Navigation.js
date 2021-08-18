@@ -3,12 +3,11 @@ import { PropTypes } from 'prop-types';
 import { HamburgerSqueeze } from 'react-animated-burgers';
 import { websiteData } from '../../data/appTextData';
 import { StyledNavigation, StyledNavLink } from './Navigation.styles';
-import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
 
 const Navigation = ({
   visibleHamburger,
   handleChangeActiveMobileNav,
-  activeMobileNavigation,
+  mobile,
 }) => {
   const [isActiveMobileNav, setIsActiveMobileNav] = useState(false);
 
@@ -44,7 +43,9 @@ const Navigation = ({
           }}
         />
       )}
-      {isActiveMobileNav && <StyledNavigation>{navButtons}</StyledNavigation>}
+      {(isActiveMobileNav || !mobile) && (
+        <StyledNavigation>{navButtons}</StyledNavigation>
+      )}
     </>
   );
 };

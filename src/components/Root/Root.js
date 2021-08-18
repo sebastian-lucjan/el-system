@@ -53,6 +53,7 @@ const Root = () => {
         <Header
           visibleHamburger={visibleHamburger}
           handleChangeActiveMobileNav={handleChangeActiveMobileNav}
+          mobile={visibleHamburger}
         />
         <StartPage
           name="home"
@@ -64,7 +65,7 @@ const Root = () => {
         <Offer name="offer" />
         <Cooperation name="cooperation" />
         <Contact name="contact" />
-        {pageY > 100 && <ScrollToTop to="" />}
+        {pageY > 100 && <ScrollToTop mobile={visibleHamburger} to="" />}
       </Wrapper>
     </ThemeProvider>
   );
