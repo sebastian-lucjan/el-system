@@ -4,11 +4,28 @@ import Hero from '../../Hero/Hero';
 import { StyledStartPage } from './StartPage.styles';
 import Navigation from '../../Navigation/Navigation';
 
-const StartPage = ({ name, visibleSlider }) => (
-  <StyledStartPage name={name}>
-    {visibleSlider ? <Hero /> : <Navigation visibleHamburger={false} mobile />}
-  </StyledStartPage>
-);
+const StartPage = ({
+  name,
+  visibleSlider,
+  activeMobileNavigation,
+  handleChangeActiveMobileNav,
+}) => {
+  const mobileStartPage = activeMobileNavigation ? (
+    <Navigation
+      visibleHamburger={false}
+      activeMobileNavigation={activeMobileNavigation}
+      handleChangeActiveMobileNav={handleChangeActiveMobileNav}
+    />
+  ) : (
+    <div>Bulb</div>
+  );
+
+  return (
+    <StyledStartPage name={name}>
+      {visibleSlider ? <Hero /> : mobileStartPage}
+    </StyledStartPage>
+  );
+};
 
 StartPage.propTypes = {
   name: PropTypes.string.isRequired,

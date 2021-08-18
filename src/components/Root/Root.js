@@ -23,12 +23,18 @@ const Root = () => {
   const [visibleHamburger, setVisibleHamburger] = useState(checkNeedBurgerMenu);
   const [activeMobileNavigation, setActiveMobileNavigation] = useState(false);
 
-  const handleChangeActiveMobileNav = () =>
-    useCallback((prevValue) => {
-      setActiveMobileNavigation(!prevValue);
-    }, []);
+  const handleChangeActiveMobileNav = () => {
+    console.log('handleChangeActiveMobileNav() - Root');
+    setActiveMobileNavigation(!activeMobileNavigation);
+    console.log(activeMobileNavigation);
+    // useCallback((prevValue) => {
+    //   setActiveMobileNavigation(!prevValue);
+    // }, []);
+  };
 
-  // setActiveMobileNavigation(true); TODO fix!
+  // useEffect(() => {
+  //   setActiveMobileNavigation(true);
+  // }, []);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(`(min-width: ${borderMediaValue}px)`);
@@ -53,11 +59,15 @@ const Root = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Wrapper>
-        <Header visibleHamburger={visibleHamburger} />
+        <Header
+          visibleHamburger={visibleHamburger}
+          handleChangeActiveMobileNav={handleChangeActiveMobileNav}
+        />
         <StartPage
           name="home"
           visibleSlider={!visibleHamburger}
           activeMobileNavigation={activeMobileNavigation}
+          handleChangeActiveMobileNav={handleChangeActiveMobileNav}
         />
         <AboutPage name="company" />
         <Offer name="offer" />

@@ -19,10 +19,11 @@ export const StyledNavigation = styled.div`
   font-size: ${({ theme }) => theme.fontSize.logo};
 
   @media (${({ theme }) => theme.breakpoints.xxl}) {
+    flex-direction: row;
     position: static;
     width: 30vw;
+    padding: 0;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     height: 100%;
@@ -34,6 +35,7 @@ const activeClass = 'active-link';
 export const StyledNavLink = styled(Link).attrs({ activeClass })`
   //width: 100vw;
   //margin: 35px 0;
+  cursor: pointer;
 
   @media (${({ theme }) => theme.breakpoints.xxl}) {
     font-size: 16px;

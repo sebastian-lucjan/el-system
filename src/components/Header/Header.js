@@ -4,10 +4,13 @@ import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import { Wrapper } from './Header.styles';
 
-const Header = ({ visibleHamburger }) => (
+const Header = ({ visibleHamburger, handleChangeActiveMobileNav }) => (
   <Wrapper>
     <Logo />
-    <Navigation visibleHamburger={visibleHamburger} />
+    <Navigation
+      visibleHamburger={visibleHamburger}
+      handleChangeActiveMobileNav={handleChangeActiveMobileNav}
+    />
   </Wrapper>
 );
 
