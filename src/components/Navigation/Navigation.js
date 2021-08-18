@@ -10,7 +10,7 @@ const Navigation = ({
   handleChangeActiveMobileNav,
   activeMobileNavigation,
 }) => {
-  const [isActive, setIsActive] = useState(false); // TODO: przesuń to do root i tam daj stan
+  const [isActiveMobileNav, setIsActiveMobileNav] = useState(false); // TODO: przesuń to do root i tam daj stan
 
   const toggleButton = useCallback(
     () => setIsActive((prevState) => !prevState),
@@ -30,11 +30,11 @@ const Navigation = ({
       to={name}
       spy
       smooth
-      duration={800}
+      duration={isActiveMobileNav ? 0 : 800}
       key={buttonText}
       onClick={() => {
         handleChangeActiveMobileNav();
-        setIsActive(!isActive);
+        setIsActiveMobileNav(!isActiveMobileNav);
       }}
     >
       {buttonText}
@@ -43,20 +43,19 @@ const Navigation = ({
 
   return (
     <>
-      {visibleHamburger ? (
+      {visibleHamburger && (
         <HamburgerSqueeze
           barColor="white"
-          isActive={isActive}
+          isActive={isActiveMobileNav}
           buttonHeight={24}
           buttonStyle={{ padding: '20px' }}
           onClick={() => {
             handleChangeActiveMobileNav();
-            setIsActive(!isActive);
+            setIsActiveMobileNav(!isActiveMobileNav);
           }}
         />
-      ) : (
-        <StyledNavigation>{navButtons}</StyledNavigation>
       )}
+      {isActiveMobileNav && <StyledNavigation>{navButtons}</StyledNavigation>}
     </>
   );
 };

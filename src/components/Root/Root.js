@@ -24,17 +24,8 @@ const Root = () => {
   const [activeMobileNavigation, setActiveMobileNavigation] = useState(false);
 
   const handleChangeActiveMobileNav = () => {
-    console.log('handleChangeActiveMobileNav() - Root');
     setActiveMobileNavigation(!activeMobileNavigation);
-    console.log(activeMobileNavigation);
-    // useCallback((prevValue) => {
-    //   setActiveMobileNavigation(!prevValue);
-    // }, []);
   };
-
-  // useEffect(() => {
-  //   setActiveMobileNavigation(true);
-  // }, []);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(`(min-width: ${borderMediaValue}px)`);
