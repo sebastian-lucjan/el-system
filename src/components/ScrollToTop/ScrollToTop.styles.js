@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 const StyledIcon = styled(Link)`
   position: fixed;
-  bottom: 20px;
+  bottom: 6px;
   right: 20px;
   color: white;
 
@@ -11,6 +11,10 @@ const StyledIcon = styled(Link)`
     width: 30px;
     height: 30px;
     cursor: pointer;
+  }
+
+  @media (${({ theme }) => theme.breakpoints.xxl}) {
+    bottom: 15px;
   }
 `;
 

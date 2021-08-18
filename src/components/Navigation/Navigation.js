@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { HamburgerSqueeze } from 'react-animated-burgers';
 import { websiteData } from '../../data/appTextData';
@@ -10,18 +10,7 @@ const Navigation = ({
   handleChangeActiveMobileNav,
   activeMobileNavigation,
 }) => {
-  const [isActiveMobileNav, setIsActiveMobileNav] = useState(false); // TODO: przesuń to do root i tam daj stan
-
-  const toggleButton = useCallback(
-    () => setIsActive((prevState) => !prevState),
-    []
-  );
-
-  // useEffect(() => {}, [isActive]);
-  // console.log(handleChangeActiveMobileNav);
-  // if (visibleHamburger) {
-  // useLockBodyScroll(); // todo: odblokuj po kliknieciu w nawigacje
-  // }
+  const [isActiveMobileNav, setIsActiveMobileNav] = useState(false);
 
   const { navigation: buttonsDataArray } = websiteData;
 

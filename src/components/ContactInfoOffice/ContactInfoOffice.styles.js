@@ -2,14 +2,22 @@ import styled from 'styled-components';
 import React from 'react';
 
 const StyledContactOffice = styled.section`
-  width: 900px;
-  font-size: ${({ theme }) => theme.fontSize.m};
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: center;
+  //padding-top: 100%;
+  font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: 300;
-  padding: 35px 0;
+  width: 100%;
+  //position: absolute;
+  //top: 20px;
+  //left: 20px;
 
   .contact-info__title {
-    font-size: ${({ theme }) => theme.fontSize.m};
-    font-weight: 400;
+    font-size: ${({ theme }) => theme.fontSize.xs};
+    font-weight: 600;
     //padding-bottom: 10px;
   }
 
@@ -19,7 +27,13 @@ const StyledContactOffice = styled.section`
   }
 
   .contact-info__office {
-    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  @media (${({ theme }) => theme.breakpoints.xxl}) {
+    width: 900px;
+    font-size: ${({ theme }) => theme.fontSize.m};
+    padding: 35px 0;
   }
 `;
 

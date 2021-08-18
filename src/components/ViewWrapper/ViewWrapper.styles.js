@@ -6,5 +6,10 @@ export const ViewWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: ${({ centered }) => (centered ? 'centered' : 'flex-start')};
-  padding: 100px;
+  padding: 84px 20px 20px 20px;
+  line-height: 24px;
+
+  @media (${({ theme }) => theme.breakpoints.xxl}) {
+    padding: 100px;
+  }
 `;

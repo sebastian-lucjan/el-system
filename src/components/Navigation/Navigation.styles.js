@@ -36,6 +36,7 @@ export const StyledNavLink = styled(Link).attrs({ activeClass })`
   //width: 100vw;
   //margin: 35px 0;
   cursor: pointer;
+  font-size: ${({ theme }) => theme.fontSize.l};
 
   @media (${({ theme }) => theme.breakpoints.xxl}) {
     font-size: 16px;
