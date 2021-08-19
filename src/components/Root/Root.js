@@ -15,7 +15,7 @@ import Header from '../Header/Header';
 
 // const AppDataContext = React.createContext({});
 
-const borderMediaValue = size.sm;
+const borderMediaValue = size.xl;
 
 const checkNeedBurgerMenu = () => window.innerWidth < borderMediaValue;
 
@@ -42,6 +42,8 @@ const Root = () => {
   }, [visibleHamburger]);
 
   const handleScroll = () => {
+    // TODO: better performance ?
+    // console.log('handleScroll');
     setPageY(window.pageYOffset);
   };
 

@@ -45,6 +45,10 @@ const StyledContactOffice = styled.section`
     }
   }
 
+  @media (${({ theme }) => theme.devices.sm}) {
+    justify-content: flex-start; //TODO: add bottom img
+  }
+
   @media (${({ theme }) => theme.devices.xxl}) {
     width: 900px;
     font-size: ${({ theme }) => theme.fontSize.m};

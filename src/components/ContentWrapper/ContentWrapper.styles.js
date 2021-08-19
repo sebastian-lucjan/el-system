@@ -9,6 +9,10 @@ export const ContentWrapper = styled.div`
   align-items: center;
   line-height: 1.4rem;
 
+  @media (${({ theme }) => theme.devices.xs}) {
+    width: 400px;
+  }
+
   @media (${({ theme }) => theme.devices.xxl}) {
     width: 900px;
     justify-content: center;

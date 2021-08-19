@@ -6,7 +6,11 @@ import bulbImg from '../../../../public/images/bulb-mobile.jpeg';
 
 const StartPage = ({ name, visibleSlider }) => (
   <StyledStartPage name={name}>
-    {visibleSlider ? <Hero /> : <img src={bulbImg} alt="żarówka" />}
+    {visibleSlider ? (
+      <Hero />
+    ) : (
+      <img className="start-page__image" src={bulbImg} alt="żarówka" />
+    )}
   </StyledStartPage>
 );
 

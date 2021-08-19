@@ -39,6 +39,11 @@ export const StyledNavLink = styled(Link).attrs({ activeClass })`
   @media (${({ theme }) => theme.devices.xs}) {
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
+
+  @media (${({ theme }) => theme.devices.md}) {
+    font-size: ${({ theme }) => theme.fontSize.xxl};
+  }
+
   @media (${({ theme }) => theme.devices.xxl}) {
     font-size: 16px;
     font-weight: 300;

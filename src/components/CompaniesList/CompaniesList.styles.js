@@ -14,6 +14,13 @@ export const StyledCompaniesList = styled.ul`
     font-size: ${({ theme }) => theme.fontSize.m};
   }
 
+  @media (${({ theme }) => theme.devices.sm}) {
+    .listItem {
+      margin-bottom: 2.2rem;
+      font-size: ${({ theme }) => theme.fontSize.l};
+    }
+  }
+
   @media (${({ theme }) => theme.devices.xxl}) {
     width: 900px;
 

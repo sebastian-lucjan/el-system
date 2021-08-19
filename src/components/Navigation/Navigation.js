@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { HamburgerSqueeze } from 'react-animated-burgers';
 import { websiteData } from '../../data/appTextData';
@@ -10,7 +10,7 @@ const Navigation = ({
   mobile,
 }) => {
   const [isActiveMobileNav, setIsActiveMobileNav] = useState(false);
-
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { navigation: buttonsDataArray } = websiteData;
 
   const navButtons = buttonsDataArray.map(({ buttonText, path, name }) => (
@@ -29,11 +29,26 @@ const Navigation = ({
     </StyledNavLink>
   ));
 
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia(`(min-width: ${borderMediaValue}px)`);
+  //   mediaQuery.addEventListener('change', () => {
+  //     setVisibleHamburger(checkNeedBurgerMenu());
+  //   });
+  //
+  //   return () => {
+  //     mediaQuery.removeEventListener('change', () => {
+  //       setVisibleHamburger(checkNeedBurgerMenu());
+  //     });
+  //   };
+  // }, [visibleHamburger]);
+
   const setHamburgerWith = () => {
-    const windowWidth = window.innerWidth;
-    console.log(windowWidth);
+    // const windowWidth = window.innerWidth;
+    // console.log(windowWidth); // TODO: handle Hamburger icon resizing
   };
+
   setHamburgerWith();
+
   return (
     <>
       {visibleHamburger && (
