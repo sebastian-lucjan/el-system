@@ -29,6 +29,11 @@ const Navigation = ({
     </StyledNavLink>
   ));
 
+  const setHamburgerWith = () => {
+    const windowWidth = window.innerWidth;
+    console.log(windowWidth);
+  };
+  setHamburgerWith();
   return (
     <>
       {visibleHamburger && (

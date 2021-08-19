@@ -6,11 +6,15 @@ export const StyledCompaniesList = styled.ul`
   .listItem {
     margin-bottom: 1.8rem;
     list-style: none;
-    font-size: ${({ theme }) => theme.fontSize.logo};
+    //font-size: ${({ theme }) => theme.fontSize.logo};
     font-weight: 300;
   }
 
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xs}) {
+    font-size: ${({ theme }) => theme.fontSize.m};
+  }
+
+  @media (${({ theme }) => theme.devices.xxl}) {
     width: 900px;
 
     .listItem {

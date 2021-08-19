@@ -12,7 +12,7 @@ export const StyledStartPage = styled.div`
     z-index: ${({ theme }) => theme.zIndex.highPriority};
   }
 
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xxl}) {
     img {
       position: static;
     }

@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../../assets/styles/theme';
+import { theme, size } from '../../assets/styles/theme';
 import StartPage from '../views/StartPage/StartPage';
 import GlobalStyle from '../../assets/styles/globalStyles';
 import { Wrapper } from './Root.styles';
@@ -10,11 +10,12 @@ import Cooperation from '../views/Cooperation/Cooperation';
 import Contact from '../views/Contact/Contact';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import Header from '../Header/Header';
+
 // import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 // const AppDataContext = React.createContext({});
 
-const borderMediaValue = 576;
+const borderMediaValue = size.sm;
 
 const checkNeedBurgerMenu = () => window.innerWidth < borderMediaValue;
 

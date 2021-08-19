@@ -7,9 +7,9 @@ export const ViewWrapper = styled.div`
   justify-content: center;
   align-items: ${({ centered }) => (centered ? 'centered' : 'flex-start')};
   padding: 84px 20px 20px 20px;
-  line-height: 24px;
 
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xxl}) {
     padding: 100px;
+    line-height: 24px;
   }
 `;

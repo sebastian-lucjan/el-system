@@ -9,7 +9,7 @@ const StyledOfferItemDescription = styled.div`
     transform: translateX(20px);
   }
 
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xxl}) {
     padding: 0;
 
     .offerItem__othersList {

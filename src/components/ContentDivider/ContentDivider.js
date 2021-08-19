@@ -7,7 +7,7 @@ const ContentDivider = styled.div`
   height: 5px;
   margin: 35px;
 
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xxl}) {
     height: 10px;
     margin: 70px;
   }

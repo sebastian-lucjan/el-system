@@ -16,9 +16,7 @@ export const StyledNavigation = styled.div`
   background-color: ${({ theme }) => theme.colors.black};
   z-index: 3;
 
-  font-size: ${({ theme }) => theme.fontSize.logo};
-
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xxl}) {
     flex-direction: row;
     position: static;
     width: 30vw;
@@ -38,7 +36,10 @@ export const StyledNavLink = styled(Link).attrs({ activeClass })`
   cursor: pointer;
   font-size: ${({ theme }) => theme.fontSize.l};
 
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xs}) {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+  }
+  @media (${({ theme }) => theme.devices.xxl}) {
     font-size: 16px;
     font-weight: 300;
     margin: 20px;

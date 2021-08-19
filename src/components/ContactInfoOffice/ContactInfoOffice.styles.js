@@ -8,7 +8,7 @@ const StyledContactOffice = styled.section`
   justify-content: flex-end;
   align-self: center;
   //padding-top: 100%;
-  font-size: ${({ theme }) => theme.fontSize.xs};
+  font-size: ${({ theme }) => theme.fontSize.xxs};
   font-weight: 300;
   width: 100%;
   //position: absolute;
@@ -16,7 +16,6 @@ const StyledContactOffice = styled.section`
   //left: 20px;
 
   .contact-info__title {
-    font-size: ${({ theme }) => theme.fontSize.xs};
     font-weight: 600;
     //padding-bottom: 10px;
   }
@@ -30,7 +29,23 @@ const StyledContactOffice = styled.section`
     padding-top: 20px;
   }
 
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xxs}) {
+    font-size: ${({ theme }) => theme.fontSize.xs};
+  }
+
+  @media (${({ theme }) => theme.devices.xs}) {
+    font-size: ${({ theme }) => theme.fontSize.m};
+
+    .contact-info__title {
+      padding-bottom: 10px;
+    }
+
+    .contact-info__details {
+      line-height: 24px;
+    }
+  }
+
+  @media (${({ theme }) => theme.devices.xxl}) {
     width: 900px;
     font-size: ${({ theme }) => theme.fontSize.m};
     padding: 35px 0;

@@ -13,7 +13,7 @@ const StyledIcon = styled(Link)`
     cursor: pointer;
   }
 
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xxl}) {
     bottom: 15px;
   }
 `;

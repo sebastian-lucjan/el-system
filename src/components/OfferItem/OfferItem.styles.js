@@ -6,7 +6,7 @@ export const StyledOfferItem = styled.div`
   flex-direction: column;
   text-align: justify;
   margin-bottom: 20px;
-  font-size: ${({ theme }) => theme.fontSize.xs};
+  font-size: ${({ theme }) => theme.fontSize.xxs};
   line-height: 16px;
   width: 100%;
 
@@ -36,7 +36,12 @@ export const StyledOfferItem = styled.div`
     align-items: center;
   }
 
-  @media (${({ theme }) => theme.breakpoints.xxl}) {
+  @media (${({ theme }) => theme.devices.xs}) {
+    font-size: ${({ theme }) => theme.fontSize.xs};
+    //line-height: 24px;
+  }
+
+  @media (${({ theme }) => theme.devices.xxl}) {
     width: 900px;
     margin-bottom: 50px;
     font-size: ${({ theme }) => theme.fontSize.m};

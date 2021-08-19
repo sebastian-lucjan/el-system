@@ -40,7 +40,7 @@ const ContactInfoOffice = ({
         <p>{`NIP: ${nip}; REGON: ${regon}`}</p>
         <p>{`${bankAccountHeadline}`}</p>
         <p>{`${bankName}`}</p>
-        <p>{`${accountHeadline}: ${accountNumber}`}</p>
+        <p>{`${accountHeadline} ${accountNumber}`}</p>
       </address>
     </article>
   </StyledContactOffice>
@@ -57,22 +57,14 @@ ContactInfoOffice.propTypes = {
   city: PropTypes.string.isRequired,
   phoneNrs: PropTypes.arrayOf(PropTypes.string),
   email: PropTypes.string.isRequired,
+  headlineCompany: PropTypes.string.isRequired,
+  companySuffix: PropTypes.string.isRequired,
+  companyMainName: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  nip: PropTypes.string.isRequired,
+  regon: PropTypes.string.isRequired,
+  bankAccountHeadline: PropTypes.string.isRequired,
+  bankName: PropTypes.string.isRequired,
+  accountHeadline: PropTypes.string.isRequired,
+  accountNumber: PropTypes.string.isRequired,
 };
-
-// companiesData: {
-//   headline: 'Dane Firmy',
-//     name: {
-//     suffix: 'Przedsiębiorstwo Techniczno-Usługowe',
-//       mainName: 'Elsystem Tomasz Pietras',
-//   },
-//   address: 'ul. Guliwera 11, 20-714 Lublin',
-//     nip: '712-286-95-53',
-//     regon: '060674447',
-//     bankAccount: {
-//     headline: 'konto bankowe:',
-//       name: 'ING Bank Śląski S.A.',
-//       account: {
-//       headline: 'nr konta:',
-//         number: '67 1050 1461 1000 0090 7599 2967',
-//     },
-//   },

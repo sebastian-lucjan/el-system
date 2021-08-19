@@ -1,3 +1,13 @@
+export const size = {
+  xxs: 360,
+  xs: 420,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400,
+};
+
 export const theme = {
   colors: {
     white: '#FFFFFF',
@@ -6,7 +16,8 @@ export const theme = {
     black: '#121212',
   },
   fontSize: {
-    xs: '12px',
+    xxs: '12px',
+    xs: '14px',
     s: '16px',
     m: '18px',
     l: '24px',
@@ -14,13 +25,14 @@ export const theme = {
     xxl: '36px',
     xxxl: '48px',
   },
-  breakpoints: {
-    xs: 'min-width: 0',
-    sm: 'min-width: 576px',
-    md: 'min-width: 768px',
-    lg: 'min-width: 992px',
-    xl: 'min-width: 1200px',
-    xxl: 'min-width: 1400px',
+  devices: {
+    xxs: `min-width: ${size.xxs}px`,
+    xs: `min-width: ${size.xs}px`,
+    sm: `min-width: ${size.sm}px`,
+    md: `min-width: ${size.md}px`,
+    lg: `min-width: ${size.lg}px`,
+    xl: `min-width: ${size.xl}px`,
+    xxl: `min-width: ${size.xxl}px`,
   },
   zIndex: {
     base: '0',
@@ -30,25 +42,4 @@ export const theme = {
   },
 };
 
-// media (min-width: 576px) { ... }
-//
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) { ... }
-//
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) { ... }
-//
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
-
 // todo: usunac zbedne kolory i wielkosci czcionek
-
-// breakpoints: {
-//   smartphoneSmall: 'min-width: 320px',
-//     smartphone: 'min-width: 460px',
-//     smartphoneLarge: 'min-width: 640px',
-//     tablet: 'min-width: 800px',
-//     tabletLarge: 'min-width: 1024px',
-//     desktopSmall: 'min-width: 1280px',
-//     desktopLarge: 'min-width: 1900px',
-// },

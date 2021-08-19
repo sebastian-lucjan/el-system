@@ -55,7 +55,7 @@ const OfferItem = ({
 
 OfferItem.defaultProps = {
   othersArray: [],
-  activeDescription: false,
+  activeDescription: true,
   mobile: false,
 };
 
