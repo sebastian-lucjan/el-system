@@ -15,7 +15,7 @@ import Header from '../Header/Header';
 
 // const AppDataContext = React.createContext({});
 
-const borderMediaValue = size.xl;
+const borderMediaValue = size.md;
 
 const checkNeedBurgerMenu = () => window.innerWidth < borderMediaValue;
 

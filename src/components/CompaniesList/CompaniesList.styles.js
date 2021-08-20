@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledCompaniesList = styled.ul`
   width: 100%;
+  flex-grow: 1;
 
   .listItem {
     margin-bottom: 1.8rem;

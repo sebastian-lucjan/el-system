@@ -7,6 +7,11 @@ export const StyledTitle = styled.h1`
   @media (${({ theme }) => theme.devices.xs}) {
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
+
+  @media (${({ theme }) => theme.devices.md}) {
+    font-size: ${({ theme }) => theme.fontSize.xxl};
+  }
+
   @media (${({ theme }) => theme.devices.xxl}) {
     font-size: ${({ theme }) => theme.fontSize.xxxl};
     font-weight: 700;

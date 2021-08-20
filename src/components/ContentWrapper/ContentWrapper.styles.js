@@ -13,6 +13,21 @@ export const ContentWrapper = styled.div`
     width: 400px;
   }
 
+  @media (${({ theme }) => theme.devices.md}) {
+    justify-content: center;
+    transform: translateY(-50px);
+  }
+
+  @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
+    width: 600px;
+    padding-top: 60px;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.md}) {
+    width: 80vh;
+    padding-top: 8vh;
+  }
+
   @media (${({ theme }) => theme.devices.xxl}) {
     width: 900px;
     justify-content: center;

@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
 import Slider from 'react-slick';
-import { Icon } from '@iconify/react';
 import styled from 'styled-components';
 import StyledHeroImage from './HeroImage.styles';
 import photoPhotovoltaic from '../../../public/images/photovoltaic-power.jpeg';
 import photoFactory from '../../../public/images/factory.jpeg';
 import photoInspection from '../../../public/images/inspection-person.jpeg';
+import SliderArrow from '../SliderArrow/SliderArrow';
 
 const StyledDot = styled.div`
   width: 8px;
@@ -53,27 +53,27 @@ const StyledDotsWrapper = styled.div`
   }
 `;
 
-const SliderArrow = (props) => {
-  const { className, style, onClick, direction, next } = props;
-  return (
-    <Icon
-      style={{
-        ...style,
-        position: 'absolute',
-        top: '50%',
-        left: `${next ? 'calc(50vw - 50px)' : '0'}`,
-        transform: 'translateY(-50%)',
-        zIndex: '2',
-        height: '30px',
-        width: '30px',
-        opacity: '.33',
-        cursor: 'pointer',
-      }}
-      onClick={onClick}
-      icon={`ph:caret-${direction}-bold`}
-    />
-  );
-};
+// const SliderArrow = (props) => {
+//   const { className, style, onClick, direction, next } = props;
+//   return (
+//     <Icon
+//       style={{
+//         ...style,
+//         position: 'absolute',
+//         top: '50%',
+//         left: `${next ? 'calc(50vw - 50px)' : '0'}`,
+//         transform: 'translateY(-50%)',
+//         zIndex: '2',
+//         height: '30px',
+//         width: '30px',
+//         opacity: '.33',
+//         cursor: 'pointer',
+//       }}
+//       onClick={onClick}
+//       icon={`ph:caret-${direction}-bold`}
+//     />
+//   );
+// };
 
 const HeroImage = ({ handleChangeSlideIndex }) => {
   const settings = {
@@ -90,8 +90,8 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
     beforeChange: (current, next) => handleChangeSlideIndex(next),
     appendDots: (dots) => <DotsWrapper dots={dots} />,
     customPaging: (i) => <StyledDot />,
-    nextArrow: <SliderArrow next direction="right" />,
-    prevArrow: <SliderArrow prev direction="left" />,
+    nextArrow: <SliderArrow direction="right" />,
+    prevArrow: <SliderArrow direction="left" />,
   };
 
   // useEffect(() => {
@@ -101,9 +101,17 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
   return (
     <StyledHeroImage>
       <Slider {...settings}>
-        <img src={photoPhotovoltaic} alt="fotowoltaika" />
-        <img src={photoFactory} alt="factory" />
-        <img src={photoInspection} alt="inspection" />
+        <img
+          className="hero-image__image"
+          src={photoPhotovoltaic}
+          alt="fotowoltaika"
+        />
+        <img className="hero-image__image" src={photoFactory} alt="factory" />
+        <img
+          className="hero-image__image"
+          src={photoInspection}
+          alt="inspection"
+        />
       </Slider>
     </StyledHeroImage>
   );

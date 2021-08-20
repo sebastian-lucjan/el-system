@@ -16,14 +16,15 @@ export const StyledNavigation = styled.div`
   background-color: ${({ theme }) => theme.colors.black};
   z-index: 3;
 
-  @media (${({ theme }) => theme.devices.xxl}) {
+  @media (${({ theme }) => theme.devices.md}) {
     flex-direction: row;
     position: static;
-    width: 30vw;
+    width: 50vw;
+    margin-right: 20px;
     padding: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     height: 100%;
   }
 `;
@@ -41,12 +42,12 @@ export const StyledNavLink = styled(Link).attrs({ activeClass })`
   }
 
   @media (${({ theme }) => theme.devices.md}) {
-    font-size: ${({ theme }) => theme.fontSize.xxl};
+    font-size: ${({ theme }) => theme.fontSize.s};
+    font-weight: 300;
   }
 
   @media (${({ theme }) => theme.devices.xxl}) {
     font-size: 16px;
-    font-weight: 300;
     margin: 20px;
     cursor: pointer;
     overflow: hidden;
