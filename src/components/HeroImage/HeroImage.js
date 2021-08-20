@@ -21,11 +21,14 @@ const DotsWrapper = ({ dots }) => (
     <ul
       style={{
         display: 'flex',
+        position: 'absolute',
+        bottom: '10px',
+        left: '50%',
         margin: '10px',
         // width: '100px',
         // position: 'absolute',
         // right: 'calc(25vw + 20px)',
-        transform: 'translate( calc(50% - 40px) , -4vh)',
+        transform: 'translateX(-50%)',
         listStyle: 'none',
       }}
     >
@@ -34,6 +37,7 @@ const DotsWrapper = ({ dots }) => (
   </StyledDotsWrapper>
 );
 const StyledDotsWrapper = styled.div`
+  position: relative;
   & li {
     background-color: white;
     opacity: 0.5;
@@ -52,28 +56,6 @@ const StyledDotsWrapper = styled.div`
     margin: 10px;
   }
 `;
-
-// const SliderArrow = (props) => {
-//   const { className, style, onClick, direction, next } = props;
-//   return (
-//     <Icon
-//       style={{
-//         ...style,
-//         position: 'absolute',
-//         top: '50%',
-//         left: `${next ? 'calc(50vw - 50px)' : '0'}`,
-//         transform: 'translateY(-50%)',
-//         zIndex: '2',
-//         height: '30px',
-//         width: '30px',
-//         opacity: '.33',
-//         cursor: 'pointer',
-//       }}
-//       onClick={onClick}
-//       icon={`ph:caret-${direction}-bold`}
-//     />
-//   );
-// };
 
 const HeroImage = ({ handleChangeSlideIndex }) => {
   const settings = {

@@ -23,6 +23,13 @@ const StyledHero = styled.section`
     justify-content: space-between;
     height: calc(100vh - 64px);
   }
+
+  @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
+    top: 10vh;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 80vh;
+  }
 `;
 
 export default StyledHero;

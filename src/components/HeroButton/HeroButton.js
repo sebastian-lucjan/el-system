@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import StyledHeroImageButton from './HeroButton.styles';
 import { websiteData } from '../../data/appTextData';
@@ -14,11 +14,10 @@ const StyledButtonContainer = styled.div`
   z-index: 2;
   overflow: hidden;
 
-  // @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
-  // }
-
+  //iPad landscape and portrait
   @media (orientation: landscape) and (${({ theme }) =>
-      theme.devices.md}) and (${maxResolutionFullSlider}) {
+      theme.devices.md}) and (${maxResolutionFullSlider}),
+    (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
     display: none;
   }
 `;
@@ -36,10 +35,6 @@ const HeroImageButton = () => {
   const handleOnClose = () => {
     setIsClicked(false);
   };
-
-  // useEffect(() => {
-  //   console.log(isClicked);
-  // }, [isClicked]);
 
   return (
     <StyledButtonContainer>

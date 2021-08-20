@@ -23,8 +23,12 @@ export const ContentWrapper = styled.div`
     padding-top: 60px;
   }
 
+  @media (orientation: landscape) {
+    width: 60vw;
+  }
+
   @media (orientation: landscape) and (${({ theme }) => theme.devices.md}) {
-    width: 80vh;
+    width: 80vw;
     padding-top: 8vh;
   }
 

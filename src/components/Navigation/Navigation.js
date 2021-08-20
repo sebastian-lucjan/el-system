@@ -7,7 +7,7 @@ import { StyledNavigation, StyledNavLink } from './Navigation.styles';
 const Navigation = ({
   visibleHamburger,
   handleChangeActiveMobileNav,
-  mobile,
+  mobile: mobileDevice,
 }) => {
   const [isActiveMobileNav, setIsActiveMobileNav] = useState(false);
   // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -18,7 +18,7 @@ const Navigation = ({
       to={name}
       spy
       smooth
-      duration={isActiveMobileNav ? 0 : 800}
+      duration={mobileDevice && isActiveMobileNav ? 0 : 800}
       key={buttonText}
       onClick={() => {
         handleChangeActiveMobileNav();
@@ -63,7 +63,7 @@ const Navigation = ({
           }}
         />
       )}
-      {(isActiveMobileNav || !mobile) && (
+      {(isActiveMobileNav || !mobileDevice) && (
         <StyledNavigation>{navButtons}</StyledNavigation>
       )}
     </>

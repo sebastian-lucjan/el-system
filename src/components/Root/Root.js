@@ -49,6 +49,9 @@ const Root = () => {
 
   window.onscroll = handleScroll;
 
+  const isSliderVisible = () =>
+    !visibleHamburger && window.innerWidth >= size.md; // TODO: look hear at the condition
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -60,7 +63,7 @@ const Root = () => {
         />
         <StartPage
           name="home"
-          visibleSlider={!visibleHamburger}
+          visibleSlider={isSliderVisible()}
           activeMobileNavigation={activeMobileNavigation}
           handleChangeActiveMobileNav={handleChangeActiveMobileNav}
         />

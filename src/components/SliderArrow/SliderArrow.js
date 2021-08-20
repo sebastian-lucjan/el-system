@@ -10,7 +10,7 @@ const StyledIcon = styled(Icon)`
   position: absolute;
   top: 50%;
   left: ${({ direction }) => (direction === 'right' ? 'calc(50vw - 50px)' : 0)};
-  transform: translateY(-50%);
+  transform: translateY(50%);
   z-index: 2;
   height: 30px;
   width: 30px;
@@ -20,22 +20,38 @@ const StyledIcon = styled(Icon)`
   @media (orientation: landscape) and (${({ theme }) =>
       theme.devices.md}) and (${maxResolutionFullSlider}) {
     left: ${({ direction }) =>
-      direction === 'right' ? 'calc(100vw - 50px)' : '20px'};
+      direction === 'right' ? 'calc(100vw - 70px)' : '20px'};
+    height: 50px;
+    width: 50px;
+    transform: translateY(-15px);
+  }
+
+  @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
+    left: ${({ direction }) =>
+      direction === 'right' ? 'calc(100vw - 70px)' : '20px'};
+    height: 50px;
+    width: 50px;
   }
 `;
 
-const SliderArrow = ({ style, direction }) => (
+const SliderArrow = ({ style, direction, onClick }) => (
   <StyledIcon
     style={{
       ...style,
     }}
+    onClick={onClick}
     direction={direction}
     icon={`ph:caret-${direction}-bold`}
   />
 );
 
+SliderArrow.defaultProps = {
+  onClick: () => {},
+};
+
 SliderArrow.propTypes = {
   direction: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default SliderArrow;

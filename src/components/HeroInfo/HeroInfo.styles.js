@@ -12,13 +12,18 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: 130px;
 
-  @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
-  }
-
+  //iPad horizontal
   @media (orientation: landscape) and (${({ theme }) =>
       theme.devices.md}) and (${maxResolutionFullSlider}) {
     width: 100vw;
     height: 64px;
+    padding: 0 20px;
+  }
+
+  //iPad portrait
+  @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
+    width: 100vw;
+    height: 12vh;
     padding: 0 20px;
   }
 `;

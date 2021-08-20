@@ -23,8 +23,15 @@ export const StyledStartPage = styled.div`
 
   @media (${({ theme }) => theme.devices.xxl}) {
     display: block;
-    img {
+    .start-page__image {
       position: static;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .start-page__image {
+      height: 60vh;
+      width: unset;
     }
   }
 `;
