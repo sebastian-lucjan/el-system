@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledShortContact = styled.div`
   position: absolute;
   bottom: 0px;
-  //left: 340px;
   left: 0px;
   transform: ${({ isClicked }) =>
     isClicked ? 'translateX(200px)' : 'translateX(-140px)'};

@@ -18,4 +18,11 @@ export const StyledParagraph = styled.div`
   @media (${({ theme }) => theme.devices.xxl}) {
     font-size: ${({ theme }) => theme.fontSize.s};
   }
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+    font-size: ${({ theme }) => theme.fontSize.s};
+  }
+
+  @media (orientation: portrait) and (${({ theme }) => theme.devices.lg}) {
+    font-size: ${({ theme }) => theme.fontSize.s};
+  }
 `;

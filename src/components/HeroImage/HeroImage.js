@@ -11,10 +11,7 @@ const StyledDot = styled.div`
   width: 8px;
   height: 8px;
   border-radius: 50%;
-
   cursor: pointer;
-
-  //transform: translateY(-3vh);
 `;
 const DotsWrapper = ({ dots }) => (
   <StyledDotsWrapper>
@@ -24,10 +21,6 @@ const DotsWrapper = ({ dots }) => (
         position: 'absolute',
         bottom: '10px',
         left: '50%',
-        margin: '10px',
-        // width: '100px',
-        // position: 'absolute',
-        // right: 'calc(25vw + 20px)',
         transform: 'translateX(-50%)',
         listStyle: 'none',
       }}

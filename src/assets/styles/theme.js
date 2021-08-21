@@ -8,6 +8,8 @@ export const size = {
   xxl: 1400,
 };
 
+export const maxResolutionFullSlider = `max-width: ${size.xl}px`;
+
 export const theme = {
   colors: {
     white: '#FFFFFF',

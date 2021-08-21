@@ -34,6 +34,14 @@ const StyledHeroImage = styled.div`
       padding: 0 20px;
     }
   }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+    .hero-image__image {
+      width: 50vw;
+      padding: 0 20px 0 0;
+      height: 50vh;
+    }
+  }
 `;
 
 export default StyledHeroImage;

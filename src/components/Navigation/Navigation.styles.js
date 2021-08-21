@@ -27,6 +27,9 @@ export const StyledNavigation = styled.div`
     align-items: center;
     height: 100%;
   }
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+    width: 33vw;
+  }
 `;
 
 const activeClass = 'active-link';
@@ -46,7 +49,7 @@ export const StyledNavLink = styled(Link).attrs({ activeClass })`
     font-weight: 300;
   }
 
-  @media (${({ theme }) => theme.devices.xxl}) {
+  @media (${({ theme }) => theme.devices.xl}) {
     font-size: 16px;
     margin: 20px;
     cursor: pointer;

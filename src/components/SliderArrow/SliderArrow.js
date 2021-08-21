@@ -29,8 +29,14 @@ const StyledIcon = styled(Icon)`
   @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
     left: ${({ direction }) =>
       direction === 'right' ? 'calc(100vw - 70px)' : '20px'};
+    transform: translateY(-50%);
     height: 50px;
     width: 50px;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+    left: ${({ direction }) =>
+      direction === 'right' ? 'calc(50vw - 70px)' : 0};
   }
 `;
 

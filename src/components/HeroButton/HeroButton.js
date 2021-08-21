@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import StyledHeroImageButton from './HeroButton.styles';
 import { websiteData } from '../../data/appTextData';
 import ShortContact from '../ShortContact/ShortContact';
-import { size } from '../../assets/styles/theme';
-
-const maxResolutionFullSlider = `max-width: ${size.xxl}px`;
+import { size, maxResolutionFullSlider } from '../../assets/styles/theme';
 
 const StyledButtonContainer = styled.div`
   position: relative;
@@ -19,6 +17,9 @@ const StyledButtonContainer = styled.div`
       theme.devices.md}) and (${maxResolutionFullSlider}),
     (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
     display: none;
+  }
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+    display: block;
   }
 `;
 

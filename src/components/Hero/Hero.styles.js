@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { size } from '../../assets/styles/theme';
-
-const maxResolutionFullSlider = `max-width: ${size.xxl}px`;
+import { maxResolutionFullSlider, size } from '../../assets/styles/theme';
 
 const StyledHero = styled.section`
   display: flex;

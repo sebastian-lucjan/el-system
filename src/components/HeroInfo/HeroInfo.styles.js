@@ -26,6 +26,15 @@ const Wrapper = styled.div`
     height: 12vh;
     padding: 0 20px;
   }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 130px;
+  }
 `;
 
 export default Wrapper;

@@ -32,8 +32,11 @@ export const ContentWrapper = styled.div`
     padding-top: 8vh;
   }
 
-  @media (${({ theme }) => theme.devices.xxl}) {
+  @media (${({ theme }) => theme.devices.xl}) {
     width: 900px;
     justify-content: center;
   }
+
+  // @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+  // }
 `;

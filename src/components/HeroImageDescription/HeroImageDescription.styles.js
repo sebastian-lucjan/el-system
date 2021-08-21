@@ -19,6 +19,9 @@ const StyledHeroImageDescription = styled.div`
     //width: 100vw;
     display: none;
   }
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+    display: block;
+  }
 `;
 
 export default StyledHeroImageDescription;

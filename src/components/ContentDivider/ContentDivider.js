@@ -31,6 +31,11 @@ const ContentDivider = styled.div`
     height: 10px;
     margin: 70px;
   }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.lg}) {
+    height: 10px;
+    margin: 70px;
+  }
 `;
 
 export default ContentDivider;
