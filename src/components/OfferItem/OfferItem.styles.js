@@ -47,4 +47,16 @@ export const StyledOfferItem = styled.div`
     font-size: ${({ theme }) => theme.fontSize.m};
     line-height: 24px;
   }
+
+  @media (${({ theme }) => theme.devices.md}) {
+    margin-bottom: 40px;
+
+
+    &:after {
+      display: none;
+    
+    .offerItem__headline {
+      //font-size: ${({ theme }) => theme.fontSize.m};
+    }
+  }
 `;

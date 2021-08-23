@@ -6,7 +6,7 @@ import { size } from '../../assets/styles/theme';
 
 const maxResolutionFullSlider = `max-width: ${size.xxl}px`;
 
-const StyledIcon = styled(Icon)`
+const StyledArrow = styled(Icon)`
   position: absolute;
   top: 50%;
   left: ${({ direction }) => (direction === 'right' ? 'calc(50vw - 50px)' : 0)};
@@ -38,10 +38,16 @@ const StyledIcon = styled(Icon)`
     left: ${({ direction }) =>
       direction === 'right' ? 'calc(50vw - 70px)' : 0};
   }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
+    left: ${({ direction }) =>
+      direction === 'right' ? 'calc(50vw - 50px)' : 0};
+    transform: translateY(-50%);
+  }
 `;
 
 const SliderArrow = ({ style, direction, onClick }) => (
-  <StyledIcon
+  <StyledArrow
     style={{
       ...style,
     }}

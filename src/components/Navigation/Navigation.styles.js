@@ -27,8 +27,13 @@ export const StyledNavigation = styled.div`
     align-items: center;
     height: 100%;
   }
+
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
     width: 33vw;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) {
+    width: 25vw;
   }
 `;
 

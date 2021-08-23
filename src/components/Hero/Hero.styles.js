@@ -7,7 +7,7 @@ const StyledHero = styled.section`
   align-items: center;
   position: absolute;
   top: 25vh;
-  width: 100vw;
+  width: 100%;
   height: 50vh;
 
   // @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
@@ -28,6 +28,12 @@ const StyledHero = styled.section`
     justify-content: space-between;
     height: 80vh;
   }
+
+  // @media (orientation: landscape) and (${({ theme }) =>
+    theme.devices.xxxl}) {
+  //   width: 1800px;
+  //   background-color: blue;
+  // }
 `;
 
 export default StyledHero;

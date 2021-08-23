@@ -40,7 +40,7 @@ const OfferItem = ({
         <OfferItemTitle
           activeOfferDescription={activeOfferDescription}
           title={title}
-          onClick={handleClickOfferItem}
+          onClick={mobile && handleClickOfferItem}
         />
       </div>
       {activeOfferDescription && (

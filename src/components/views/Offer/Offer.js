@@ -23,7 +23,6 @@ const OfferPage = ({ name, mobile }) => {
         othersArray={others}
         mobile={mobile}
         activeDescription={!mobile}
-        // toggleDescription={handleToggleDescription}
       />
     );
   });

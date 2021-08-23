@@ -16,6 +16,10 @@ const StyledOfferItemDescription = styled.div`
       transform: translateX(20px);
     }
   }
+
+  @media (${({ theme }) => theme.devices.md}) {
+    padding: 10px 0;
+  }
 `;
 
 export default StyledOfferItemDescription;

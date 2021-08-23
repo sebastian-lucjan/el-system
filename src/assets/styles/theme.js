@@ -6,6 +6,7 @@ export const size = {
   lg: 992,
   xl: 1200,
   xxl: 1400,
+  xxxl: 1900,
 };
 
 export const maxResolutionFullSlider = `max-width: ${size.xl}px`;
@@ -35,6 +36,7 @@ export const theme = {
     lg: `min-width: ${size.lg}px`,
     xl: `min-width: ${size.xl}px`,
     xxl: `min-width: ${size.xxl}px`,
+    xxxl: `min-width: ${size.xxxl}px`,
   },
   zIndex: {
     base: '0',
