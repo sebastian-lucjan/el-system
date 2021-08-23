@@ -6,8 +6,21 @@ import { elSystemInfo, websiteData } from '../../../data/appTextData';
 import ContactInfoOffice from '../../ContactInfoOffice/ContactInfoOffice';
 import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
 import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
+import photoMotorwayLights from '../../../../public/images/motorway-lights.jpeg';
 
-const Contact = ({ name }) => {
+const ContactBackground = ({ mobile }) => (
+  <>
+    {!mobile && (
+      <img
+        // style={{ position: 'absolute', bottom: '0px', left: '0px' }}
+        src={photoMotorwayLights}
+        alt="motorway lights background"
+      />
+    )}
+  </>
+);
+
+const Contact = ({ name, mobile }) => {
   const {
     contact: {
       headline,
@@ -35,7 +48,8 @@ const Contact = ({ name }) => {
   const contentTitle = headline.toUpperCase();
 
   return (
-    <ViewWrapper name={name}>
+    <ViewWrapper contact name={name}>
+      <ContactBackground mobile={mobile} />
       <ContentWrapper>
         <Title title={contentTitle} />
         <ContentDivider />
@@ -62,6 +76,11 @@ const Contact = ({ name }) => {
   );
 };
 
-Contact.propTypes = { name: PropTypes.string.isRequired };
+Contact.defaultProps = { mobile: false };
+
+Contact.propTypes = {
+  name: PropTypes.string.isRequired,
+  mobile: PropTypes.bool,
+};
 
 export default Contact;

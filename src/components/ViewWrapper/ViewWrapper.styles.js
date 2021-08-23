@@ -6,6 +6,16 @@ export const ViewWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 84px 20px 20px 20px;
+  //overflow: hidden;
+  position: relative;
+
+  img {
+    //display: none;
+    position: absolute;
+    bottom: 0;
+    max-width: 100vw;
+    max-height: 40vh;
+  }
 
   @media (${({ theme }) => theme.devices.md}) {
     padding: 105px 20px 20px 20px;

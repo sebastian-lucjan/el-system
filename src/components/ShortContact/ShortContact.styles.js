@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const StyledShortContact = styled.div`
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   transform: ${({ isClicked }) =>
     isClicked ? 'translateX(200px)' : 'translateX(-140px)'};
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   width: 340px;
   height: 60px;
   color: ${({ theme }) => theme.colors.white};
