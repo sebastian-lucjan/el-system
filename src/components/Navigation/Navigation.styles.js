@@ -1,43 +1,87 @@
 import styled from 'styled-components';
-// import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 
 export const StyledNavigation = styled.div`
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 64px);
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: calc(25vh - 64px) 0 25vh 0;
+  background-color: ${({ theme }) => theme.colors.black};
+  z-index: 3;
+
+  @media (${({ theme }) => theme.devices.md}) {
+    flex-direction: row;
+    position: static;
+    width: 50vw;
+    margin-right: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+    width: 33vw;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) {
+    width: 25vw;
+  }
 `;
 
 const activeClass = 'active-link';
 
 export const StyledNavLink = styled(Link).attrs({ activeClass })`
-  font-size: 16px;
-  font-weight: 300;
-  margin: 20px;
+  //width: 100vw;
+  //margin: 35px 0;
   cursor: pointer;
-  overflow: hidden;
-  color: white;
-  text-decoration: none;
+  font-size: ${({ theme }) => theme.fontSize.l};
 
-  &::after {
-    display: block;
-    content: '';
-    height: 2px;
-    width: 100%;
-    background-color: white;
-    transform: translateX(-110%);
-    transition: 0.3s;
+  @media (${({ theme }) => theme.devices.xs}) {
+    font-size: ${({ theme }) => theme.fontSize.xl};
   }
-  &:hover {
+
+  @media (${({ theme }) => theme.devices.md}) {
+    font-size: ${({ theme }) => theme.fontSize.s};
+    font-weight: 300;
+  }
+
+  @media (${({ theme }) => theme.devices.xl}) {
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+
     &::after {
-      transform: translateX(0%);
+      display: block;
+      content: '';
+      height: 2px;
+      width: 100%;
+      background-color: white;
+      transform: translateX(-110%);
+      transition: 0.3s;
     }
-  }
 
-  &.${activeClass} {
-    &::after {
-      transform: translateX(0%);
+    &:hover {
+      &::after {
+        transform: translateX(0%);
+      }
+    }
+
+    &.${activeClass} {
+      &::after {
+        transform: translateX(0%);
+      }
     }
   }
 `;

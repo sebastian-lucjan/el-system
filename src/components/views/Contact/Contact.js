@@ -32,8 +32,6 @@ const Contact = ({ name }) => {
     },
   } = elSystemInfo;
 
-  // const { name: nameToScroller } = websiteData;
-
   const contentTitle = headline.toUpperCase();
 
   return (

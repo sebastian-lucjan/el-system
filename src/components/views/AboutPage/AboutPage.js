@@ -24,7 +24,7 @@ const AboutPage = ({ name }) => {
   });
 
   return (
-    <ViewWrapper centered name={name}>
+    <ViewWrapper name={name}>
       <ContentWrapper>
         <Title title={contentTitle} />
         <ContentDivider />

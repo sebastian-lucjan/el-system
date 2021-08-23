@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxResolutionFullSlider, size } from '../../assets/styles/theme';
 
 const StyledHero = styled.section`
   display: flex;
@@ -6,8 +7,33 @@ const StyledHero = styled.section`
   align-items: center;
   position: absolute;
   top: 25vh;
-  width: 100vw;
+  width: 100%;
   height: 50vh;
+
+  // @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
+  //
+  // }
+  //
+  @media (orientation: landscape) and (${({ theme }) =>
+      theme.devices.md}) and (${maxResolutionFullSlider}) {
+    top: 64px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: calc(100vh - 64px);
+  }
+
+  @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
+    top: 10vh;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 80vh;
+  }
+
+  // @media (orientation: landscape) and (${({ theme }) =>
+    theme.devices.xxxl}) {
+  //   width: 1800px;
+  //   background-color: blue;
+  // }
 `;
 
 export default StyledHero;

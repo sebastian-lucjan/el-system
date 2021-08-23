@@ -7,5 +7,5 @@ export const Wrapper = styled.header`
   height: 64px;
   width: 100vw;
   background-color: ${({ theme }) => theme.colors.black};
-  z-index: 1;
+  z-index: 3;
 `;
