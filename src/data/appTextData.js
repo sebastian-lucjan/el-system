@@ -47,7 +47,7 @@ export const elSystemInfo = {
         sliderImgName: 'factory.jpeg',
       },
       {
-        headline: 'Dworactwo techniczne, nadzory inwestorskie',
+        headline: 'Doradztwo techniczne, nadzory inwestorskie',
         iconName: 'mdi:help-network-outline',
         description:
           'Oferujemy kompleksowy i fachowy nadzór nad wszelkiego rodzaju pracami elektroinstalacyjnymi. Świadczymy usługi w zakresie pełnienia nadzoru inwestorskiego i kierowania robotami budowlanymi.',

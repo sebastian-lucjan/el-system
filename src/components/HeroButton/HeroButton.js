@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import StyledHeroImageButton from './HeroButton.styles';
 import { websiteData } from '../../data/appTextData';
 import ShortContact from '../ShortContact/ShortContact';
+import { size, maxResolutionFullSlider } from '../../assets/styles/theme';
 
 const StyledButtonContainer = styled.div`
   position: relative;
@@ -10,6 +11,16 @@ const StyledButtonContainer = styled.div`
   height: 60px;
   z-index: 2;
   overflow: hidden;
+
+  //iPad landscape and portrait
+  @media (orientation: landscape) and (${({ theme }) =>
+      theme.devices.md}) and (${maxResolutionFullSlider}),
+    (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
+    display: none;
+  }
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
+    display: block;
+  }
 `;
 
 const HeroImageButton = () => {
@@ -25,10 +36,6 @@ const HeroImageButton = () => {
   const handleOnClose = () => {
     setIsClicked(false);
   };
-
-  // useEffect(() => {
-  //   console.log(isClicked);
-  // }, [isClicked]);
 
   return (
     <StyledButtonContainer>

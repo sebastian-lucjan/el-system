@@ -7,9 +7,10 @@ import OfferItem from '../../OfferItem/OfferItem';
 import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
 import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
 
-const OfferPage = ({ name }) => {
+const OfferPage = ({ name, mobile }) => {
   const { offer: offersData } = elSystemInfo;
   const contentTitle = offersData.headline.toUpperCase();
+
   const offers = offersData.offers.map((offer, index) => {
     const key = `offer-nr-${index + 1}`;
     const { iconName, headline, description, others } = offer;
@@ -20,6 +21,8 @@ const OfferPage = ({ name }) => {
         iconName={iconName}
         description={description}
         othersArray={others}
+        mobile={mobile}
+        activeDescription={!mobile}
       />
     );
   });
@@ -35,6 +38,10 @@ const OfferPage = ({ name }) => {
   );
 };
 
-OfferPage.propTypes = { name: PropTypes.string.isRequired };
+OfferPage.defaultProps = { mobile: false };
+OfferPage.propTypes = {
+  name: PropTypes.string.isRequired,
+  mobile: PropTypes.bool,
+};
 
 export default OfferPage;
