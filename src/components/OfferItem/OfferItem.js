@@ -17,7 +17,9 @@ const OfferItem = ({
     useState(activeDescription);
 
   const handleClickOfferItem = () => {
-    setActiveOfferDescription(!activeOfferDescription);
+    if (mobile) {
+      setActiveOfferDescription(!activeOfferDescription);
+    }
   };
 
   return (
@@ -40,7 +42,7 @@ const OfferItem = ({
         <OfferItemTitle
           activeOfferDescription={activeOfferDescription}
           title={title}
-          onClick={mobile && handleClickOfferItem}
+          onClick={handleClickOfferItem}
         />
       </div>
       {activeOfferDescription && (
