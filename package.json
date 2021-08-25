@@ -52,6 +52,7 @@
     "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
+    "imagemin-mozjpeg": "^9.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-animated-burgers": "^1.2.8",
