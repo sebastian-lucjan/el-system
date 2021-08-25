@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 130px;
+  padding: 130px 65px 130px 130px;
 
   //iPad horizontal
   @media (orientation: landscape) and (${({ theme }) =>
@@ -33,7 +33,15 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 130px;
+    padding: 90px 65px 90px 130px;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
+    padding: 100px 160px 100px 160px;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) {
+    padding: 160px 160px 160px 160px;
   }
 `;
 

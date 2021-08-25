@@ -1,10 +1,16 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import StyledHeroImage from './HeroImage.styles';
-import photoPhotovoltaic from '../../../public/images/photovoltaic-power.jpeg';
-import photoFactory from '../../../public/images/factory.jpeg';
-import photoInspection from '../../../public/images/inspection-person.jpeg';
+import photoPhotovoltaicM from '../../../public/images/photovoltaic-power-960-639.jpeg';
+import photoPhotovoltaicL from '../../../public/images/photovoltaic-power-1200-799.jpeg';
+import photoPhotovoltaicXL from '../../../public/images/photovoltaic-power-1920-1080.jpeg';
+import photoFactoryM from '../../../public/images/factory-960-640.jpeg';
+import photoFactoryL from '../../../public/images/factory-1200-800.jpeg';
+import photoFactoryXL from '../../../public/images/factory-1920-1280.jpeg';
+import photoInspectionM from '../../../public/images/inspection-person-960-640.jpeg';
+import photoInspectionL from '../../../public/images/inspection-person-1200-800.jpeg';
+import photoInspectionXL from '../../../public/images/inspection-person-1920-1280.jpeg';
 import SliderArrow from '../SliderArrow/SliderArrow';
 
 const StyledDot = styled.div`
@@ -78,14 +84,48 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
       <Slider {...settings}>
         <img
           className="hero-image__image"
-          src={photoPhotovoltaic}
-          alt="fotowoltaika"
+          srcSet={`
+          ${photoPhotovoltaicM} 960w,
+          ${photoPhotovoltaicL} 1200w,
+          ${photoPhotovoltaicXL} 1920w,
+          `}
+          sizes="
+          (max-width: 1920px) 960px,
+          (max-width: 2400px) 1200px,
+          1920px,
+          "
+          src={photoPhotovoltaicXL}
+          alt="instalacje fotowoltaiczne"
         />
-        <img className="hero-image__image" src={photoFactory} alt="factory" />
         <img
           className="hero-image__image"
-          src={photoInspection}
-          alt="inspection"
+          srcSet={`
+          ${photoFactoryM} 960w,
+          ${photoFactoryL} 1200w,
+          ${photoFactoryXL} 1920w,
+          `}
+          sizes="
+          (max-width: 1920px) 960px,
+          (max-width: 2400px) 1200px,
+          1920px,
+          "
+          src={photoFactoryXL}
+          alt="rozwiązania dla przemysłu"
+        />
+        <img
+          className="hero-image__image"
+          srcSet={`
+          ${photoInspectionM} 960w,
+          ${photoInspectionL} 1200w,
+          ${photoInspectionXL} 1920w,
+          `}
+          sizes="
+          (max-width: 1920px) 960px,
+          (max-width: 2400px) 1200px,
+          1920px,
+          "
+          src={photoInspectionXL}
+          alt="doradztwo techniczne nadzory inwestoreskie"
         />
       </Slider>
     </StyledHeroImage>
@@ -93,5 +133,3 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
 };
 
 export default HeroImage;
-
-// TODO: add alts to images
