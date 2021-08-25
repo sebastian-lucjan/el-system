@@ -7,12 +7,12 @@ const StyledOfferItemTitle = styled.div`
   cursor: pointer;
 
   @media (${({ theme }) => theme.devices.md}) {
-    // font-size: ${({ theme }) => theme.fontSize.s};
     height: 100%;
     display: flex;
     align-items: flex-end;
     padding-bottom: 10px;
     font-weight: 400;
+    cursor: text;
   }
 `;
 

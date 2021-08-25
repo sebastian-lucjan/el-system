@@ -43,15 +43,15 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: ['url-loader?limit=10000', 'img-loader'],
-      },
-      {
-        test: /\.(png|jpg|gif)$/i,
         use: [
+          'file-loader',
           {
-            loader: 'url-loader',
+            loader: 'image-webpack-loader',
             options: {
-              limit: 8192,
+              mozjpeg: {
+                quality: '75',
+                progressive: true,
+              },
             },
           },
         ],
@@ -66,7 +66,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'public/images', to: 'images' },
+        // { from: 'public/images', to: 'images' },
         { from: 'public/icons', to: 'icons' },
       ],
     }),
