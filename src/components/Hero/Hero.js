@@ -30,8 +30,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-/*
-  todo: propsy sterujace wewnetrznymi componentami -> 'slider',
-   - update po zmianie wartosci - zmiana obrazka i informacji,
-*/

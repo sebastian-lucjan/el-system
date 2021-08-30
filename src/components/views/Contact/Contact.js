@@ -2,23 +2,38 @@ import React from 'react';
 import * as PropTypes from 'prop-types';
 import Title from '../../Title/Title';
 import ContentDivider from '../../ContentDivider/ContentDivider';
-import { elSystemInfo, websiteData } from '../../../data/appTextData';
+import { elSystemInfo } from '../../../data/appTextData';
 import ContactInfoOffice from '../../ContactInfoOffice/ContactInfoOffice';
 import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
 import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
-import photoMotorwayLights from '../../../../public/images/motorway-lights.jpeg';
+import photoMotorwayLightsM from '../../../../public/images/motorway-lights-1200.jpeg';
+import photoMotorwayLightsL from '../../../../public/images/motorway-lights-1920.jpeg';
 
 const ContactBackground = ({ mobile }) => (
   <>
     {!mobile && (
       <img
-        // style={{ position: 'absolute', bottom: '0px', left: '0px' }}
-        src={photoMotorwayLights}
+        className="hero-image__image"
+        srcSet={`
+          ${photoMotorwayLightsM} 960w,
+          ${photoMotorwayLightsL} 1200w,
+          `}
+        sizes="
+          (max-width: 1920px) 960px,
+          1920px,
+          "
+        src={photoMotorwayLightsL}
         alt="motorway lights background"
       />
     )}
   </>
 );
+
+ContactBackground.defaultProps = { mobile: false };
+
+ContactBackground.propTypes = {
+  mobile: PropTypes.bool,
+};
 
 const Contact = ({ name, mobile }) => {
   const {
