@@ -36,7 +36,4 @@ export const ContentWrapper = styled.div`
     width: 900px;
     justify-content: center;
   }
-
-  // @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
-  // }
 `;

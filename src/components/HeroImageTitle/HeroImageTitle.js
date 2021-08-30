@@ -1,8 +1,11 @@
 import React from 'react';
+import * as PropTypes from 'prop-types';
 import StyledHeroImageTitle from './HeroImageTitle.styles';
 
 const HeroImageTitle = ({ headline }) => (
   <StyledHeroImageTitle>{headline.toUpperCase()}</StyledHeroImageTitle>
 );
+
+HeroImageTitle.propTypes = { headline: PropTypes.string.isRequired };
 
 export default HeroImageTitle;

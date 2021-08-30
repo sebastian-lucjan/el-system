@@ -11,10 +11,6 @@ export const StyledParagraph = styled.div`
     line-height: 24px;
   }
 
-  // @media (${({ theme }) => theme.devices.md}) {
-  //
-  // }
-
   @media (${({ theme }) => theme.devices.xxl}) {
     font-size: ${({ theme }) => theme.fontSize.s};
   }

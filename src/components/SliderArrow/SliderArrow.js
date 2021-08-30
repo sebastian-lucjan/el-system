@@ -19,29 +19,25 @@ const StyledArrow = styled(Icon)`
 
   @media (orientation: landscape) and (${({ theme }) =>
       theme.devices.md}) and (${maxResolutionFullSlider}) {
-    left: ${({ direction }) =>
-      direction === 'right' ? 'calc(100vw - 70px)' : '20px'};
+    left: ${({ direction }) => (direction === 'right' ? 'calc(100vw - 70px)' : '20px')};
     height: 50px;
     width: 50px;
     transform: translateY(-15px);
   }
 
   @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
-    left: ${({ direction }) =>
-      direction === 'right' ? 'calc(100vw - 70px)' : '20px'};
+    left: ${({ direction }) => (direction === 'right' ? 'calc(100vw - 70px)' : '20px')};
     transform: translateY(-50%);
     height: 50px;
     width: 50px;
   }
 
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
-    left: ${({ direction }) =>
-      direction === 'right' ? 'calc(50vw - 70px)' : 0};
+    left: ${({ direction }) => (direction === 'right' ? 'calc(50vw - 70px)' : 0)};
   }
 
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
-    left: ${({ direction }) =>
-      direction === 'right' ? 'calc(50vw - 50px)' : 0};
+    left: ${({ direction }) => (direction === 'right' ? 'calc(50vw - 50px)' : 0)};
     transform: translateY(-50%);
   }
 `;
@@ -59,11 +55,13 @@ const SliderArrow = ({ style, direction, onClick }) => (
 
 SliderArrow.defaultProps = {
   onClick: () => {},
+  style: {},
 };
 
 SliderArrow.propTypes = {
   direction: PropTypes.string.isRequired,
   onClick: PropTypes.func,
+  style: PropTypes.objectOf(PropTypes.string),
 };
 
 export default SliderArrow;
