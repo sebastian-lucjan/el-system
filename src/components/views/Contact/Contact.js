@@ -23,7 +23,7 @@ const ContactBackground = ({ mobile }) => (
           1920px,
           "
         src={photoMotorwayLightsL}
-        alt="motorway lights background"
+        alt="droga nocą rozmazane światła"
       />
     )}
   </>
