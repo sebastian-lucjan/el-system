@@ -27,21 +27,28 @@ const Wrapper = styled.div`
     padding: 0 20px;
   }
 
+  //iPad PRO (1366x1024) landscape
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
     width: 50%;
     height: 50vh;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 90px 65px 90px 130px;
+    padding: 130px 65px 130px 130px;
   }
 
+  //Desktop landscape for small resolution like laptop
+  @media (${({ theme }) =>
+      theme.devices.xl}) and (${`max-width: ${size.xxl}px`}) and (${`max-height: ${size.md}px`}) {
+    padding: 65px 65px 65px 130px;
+  }
+
+  //Desktop landscape for medium resolutions
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
     padding: 100px 160px 100px 160px;
   }
 
+  //Desktop landscape for high resolutions
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) {
-    padding: 160px 160px 160px 160px;
+    padding: 160px;
   }
 `;
 

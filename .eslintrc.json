@@ -15,7 +15,7 @@
   "rules": {
     "prettier/prettier": [
       "error",
-      { "endOfLine": "auto", "singleQuote": true }
+      { "endOfLine": "auto", "singleQuote": true, "printWidth": 100 }
     ],
     "no-unused-vars": "warn",
     "no-use-before-define": ["error", { "functions": false, "classes": false }],

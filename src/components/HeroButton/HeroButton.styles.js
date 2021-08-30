@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 const StyledHeroImageButton = styled.button`
   border: none;
-  color: ${({ isClicked, theme }) =>
-    isClicked ? theme.colors.white : theme.colors.black};
+  color: ${({ isClicked, theme }) => (isClicked ? theme.colors.white : theme.colors.black)};
   width: 200px;
   height: 100%;
   background-color: ${({ isClicked, theme }) =>

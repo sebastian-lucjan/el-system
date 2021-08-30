@@ -13,11 +13,13 @@ export const StyledTitle = styled.h1`
   }
 
   @media (${({ theme }) => theme.devices.xl}) {
+    font-size: ${({ theme }) => theme.fontSize.xxl};
+  }
+
+  @media (${({ theme }) => theme.devices.xxxl}) {
     font-size: ${({ theme }) => theme.fontSize.xxxl};
-    font-weight: 700;
   }
   @media (orientation: portrait) and (${({ theme }) => theme.devices.lg}) {
     font-size: ${({ theme }) => theme.fontSize.xxl};
-    font-weight: 700;
   }
 `;

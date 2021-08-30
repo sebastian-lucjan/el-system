@@ -17,6 +17,12 @@ const StyledHeroImageDescription = styled.div`
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
     display: block;
   }
+
+  //Desktop landscape for small resolution like laptop
+  @media (${({ theme }) =>
+      theme.devices.xl}) and (${`max-width: ${size.xxl}px`}) and (${`max-height: ${size.md}px`}) {
+    font-size: ${({ theme }) => theme.fontSize.s};
+  }
 `;
 
 export default StyledHeroImageDescription;
