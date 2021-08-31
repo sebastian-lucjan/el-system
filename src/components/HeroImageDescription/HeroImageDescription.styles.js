@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { size } from '../../assets/styles/theme';
-
-const maxResolutionFullSlider = `max-width: ${size.xxl}px`;
+import { size, maxResolutionFullSlider } from '../../assets/styles/theme';
 
 const StyledHeroImageDescription = styled.div`
   width: 100%;
@@ -20,7 +18,8 @@ const StyledHeroImageDescription = styled.div`
 
   //Desktop landscape for small resolution like laptop
   @media (${({ theme }) =>
-      theme.devices.xl}) and (${`max-width: ${size.xxl}px`}) and (${`max-height: ${size.md}px`}) {
+      theme.devices
+        .xl}) and (${`max-width: ${size.width.xxl}px`}) and (${`max-height: ${size.width.md}px`}) {
     font-size: ${({ theme }) => theme.fontSize.s};
   }
 `;

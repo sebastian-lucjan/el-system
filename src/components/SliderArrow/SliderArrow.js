@@ -2,34 +2,27 @@ import { Icon } from '@iconify/react';
 import React from 'react';
 import styled from 'styled-components';
 import { PropTypes } from 'prop-types';
-import { size } from '../../assets/styles/theme';
-
-const maxResolutionFullSlider = `max-width: ${size.xxl}px`;
+import { size, maxResolutionLargeArrows } from '../../assets/styles/theme';
 
 const StyledArrow = styled(Icon)`
   position: absolute;
   top: 50%;
   left: ${({ direction }) => (direction === 'right' ? 'calc(50vw - 50px)' : 0)};
   transform: translateY(50%);
-  z-index: 2;
-  height: 30px;
-  width: 30px;
+  z-index: ${({ theme }) => theme.zIndex.highPriority};
+  height: ${size.arrowSlider.sm};
+  width: ${size.arrowSlider.sm};
   opacity: 0.33;
   cursor: pointer;
 
+  //
   @media (orientation: landscape) and (${({ theme }) =>
-      theme.devices.md}) and (${maxResolutionFullSlider}) {
+      theme.devices.md}) and (${maxResolutionLargeArrows}),
+    (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
     left: ${({ direction }) => (direction === 'right' ? 'calc(100vw - 70px)' : '20px')};
-    height: 50px;
-    width: 50px;
-    transform: translateY(-15px);
-  }
-
-  @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
-    left: ${({ direction }) => (direction === 'right' ? 'calc(100vw - 70px)' : '20px')};
+    height: ${size.arrowSlider.lg};
+    width: ${size.arrowSlider.lg};
     transform: translateY(-50%);
-    height: 50px;
-    width: 50px;
   }
 
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {

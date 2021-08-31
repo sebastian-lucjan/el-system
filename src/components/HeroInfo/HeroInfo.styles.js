@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { size } from '../../assets/styles/theme';
 
-const maxResolutionFullSlider = `max-width: ${size.xxl}px`;
+const maxResolutionFullSlider = `max-width: ${size.width.xxl}px`;
 
 const Wrapper = styled.div`
   position: relative;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: 130px 65px 130px 130px;
 
-  //iPad horizontal
+  //iPad and large mobile landscape
   @media (orientation: landscape) and (${({ theme }) =>
       theme.devices.md}) and (${maxResolutionFullSlider}) {
     width: 100%;
@@ -37,7 +37,8 @@ const Wrapper = styled.div`
 
   //Desktop landscape for small resolution like laptop
   @media (${({ theme }) =>
-      theme.devices.xl}) and (${`max-width: ${size.xxl}px`}) and (${`max-height: ${size.md}px`}) {
+      theme.devices
+        .xl}) and (${`max-width: ${size.width.xxl}px`}) and (${`max-height: ${size.width.md}px`}) {
     padding: 65px 65px 65px 130px;
   }
 

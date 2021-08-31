@@ -15,7 +15,7 @@ import Header from '../Header/Header';
 
 // const AppDataContext = React.createContext({});
 
-const borderMediaValue = size.md;
+const borderMediaValue = size.width.md;
 
 const checkNeedBurgerMenu = () => window.innerWidth < borderMediaValue;
 
@@ -49,7 +49,7 @@ const Root = () => {
 
   window.onscroll = handleScroll;
 
-  const isSliderVisible = () => !visibleHamburger && window.innerWidth >= size.md;
+  const isSliderVisible = () => !visibleHamburger && window.innerWidth >= size.width.md;
   // TODO: look hear at the condition
 
   return (
