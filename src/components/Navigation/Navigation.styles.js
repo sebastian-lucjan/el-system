@@ -2,36 +2,40 @@ import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
 export const StyledNavigation = styled.div`
+  // mobile
   position: fixed;
-  top: 64px;
+  top: ${({ theme }) => theme.headerHeight};
   left: 0;
-  width: 100%;
-  height: calc(100% - 64px);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: calc(25vh - 64px) 0 25vh 0;
+  width: 100%;
+  height: calc(100% - ${({ theme }) => theme.headerHeight});
+  overflow: hidden;
+  padding: calc(25vh - ${({ theme }) => theme.headerHeight}) 0 25vh 0;
   background-color: ${({ theme }) => theme.colors.black};
-  z-index: 3;
+  z-index: ${({ theme }) => theme.zIndex.superiorPriority};
 
+  //iPad and large mobile landscape
   @media (${({ theme }) => theme.devices.md}) {
-    flex-direction: row;
     position: static;
-    width: 50vw;
-    margin-right: 20px;
-    padding: 0;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 50vw;
     height: 100%;
+    margin-right: ${({ theme }) => theme.margin};
+    padding: 0;
   }
 
+  //Desktop landscape for medium resolution
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
     width: 33vw;
   }
 
+  //Desktop landscape for high resolution
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) {
     width: 25vw;
   }
@@ -40,26 +44,28 @@ export const StyledNavigation = styled.div`
 const activeClass = 'active-link';
 
 export const StyledNavLink = styled(Link).attrs({ activeClass })`
-  //width: 100vw;
-  //margin: 35px 0;
+  // mobile small
   cursor: pointer;
   font-size: ${({ theme }) => theme.fontSize.l};
 
+  // mobile medium
   @media (${({ theme }) => theme.devices.xs}) {
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
 
+  //iPad portrait / mobile large landscape
   @media (${({ theme }) => theme.devices.md}) {
     font-size: ${({ theme }) => theme.fontSize.s};
-    font-weight: 300;
+    font-weight: ${({ theme }) => theme.fontWeight.extraLight};
   }
 
+  //Desktop landscape for small resolution like laptop
   @media (${({ theme }) => theme.devices.xl}) {
-    font-size: 16px;
-    margin: 20px;
+    font-size: ${({ theme }) => theme.fontSize.s};
+    margin: ${({ theme }) => theme.margin};
     cursor: pointer;
     overflow: hidden;
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     text-decoration: none;
 
     &::after {
@@ -67,7 +73,7 @@ export const StyledNavLink = styled(Link).attrs({ activeClass })`
       content: '';
       height: 2px;
       width: 100%;
-      background-color: white;
+      background-color: ${({ theme }) => theme.colors.white};
       transform: translateX(-110%);
       transition: 0.3s;
     }

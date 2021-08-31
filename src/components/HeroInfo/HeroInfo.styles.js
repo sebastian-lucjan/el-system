@@ -4,6 +4,7 @@ import { size } from '../../assets/styles/theme';
 const maxResolutionFullSlider = `max-width: ${size.width.xxl}px`;
 
 const Wrapper = styled.div`
+  // mobile
   position: relative;
   width: 50%;
   height: 50vh;
@@ -42,12 +43,12 @@ const Wrapper = styled.div`
     padding: 65px 65px 65px 130px;
   }
 
-  //Desktop landscape for medium resolutions
+  //Desktop landscape for medium resolution
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
     padding: 100px 160px 100px 160px;
   }
 
-  //Desktop landscape for high resolutions
+  //Desktop landscape for high resolution
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) {
     padding: 160px;
   }

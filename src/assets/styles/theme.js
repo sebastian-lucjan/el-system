@@ -35,6 +35,7 @@ export const theme = {
     xxl: '36px',
     xxxl: '48px',
   },
+  fontFamily: 'Red Hat Display, Arial, sans-serif',
   fontWeight: {
     extraLight: 300,
     light: 400,
@@ -60,4 +61,3 @@ export const theme = {
     superiorPriority: '3',
   },
 };
-// todo: usunac zbedne kolory i wielkosci czcionek
