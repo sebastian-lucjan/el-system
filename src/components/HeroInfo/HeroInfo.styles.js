@@ -4,28 +4,28 @@ import { size } from '../../assets/styles/theme';
 const maxResolutionFullSlider = `max-width: ${size.width.xxl}px`;
 
 const Wrapper = styled.div`
-  // mobile
+  // base
   position: relative;
   width: 50%;
   height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 130px 65px 130px 130px;
+  padding: 120px 60px 120px 120px;
 
   //iPad and large mobile landscape
   @media (orientation: landscape) and (${({ theme }) =>
       theme.devices.md}) and (${maxResolutionFullSlider}) {
     width: 100%;
-    height: 64px;
-    padding: 0 20px;
+    height: ${({ theme }) => theme.headerHeight};
+    padding: 0 ${({ theme }) => theme.baseSpacing};
   }
 
   //iPad portrait
   @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
     width: 100%;
     height: 12vh;
-    padding: 0 20px;
+    padding: 0 ${({ theme }) => theme.baseSpacing};
   }
 
   //iPad PRO (1366x1024) landscape
@@ -33,14 +33,14 @@ const Wrapper = styled.div`
     width: 50%;
     height: 50vh;
     flex-direction: column;
-    padding: 130px 65px 130px 130px;
+    padding: 120px 60px 120px 120px;
   }
 
   //Desktop landscape for small resolution like laptop
   @media (${({ theme }) =>
       theme.devices
         .xl}) and (${`max-width: ${size.width.xxl}px`}) and (${`max-height: ${size.width.md}px`}) {
-    padding: 65px 65px 65px 130px;
+    padding: 60px 60px 60px 120px;
   }
 
   //Desktop landscape for medium resolution

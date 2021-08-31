@@ -26,7 +26,7 @@ export const StyledNavigation = styled.div`
     align-items: center;
     width: 50vw;
     height: 100%;
-    margin-right: ${({ theme }) => theme.margin};
+    margin-right: ${({ theme }) => theme.baseSpacing};
     padding: 0;
   }
 
@@ -62,7 +62,7 @@ export const StyledNavLink = styled(Link).attrs({ activeClass })`
   //Desktop landscape for small resolution like laptop
   @media (${({ theme }) => theme.devices.xl}) {
     font-size: ${({ theme }) => theme.fontSize.s};
-    margin: ${({ theme }) => theme.margin};
+    margin: ${({ theme }) => theme.baseSpacing};
     cursor: pointer;
     overflow: hidden;
     color: ${({ theme }) => theme.colors.white};

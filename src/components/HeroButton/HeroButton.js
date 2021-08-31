@@ -6,10 +6,11 @@ import ShortContact from '../ShortContact/ShortContact';
 import { size, maxResolutionFullSlider } from '../../assets/styles/theme';
 
 const StyledButtonContainer = styled.div`
+  //base
   position: relative;
   width: 700px;
   height: 60px;
-  z-index: 2;
+  z-index: ${({ theme }) => theme.zIndex.highPriority};
   overflow: hidden;
 
   //iPad landscape and portrait
@@ -18,6 +19,8 @@ const StyledButtonContainer = styled.div`
     (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
     display: none;
   }
+
+  //Desktop landscape for small resolution like laptop
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
     display: block;
   }

@@ -13,7 +13,7 @@ const ContactBackground = ({ mobile }) => (
   <>
     {!mobile && (
       <img
-        className="hero-image__image"
+        className="image contact__image"
         srcSet={`
           ${photoMotorwayLightsM} 960w,
           ${photoMotorwayLightsL} 1200w,

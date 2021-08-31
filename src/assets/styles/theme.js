@@ -23,6 +23,7 @@ export const theme = {
   colors: {
     white: '#FFFFFF',
     blue: '#47A6ff',
+    gray: '#777777',
     black: '#121212',
   },
   fontSize: {
@@ -43,7 +44,8 @@ export const theme = {
     bold: 700,
   },
   headerHeight: '64px',
-  margin: '20px',
+  baseSpacing: '20px',
+  transition: '0.3s',
   devices: {
     xxs: `min-width: ${size.width.xxs}px`,
     xs: `min-width: ${size.width.xs}px`,
@@ -55,6 +57,7 @@ export const theme = {
     xxxl: `min-width: ${size.width.xxxl}px`,
   },
   zIndex: {
+    hidden: '-1',
     base: '0',
     priority: '1',
     highPriority: '2',
