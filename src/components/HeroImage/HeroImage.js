@@ -99,6 +99,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
           1920px,
           "
           src={photoPhotovoltaicXL}
+          rel="preload"
           alt="instalacje fotowoltaiczne"
         />
         <img
@@ -114,6 +115,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
           1920px,
           "
           src={photoFactoryXL}
+          loading="lazy"
           alt="rozwiązania dla przemysłu"
         />
         <img
@@ -129,6 +131,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
           1920px,
           "
           src={photoInspectionXL}
+          loading="lazy"
           alt="doradztwo techniczne nadzory inwestoreskie"
         />
       </Slider>

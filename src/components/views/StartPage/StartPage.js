@@ -9,7 +9,7 @@ const StartPage = ({ name, visibleSlider }) => (
     {visibleSlider ? (
       <Hero />
     ) : (
-      <img className="image start-page__image" src={bulbImg} alt="żarówka" />
+      <img className="image start-page__image" src={bulbImg} alt="żarówka" loading="lazy" />
     )}
   </StyledStartPage>
 );
