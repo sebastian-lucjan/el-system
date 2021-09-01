@@ -6,7 +6,7 @@ const StyledHeroImageDescription = styled.div`
   width: 100%;
   font-size: ${({ theme }) => theme.fontSize.m};
   letter-spacing: 0.5px;
-  font-weight: 300;
+  font-weight: ${({ theme }) => theme.fontWeight.extraLight};
 
   //iPad and large mobile landscape
   @media (orientation: landscape) and (${({ theme }) =>

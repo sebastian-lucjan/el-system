@@ -3,13 +3,13 @@ import { size, maxResolutionFullSlider } from '../../assets/styles/theme';
 
 const StyledHeroImageTitle = styled.div`
   font-size: ${({ theme }) => theme.fontSize.xl};
-  font-weight: 300;
+  font-weight: ${({ theme }) => theme.fontWeight.extraLight};
 
   @media (orientation: landscape) and (${({ theme }) =>
       theme.devices.md}) and (${maxResolutionFullSlider}) {
     display: flex;
     align-items: center;
-    height: 64px;
+    height: ${({ theme }) => theme.headerHeight};
   }
 `;
 

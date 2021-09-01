@@ -13,7 +13,7 @@ const StyledHero = styled.section`
   //iPad and large mobile landscape
   @media (orientation: landscape) and (${({ theme }) =>
       theme.devices.md}) and (${maxResolutionFullSlider}) {
-    top: 64px;
+    top: ${({ theme }) => theme.headerHeight};
     flex-direction: column-reverse;
     justify-content: space-between;
     height: calc(100vh - 64px);

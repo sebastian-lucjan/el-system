@@ -8,10 +8,10 @@ const StyledHeroImageButton = styled.button`
   background-color: ${({ isClicked, theme }) =>
     isClicked ? theme.colors.blue : theme.colors.white};
   color: ${({ isClicked, theme }) => (isClicked ? theme.colors.white : theme.colors.black)};
-  text-transform: uppercase;
   font-family: ${({ theme }) => theme.fontFamily};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   transition: ${({ theme }) => theme.transition};
+  text-transform: uppercase;
   cursor: pointer;
   z-index: ${({ theme }) => theme.zIndex.highPriority};
 
