@@ -1,21 +1,29 @@
 export const size = {
-  xxs: 360,
-  xs: 420,
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200,
-  xxl: 1400,
-  xxxl: 1900,
+  width: {
+    xxs: 360,
+    xs: 420,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+    xxl: 1400,
+    xxxl: 1900,
+  },
+  arrowSlider: {
+    sm: '30px',
+    lg: '50px',
+  },
 };
 
-export const maxResolutionFullSlider = `max-width: ${size.xl}px`;
+export const maxResolutionFullSlider = `max-width: ${size.width.xl}px`;
+
+export const maxResolutionLargeArrows = `max-width: ${size.width.xxl}px`;
 
 export const theme = {
   colors: {
     white: '#FFFFFF',
-    lightGray: '#DDDDDD',
-    blue: '#47a6ff',
+    blue: '#47A6ff',
+    gray: '#777777',
     black: '#121212',
   },
   fontSize: {
@@ -28,22 +36,31 @@ export const theme = {
     xxl: '36px',
     xxxl: '48px',
   },
+  fontFamily: 'Red Hat Display, Arial, sans-serif',
+  fontWeight: {
+    extraLight: 300,
+    light: 400,
+    semiBold: 600,
+    bold: 700,
+  },
+  headerHeight: '64px',
+  baseSpacing: '20px',
+  transition: '0.3s',
   devices: {
-    xxs: `min-width: ${size.xxs}px`,
-    xs: `min-width: ${size.xs}px`,
-    sm: `min-width: ${size.sm}px`,
-    md: `min-width: ${size.md}px`,
-    lg: `min-width: ${size.lg}px`,
-    xl: `min-width: ${size.xl}px`,
-    xxl: `min-width: ${size.xxl}px`,
-    xxxl: `min-width: ${size.xxxl}px`,
+    xxs: `min-width: ${size.width.xxs}px`,
+    xs: `min-width: ${size.width.xs}px`,
+    sm: `min-width: ${size.width.sm}px`,
+    md: `min-width: ${size.width.md}px`,
+    lg: `min-width: ${size.width.lg}px`,
+    xl: `min-width: ${size.width.xl}px`,
+    xxl: `min-width: ${size.width.xxl}px`,
+    xxxl: `min-width: ${size.width.xxxl}px`,
   },
   zIndex: {
+    hidden: '-1',
     base: '0',
     priority: '1',
     highPriority: '2',
     superiorPriority: '3',
   },
 };
-
-// todo: usunac zbedne kolory i wielkosci czcionek

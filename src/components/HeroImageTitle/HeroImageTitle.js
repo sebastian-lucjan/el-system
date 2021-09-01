@@ -1,12 +1,11 @@
 import React from 'react';
-// import { elSystemInfo } from '../../data/appTextData';
+import * as PropTypes from 'prop-types';
 import StyledHeroImageTitle from './HeroImageTitle.styles';
 
 const HeroImageTitle = ({ headline }) => (
   <StyledHeroImageTitle>{headline.toUpperCase()}</StyledHeroImageTitle>
 );
 
-export default HeroImageTitle;
+HeroImageTitle.propTypes = { headline: PropTypes.string.isRequired };
 
-/* TODO: zmieniajaca sie wielkosc czcionki w zaleznosci od dlugosci tekstu
- */
+export default HeroImageTitle;

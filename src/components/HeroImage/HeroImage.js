@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
+import * as PropTypes from 'prop-types';
 import StyledHeroImage from './HeroImage.styles';
 import photoPhotovoltaicM from '../../../public/images/photovoltaic-power-960-639.jpeg';
 import photoPhotovoltaicL from '../../../public/images/photovoltaic-power-1200-799.jpeg';
@@ -19,6 +20,7 @@ const StyledDot = styled.div`
   border-radius: 50%;
   cursor: pointer;
 `;
+
 const DotsWrapper = ({ dots }) => (
   <StyledDotsWrapper>
     <ul
@@ -35,6 +37,11 @@ const DotsWrapper = ({ dots }) => (
     </ul>
   </StyledDotsWrapper>
 );
+
+DotsWrapper.propTypes = {
+  dots: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
 const StyledDotsWrapper = styled.div`
   position: relative;
   & li {
@@ -70,17 +77,14 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
     pauseOnHover: true,
     beforeChange: (current, next) => handleChangeSlideIndex(next),
     appendDots: (dots) => <DotsWrapper dots={dots} />,
-    customPaging: (i) => <StyledDot />,
+    customPaging: () => <StyledDot />,
     nextArrow: <SliderArrow direction="right" />,
     prevArrow: <SliderArrow direction="left" />,
   };
 
-  // useEffect(() => {
-  // console.log(slideIndex);
-  // }, [slideIndex]);
-
   return (
     <StyledHeroImage>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Slider {...settings}>
         <img
           className="hero-image__image"
@@ -131,5 +135,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
     </StyledHeroImage>
   );
 };
+
+HeroImage.propTypes = { handleChangeSlideIndex: PropTypes.func.isRequired };
 
 export default HeroImage;

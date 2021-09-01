@@ -4,11 +4,7 @@ import { HamburgerSqueeze } from 'react-animated-burgers';
 import { websiteData } from '../../data/appTextData';
 import { StyledNavigation, StyledNavLink } from './Navigation.styles';
 
-const Navigation = ({
-  visibleHamburger,
-  handleChangeActiveMobileNav,
-  mobile: mobileDevice,
-}) => {
+const Navigation = ({ visibleHamburger, handleChangeActiveMobileNav, mobile: mobileDevice }) => {
   const [isActiveMobileNav, setIsActiveMobileNav] = useState(false);
   // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { navigation: buttonsDataArray } = websiteData;
@@ -63,13 +59,17 @@ const Navigation = ({
           }}
         />
       )}
-      {(isActiveMobileNav || !mobileDevice) && (
-        <StyledNavigation>{navButtons}</StyledNavigation>
-      )}
+      {(isActiveMobileNav || !mobileDevice) && <StyledNavigation>{navButtons}</StyledNavigation>}
     </>
   );
 };
 
-Navigation.propTypes = { visibleHamburger: PropTypes.bool.isRequired };
+Navigation.defaultProps = { handleChangeActiveMobileNav: () => {}, mobile: false };
+
+Navigation.propTypes = {
+  visibleHamburger: PropTypes.bool.isRequired,
+  handleChangeActiveMobileNav: PropTypes.func,
+  mobile: PropTypes.bool,
+};
 
 export default Navigation;

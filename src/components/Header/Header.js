@@ -15,6 +15,14 @@ const Header = ({ visibleHamburger, handleChangeActiveMobileNav, mobile }) => (
   </Wrapper>
 );
 
-Header.propTypes = { visibleHamburger: PropTypes.bool.isRequired };
+Header.defaultProps = {
+  mobile: false,
+};
+
+Header.propTypes = {
+  visibleHamburger: PropTypes.bool.isRequired,
+  handleChangeActiveMobileNav: PropTypes.func.isRequired,
+  mobile: PropTypes.bool,
+};
 
 export default Header;

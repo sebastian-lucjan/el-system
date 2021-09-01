@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme, size } from '../../assets/styles/theme';
 import StartPage from '../views/StartPage/StartPage';
@@ -15,7 +15,7 @@ import Header from '../Header/Header';
 
 // const AppDataContext = React.createContext({});
 
-const borderMediaValue = size.md;
+const borderMediaValue = size.width.md;
 
 const checkNeedBurgerMenu = () => window.innerWidth < borderMediaValue;
 
@@ -49,8 +49,8 @@ const Root = () => {
 
   window.onscroll = handleScroll;
 
-  const isSliderVisible = () =>
-    !visibleHamburger && window.innerWidth >= size.md; // TODO: look hear at the condition
+  const isSliderVisible = () => !visibleHamburger && window.innerWidth >= size.width.md;
+  // TODO: look hear at the condition
 
   return (
     <ThemeProvider theme={theme}>

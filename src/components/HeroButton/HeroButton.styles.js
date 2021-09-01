@@ -1,24 +1,23 @@
 import styled from 'styled-components';
 
 const StyledHeroImageButton = styled.button`
-  border: none;
-  color: ${({ isClicked, theme }) =>
-    isClicked ? theme.colors.white : theme.colors.black};
   width: 200px;
   height: 100%;
+  border: none;
+  font-size: ${({ theme }) => theme.fontSize.m};
   background-color: ${({ isClicked, theme }) =>
     isClicked ? theme.colors.blue : theme.colors.white};
-  font-size: ${({ theme }) => theme.fontSize.m};
+  color: ${({ isClicked, theme }) => (isClicked ? theme.colors.white : theme.colors.black)};
   text-transform: uppercase;
-  font-family: 'Red Hat Display', sans-serif;
-  font-weight: 700;
-  transition: 0.3s;
+  font-family: ${({ theme }) => theme.fontFamily};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  transition: ${({ theme }) => theme.transition};
   cursor: pointer;
-  z-index: 2;
+  z-index: ${({ theme }) => theme.zIndex.highPriority};
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.blue};
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
   }
 
   &.clicked-button {

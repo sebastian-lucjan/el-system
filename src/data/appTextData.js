@@ -20,8 +20,7 @@ export const elSystemInfo = {
           'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO . Świadczymy usługi dla sektora energetyki zawodowej, przemysłu i budownictwa ogólnego (budynki handlowe, użyteczności publicznej, budynki mieszkalne).',
       },
       {
-        headline:
-          'Kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych',
+        headline: 'Kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych',
         iconName: 'si-glyph:magnifier',
         description:
           'Wykonujemy badania odbiorcze i okresowe instalacji i urządzeń elektroenergetycznych oraz instalacji odgromowych.',

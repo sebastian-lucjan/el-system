@@ -1,26 +1,34 @@
 import styled from 'styled-components';
 
 export const ViewWrapper = styled.div`
+  //mobile
   min-height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
-  padding: 84px 20px 20px 20px;
-  //overflow: hidden;
+  padding: 84px 20px 20px 20px; //84px -> 64px (header height) + 20px (baseSpace)
   position: relative;
 
-  img {
-    //display: none;
+  .image {
     position: absolute;
     bottom: 0;
     max-width: 100vw;
+  }
+
+  .start-page__image {
     max-height: 40vh;
   }
 
-  @media (${({ theme }) => theme.devices.md}) {
-    padding: 105px 20px 20px 20px;
+  .contact__image {
+    max-height: 30vh;
   }
 
+  //iPad and large mobile landscape
+  @media (${({ theme }) => theme.devices.md}) {
+    padding: 100px 20px 20px 20px;
+  }
+
+  //Desktop landscape for medium resolution
   @media (${({ theme }) => theme.devices.xxl}) {
     padding: 100px;
     line-height: 24px;
