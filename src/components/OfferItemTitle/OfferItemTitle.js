@@ -9,13 +9,13 @@ const OfferItemTitle = ({ title, activeOfferDescription, onClick }) => (
 );
 
 OfferItemTitle.defaultProps = {
-  activeOfferDescription: '',
+  activeOfferDescription: false,
   onClick: () => {},
 };
 
 OfferItemTitle.propTypes = {
   title: PropTypes.string.isRequired,
-  activeOfferDescription: PropTypes.string,
+  activeOfferDescription: PropTypes.bool,
   onClick: PropTypes.func,
 };
 

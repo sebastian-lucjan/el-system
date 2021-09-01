@@ -50,7 +50,6 @@ const Root = () => {
   window.onscroll = handleScroll;
 
   const isSliderVisible = () => !visibleHamburger && window.innerWidth >= size.width.md;
-  // TODO: look hear at the condition
 
   return (
     <ThemeProvider theme={theme}>

@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { size, maxResolutionFullSlider } from '../../assets/styles/theme';
 
-console.log(maxResolutionFullSlider);
-
 const StyledHeroImage = styled.div`
   width: 50vw;
   height: 100%;

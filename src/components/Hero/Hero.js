@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { elSystemInfo } from '../../data/appTextData';
 
-export const SliderIndexContext = React.createContext(null);
+export const SliderIndexContext = React.createContext(0);
 
 const Hero = () => {
   const [slideIndex, setSlideIndex] = useState(0);
