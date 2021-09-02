@@ -87,8 +87,8 @@ export const elSystemInfo = {
       'In Loft Deweloper',
       'Kwadrat Deweloper',
       'Elekromontaż S.A',
-      'Trakcja PRKII',
-      'Elektroinstal Chełm ',
+      'Trakcja PRKII S.A',
+      'Elektro-Instal Chełm Sp.j',
     ],
   },
   contact: {
