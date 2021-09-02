@@ -16,7 +16,7 @@ const OfferItem = ({ title, iconName, description, othersArray, activeDescriptio
 
   return (
     <StyledOfferItem>
-      <div className="offerItem__headline">
+      <header className="offerItem__headline">
         {mobile ? (
           <Icon
             style={{
@@ -36,7 +36,7 @@ const OfferItem = ({ title, iconName, description, othersArray, activeDescriptio
           title={title}
           onClick={handleClickOfferItem}
         />
-      </div>
+      </header>
       {activeOfferDescription && (
         <OfferItemDescription description={description} othersArray={othersArray} />
       )}

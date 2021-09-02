@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledOfferItemDescription = styled.div`
+const StyledOfferItemDescription = styled.p`
   //mobile
   font-weight: ${({ theme }) => theme.fontWeight.extraLight};
   padding: 10px 0 0 30px;
@@ -17,7 +17,8 @@ const StyledOfferItemDescription = styled.div`
 
   //Desktop landscape for medium resolution
   @media (${({ theme }) => theme.devices.xxl}) {
-    padding: 0;
+    line-height: 28px;
+    padding: 10px 0;
 
     .offerItem__othersList {
       transform: translateX(${({ theme }) => theme.baseSpacing});

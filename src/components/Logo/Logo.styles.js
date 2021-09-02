@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledLogo = styled.div`
+const StyledLogo = styled.h1`
   font-family: ${({ theme }) => theme.fontFamily};
   font-weight: ${({ theme }) => theme.fontWeight.light};
   font-size: ${({ theme }) => theme.fontSize.l};

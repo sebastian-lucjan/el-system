@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledOfferItem = styled.div`
+export const StyledOfferItem = styled.article`
   
   //mobile
   display: flex;

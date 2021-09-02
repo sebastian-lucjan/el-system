@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledTitle = styled.h1`
+export const StyledTitle = styled.h2`
   //mobile small
   font-size: ${({ theme }) => theme.fontSize.l};
   font-weight: 700;

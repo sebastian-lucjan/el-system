@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledParagraph = styled.div`
+export const StyledParagraph = styled.p`
   //mobile small
   font-weight: ${({ theme }) => theme.fontWeight.extraLight};
   text-align: justify;
@@ -20,7 +20,8 @@ export const StyledParagraph = styled.div`
 
   //Desktop landscape for medium resolution
   @media (${({ theme }) => theme.devices.xxl}) {
-    font-size: ${({ theme }) => theme.fontSize.s};
+    line-height: 26px;
+    font-size: ${({ theme }) => theme.fontSize.m};
   }
 
   //iPad portrait

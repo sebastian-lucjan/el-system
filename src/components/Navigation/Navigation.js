@@ -9,7 +9,8 @@ const Navigation = ({ visibleHamburger, handleChangeActiveMobileNav, mobile: mob
   // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { navigation: buttonsDataArray } = websiteData;
 
-  const navButtons = buttonsDataArray.map(({ buttonText, path, name }) => (
+  const navButtons = buttonsDataArray.map(({ buttonText, path, name }, index) => (
+    // console.log((index + 1).toLocaleString());
     <StyledNavLink
       to={name}
       spy
@@ -20,6 +21,7 @@ const Navigation = ({ visibleHamburger, handleChangeActiveMobileNav, mobile: mob
         handleChangeActiveMobileNav();
         setIsActiveMobileNav(!isActiveMobileNav);
       }}
+      tabIndex="0"
     >
       {buttonText}
     </StyledNavLink>

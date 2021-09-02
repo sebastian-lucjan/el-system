@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.section`
   // mobile small
   width: 100%;
   height: 100%;
