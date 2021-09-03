@@ -10,6 +10,7 @@ import Cooperation from '../views/Cooperation/Cooperation';
 import Contact from '../views/Contact/Contact';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import Header from '../Header/Header';
+import Cookies from '../Cookies/Cookies';
 
 // import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
@@ -23,6 +24,7 @@ const Root = () => {
   const [pageY, setPageY] = useState(0);
   const [visibleHamburger, setVisibleHamburger] = useState(checkNeedBurgerMenu);
   const [activeMobileNavigation, setActiveMobileNavigation] = useState(false);
+  const [cookiesActive, setCookiesActive] = useState(true);
 
   const handleChangeActiveMobileNav = () => {
     setActiveMobileNavigation(!activeMobileNavigation);
@@ -40,6 +42,10 @@ const Root = () => {
       });
     };
   }, [visibleHamburger]);
+
+  const handleCookiesDismiss = () => {
+    setCookiesActive(false);
+  };
 
   const handleScroll = () => {
     // TODO: better performance ?
@@ -71,6 +77,7 @@ const Root = () => {
         <Cooperation name="cooperation" />
         <Contact name="contact" mobile={visibleHamburger} />
         {pageY > 100 && <ScrollToTop mobile={visibleHamburger} to="" />}
+        {cookiesActive && <Cookies handleCookiesDismiss={handleCookiesDismiss} />}
       </Wrapper>
     </ThemeProvider>
   );
