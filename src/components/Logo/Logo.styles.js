@@ -7,6 +7,7 @@ const StyledLogo = styled(Link)`
   font-size: ${({ theme }) => theme.fontSize.l};
   line-height: ${({ theme }) => theme.fontSize.l};
   margin: ${({ theme }) => theme.baseSpacing};
+  cursor: default;
 `;
 
 export default StyledLogo;

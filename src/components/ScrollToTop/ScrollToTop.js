@@ -2,21 +2,15 @@ import React, { useRef } from 'react';
 import { Icon } from '@iconify/react';
 import PropTypes from 'prop-types';
 import StyledIcon from './ScrollToTop.styles';
+import { simulateClick } from '../../helpers/simulateClick';
 
 const ScrollToTop = ({ mobile }) => {
-  const testRef = useRef(null);
-
-  const simulateClick = (e) => {
-    if (e.keyCode === 13) {
-      testRef.current.scrollTo('home');
-    }
-  };
+  const goTopRef = useRef(null);
 
   return (
     <StyledIcon
-      ref={testRef}
-      onKeyDown={(e) => simulateClick(e, 'home')}
-      onClick={() => 'forced onClick'}
+      ref={goTopRef}
+      onKeyDown={(e) => simulateClick(e, goTopRef, 'home')}
       tabIndex="0"
       to="home"
       spy
