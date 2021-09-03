@@ -1,46 +1,49 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Icon } from '@iconify/react';
 import PropTypes from 'prop-types';
+import { StyledCookies } from './Cookies.styles';
 
-const StyledCookies = styled.aside`
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  background-color: #121212cc; //bgc "121212" with opacity "cc"
-  padding: 5px;
-
-  .cookies__link {
-    color: ${({ theme }) => theme.colors.white};
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-`;
-
-const Cookies = ({ handleCookiesDismiss }) => (
+const Cookies = ({ handleCookiesPolicyAgree, handleDismissCookiesPopUp }) => (
   <StyledCookies>
-    Strona korzysta z plików cookies. Więcej na:{' '}
-    <a href="https://wszystkoociasteczkach.pl/" className="cookies__link" target="black">
-      Wszystko o ciasteczkach
-    </a>
-    <Icon
-      tabIndex={0}
-      onClick={handleCookiesDismiss}
-      onKeyDown={(e) => {
-        if (e.keyCode === 13) {
-          handleCookiesDismiss();
-        }
-      }}
-      className="short-contact-exit"
-      icon="feather:x"
-    />
+    <div className="cookies__content-container">
+      Strona korzysta z plików cookies. Więcej na:{' '}
+      <a href="https://wszystkoociasteczkach.pl/" className="cookies__link" target="black">
+        Wszystko o ciasteczkach
+      </a>
+      <button
+        type="submit"
+        className="cookies__accept"
+        onClick={handleCookiesPolicyAgree}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleCookiesPolicyAgree();
+          }
+        }}
+        tabIndex={0}
+      >
+        {' '}
+        Ok, akceptuję.
+      </button>
+    </div>
+    <div className="cookies__dismissIcon">
+      <Icon
+        tabIndex={0}
+        onClick={() => handleDismissCookiesPopUp(false)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleDismissCookiesPopUp(false);
+          }
+        }}
+        className="short-contact-exit"
+        icon="feather:x"
+      />
+    </div>
   </StyledCookies>
 );
 
-Cookies.propTypes = { handleCookiesDismiss: PropTypes.func.isRequired };
+Cookies.propTypes = {
+  handleCookiesPolicyAgree: PropTypes.func.isRequired,
+  handleDismissCookiesPopUp: PropTypes.func.isRequired,
+};
 
 export default Cookies;

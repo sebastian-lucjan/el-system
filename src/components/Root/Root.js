@@ -24,7 +24,14 @@ const Root = () => {
   const [pageY, setPageY] = useState(0);
   const [visibleHamburger, setVisibleHamburger] = useState(checkNeedBurgerMenu);
   const [activeMobileNavigation, setActiveMobileNavigation] = useState(false);
-  const [cookiesActive, setCookiesActive] = useState(true);
+  const [cookiesPopUp, setCookiesPopUp] = useState(
+    localStorage.getItem('cookie-notice-accept') !== 'accepted'
+  );
+
+  const handleCookiesPolicyAgree = () => {
+    localStorage.setItem('cookie-notice-accept', 'accepted');
+    setCookiesPopUp(false);
+  };
 
   const handleChangeActiveMobileNav = () => {
     setActiveMobileNavigation(!activeMobileNavigation);
@@ -43,10 +50,6 @@ const Root = () => {
     };
   }, [visibleHamburger]);
 
-  const handleCookiesDismiss = () => {
-    setCookiesActive(false);
-  };
-
   const handleScroll = () => {
     // TODO: better performance ?
     // console.log('handleScroll');
@@ -56,7 +59,7 @@ const Root = () => {
   window.onscroll = handleScroll;
 
   const isSliderVisible = () => !visibleHamburger && window.innerWidth >= size.width.md;
-
+  console.log(cookiesPopUp);
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -77,7 +80,13 @@ const Root = () => {
         <Cooperation name="cooperation" />
         <Contact name="contact" mobile={visibleHamburger} />
         {pageY > 100 && <ScrollToTop mobile={visibleHamburger} to="" />}
-        {cookiesActive && <Cookies handleCookiesDismiss={handleCookiesDismiss} />}
+        {cookiesPopUp && (
+          <Cookies
+            handleCookiesA
+            handleCookiesPolicyAgree={handleCookiesPolicyAgree}
+            handleDismissCookiesPopUp={setCookiesPopUp}
+          />
+        )}
       </Wrapper>
     </ThemeProvider>
   );
