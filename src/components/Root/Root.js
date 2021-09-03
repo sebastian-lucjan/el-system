@@ -66,7 +66,7 @@ const Root = () => {
           activeMobileNavigation={activeMobileNavigation}
           handleChangeActiveMobileNav={handleChangeActiveMobileNav}
         />
-        <AboutPage name="company" />
+        <AboutPage name="about" />
         <Offer name="offer" mobile={visibleHamburger} />
         <Cooperation name="cooperation" />
         <Contact name="contact" mobile={visibleHamburger} />

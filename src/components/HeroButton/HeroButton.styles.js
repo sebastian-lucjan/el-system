@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledHeroImageButton = styled.button`
+const StyledHeroImageButton = styled.button.attrs({ tabIndex: '-1' })`
   width: 200px;
   height: 100%;
   border: none;

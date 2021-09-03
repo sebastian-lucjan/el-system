@@ -8,7 +8,9 @@ const listOthers = (othersArray) => {
 };
 
 const OfferItemDescription = ({ description, othersArray }) => (
-  <StyledOfferItemDescription>{description || listOthers(othersArray)}</StyledOfferItemDescription>
+  <StyledOfferItemDescription>
+    {description ? <p>{description}</p> : listOthers(othersArray)}
+  </StyledOfferItemDescription>
 );
 
 OfferItemDescription.defaultProps = {

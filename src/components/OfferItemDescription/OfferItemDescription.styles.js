@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledOfferItemDescription = styled.p`
+const StyledOfferItemDescription = styled.div`
   //mobile
   font-weight: ${({ theme }) => theme.fontWeight.extraLight};
   padding: 10px 0 0 30px;

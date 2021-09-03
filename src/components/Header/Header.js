@@ -6,7 +6,7 @@ import { Wrapper } from './Header.styles';
 
 const Header = ({ visibleHamburger, handleChangeActiveMobileNav, mobile }) => (
   <Wrapper>
-    <Logo />
+    <Logo mobile={mobile} />
     <Navigation
       visibleHamburger={visibleHamburger}
       handleChangeActiveMobileNav={handleChangeActiveMobileNav}

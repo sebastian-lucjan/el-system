@@ -127,7 +127,7 @@ export const elSystemInfo = {
 export const websiteData = {
   logo: 'el system',
   navigation: [
-    { buttonText: 'O firmie', name: 'company', path: '/firma' },
+    { buttonText: 'O firmie', name: 'about', path: '/firma' },
     { buttonText: 'Oferta', name: 'offer', path: '/oferta' },
     { buttonText: 'Współpraca', name: 'cooperation', path: '/wspolpraca' },
     { buttonText: 'Kontakt', name: 'contact', path: '/kontakt' },
