@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { HamburgerSqueeze } from 'react-animated-burgers';
 import { websiteData } from '../../data/appTextData';
 import { StyledNavigation, StyledNavLink } from './Navigation.styles';
+import { simulateClick } from '../../helpers/simulateClick';
 
-const Navigation = ({
-  visibleHamburger,
-  handleChangeActiveMobileNav,
-  mobile: mobileDevice,
-}) => {
+const Navigation = ({ visibleHamburger, handleChangeActiveMobileNav, mobile: mobileDevice }) => {
   const [isActiveMobileNav, setIsActiveMobileNav] = useState(false);
-  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { navigation: buttonsDataArray } = websiteData;
 
-  const navButtons = buttonsDataArray.map(({ buttonText, path, name }) => (
+  const navLinkRef = useRef(null);
+
+  const navButtons = buttonsDataArray.map(({ buttonText, name }, index) => (
     <StyledNavLink
       to={name}
       spy
@@ -24,23 +22,13 @@ const Navigation = ({
         handleChangeActiveMobileNav();
         setIsActiveMobileNav(!isActiveMobileNav);
       }}
+      tabIndex={index + 1}
+      ref={navLinkRef}
+      onKeyDown={(e) => simulateClick(e, navLinkRef, name)}
     >
       {buttonText}
     </StyledNavLink>
   ));
-
-  // useEffect(() => {
-  //   const mediaQuery = window.matchMedia(`(min-width: ${borderMediaValue}px)`);
-  //   mediaQuery.addEventListener('change', () => {
-  //     setVisibleHamburger(checkNeedBurgerMenu());
-  //   });
-  //
-  //   return () => {
-  //     mediaQuery.removeEventListener('change', () => {
-  //       setVisibleHamburger(checkNeedBurgerMenu());
-  //     });
-  //   };
-  // }, [visibleHamburger]);
 
   const setHamburgerWith = () => {
     // const windowWidth = window.innerWidth;
@@ -63,13 +51,17 @@ const Navigation = ({
           }}
         />
       )}
-      {(isActiveMobileNav || !mobileDevice) && (
-        <StyledNavigation>{navButtons}</StyledNavigation>
-      )}
+      {(isActiveMobileNav || !mobileDevice) && <StyledNavigation>{navButtons}</StyledNavigation>}
     </>
   );
 };
 
-Navigation.propTypes = { visibleHamburger: PropTypes.bool.isRequired };
+Navigation.defaultProps = { handleChangeActiveMobileNav: () => {}, mobile: false };
+
+Navigation.propTypes = {
+  visibleHamburger: PropTypes.bool.isRequired,
+  handleChangeActiveMobileNav: PropTypes.func,
+  mobile: PropTypes.bool,
+};
 
 export default Navigation;

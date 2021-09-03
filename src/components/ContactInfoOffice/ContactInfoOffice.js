@@ -22,7 +22,7 @@ const ContactInfoOffice = ({
 }) => (
   <StyledContactOffice>
     <article className="contact-info__office">
-      <h2 className="contact-info__title">{title}</h2>
+      <h3 className="contact-info__title">{title}</h3>
       <address className="contact-info__details">
         <p>{`${street},`}</p>
         <p>{`${postalCode} ${city},`}</p>
@@ -32,7 +32,7 @@ const ContactInfoOffice = ({
     </article>
 
     <article className="contact-info__office">
-      <h2 className="contact-info__title">{headlineCompany}</h2>
+      <h3 className="contact-info__title">{headlineCompany}</h3>
       <address className="contact-info__details">
         <p>{`${companySuffix}`}</p>
         <p>{`${companyMainName}`}</p>

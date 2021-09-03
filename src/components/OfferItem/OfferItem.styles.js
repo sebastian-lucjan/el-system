@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
-export const StyledOfferItem = styled.div`
+export const StyledOfferItem = styled.article`
+  
+  //mobile
   display: flex;
   position: relative;
   flex-direction: column;
   text-align: justify;
-  margin-bottom: 20px;
+  margin-bottom: ${({ theme }) => theme.baseSpacing};
   font-size: ${({ theme }) => theme.fontSize.xxs};
   line-height: 16px;
   width: 100%;
@@ -19,7 +21,7 @@ export const StyledOfferItem = styled.div`
     margin-top: 10px;
     height: 1px;
     width: calc(100% - 30px);
-    background-color: #777;
+    background-color: ${({ theme }) => theme.colors.gray};
   }
 
   .offerItem__icon {
@@ -36,11 +38,20 @@ export const StyledOfferItem = styled.div`
     align-items: center;
   }
 
+  //mobile medium
   @media (${({ theme }) => theme.devices.xs}) {
     font-size: ${({ theme }) => theme.fontSize.xs};
-    //line-height: 24px;
   }
 
+  //iPad portrait / mobile large landscape
+  @media (${({ theme }) => theme.devices.md}) {
+    margin-bottom: 40px;
+
+    &:after {
+      display: none;
+  }
+
+  //Desktop landscape for medium resolution
   @media (${({ theme }) => theme.devices.xxl}) {
     width: 900px;
     margin-bottom: 50px;
@@ -48,15 +59,4 @@ export const StyledOfferItem = styled.div`
     line-height: 24px;
   }
 
-  @media (${({ theme }) => theme.devices.md}) {
-    margin-bottom: 40px;
-
-
-    &:after {
-      display: none;
-    
-    .offerItem__headline {
-      //font-size: ${({ theme }) => theme.fontSize.m};
-    }
-  }
 `;

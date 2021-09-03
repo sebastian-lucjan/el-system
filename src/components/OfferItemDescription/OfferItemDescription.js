@@ -3,15 +3,13 @@ import * as PropTypes from 'prop-types';
 import StyledOfferItemDescription from './OfferItemDescription.styles';
 
 const listOthers = (othersArray) => {
-  const others = othersArray.map((item, index) => (
-    <li key={`other-offer-${index + 1}`}>{item}</li>
-  ));
+  const others = othersArray.map((item, index) => <li key={`other-offer-${index + 1}`}>{item}</li>);
   return <ul className="offerItem__othersList">{others}</ul>;
 };
 
 const OfferItemDescription = ({ description, othersArray }) => (
   <StyledOfferItemDescription>
-    {description || listOthers(othersArray)}
+    {description ? <p>{description}</p> : listOthers(othersArray)}
   </StyledOfferItemDescription>
 );
 

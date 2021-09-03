@@ -2,22 +2,18 @@ import styled from 'styled-components';
 import React from 'react';
 
 const StyledContactOffice = styled.section`
+  //base
   flex-grow: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-self: center;
-  //padding-top: 100%;
   font-size: ${({ theme }) => theme.fontSize.xxs};
-  font-weight: 300;
+  font-weight: ${({ theme }) => theme.fontWeight.extraLight};
   width: 100%;
-  //position: absolute;
-  //top: 20px;
-  //left: 20px;
 
   .contact-info__title {
     font-weight: 600;
-    //padding-bottom: 10px;
   }
 
   .contact-info__details {
@@ -26,13 +22,15 @@ const StyledContactOffice = styled.section`
   }
 
   .contact-info__office {
-    padding-top: 20px;
+    padding-top: ${({ theme }) => theme.baseSpacing};
   }
 
+  //mobile small
   @media (${({ theme }) => theme.devices.xxs}) {
     font-size: ${({ theme }) => theme.fontSize.xs};
   }
 
+  //mobile medium
   @media (${({ theme }) => theme.devices.xs}) {
     font-size: ${({ theme }) => theme.fontSize.m};
 
@@ -45,10 +43,12 @@ const StyledContactOffice = styled.section`
     }
   }
 
+  //mobile large
   @media (${({ theme }) => theme.devices.sm}) {
-    justify-content: flex-start; //TODO: add bottom img
+    justify-content: flex-start;
   }
 
+  //Desktop landscape for medium resolution
   @media (${({ theme }) => theme.devices.xxl}) {
     width: 900px;
     font-size: ${({ theme }) => theme.fontSize.m};

@@ -1,17 +1,22 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import { Icon } from '@iconify/react';
 import StyledOfferItemTitle from './OfferItemTitle.styles';
 
 const OfferItemTitle = ({ title, activeOfferDescription, onClick }) => (
-  <StyledOfferItemTitle
-    onClick={onClick}
-    activeOfferDescription={activeOfferDescription}
-  >
+  <StyledOfferItemTitle onClick={onClick} activeOfferDescription={activeOfferDescription}>
     {title}
   </StyledOfferItemTitle>
 );
 
-export default OfferItemTitle;
+OfferItemTitle.defaultProps = {
+  activeOfferDescription: false,
+  onClick: () => {},
+};
 
-OfferItemTitle.propTypes = { title: PropTypes.string.isRequired };
+OfferItemTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+  activeOfferDescription: PropTypes.bool,
+  onClick: PropTypes.func,
+};
+
+export default OfferItemTitle;

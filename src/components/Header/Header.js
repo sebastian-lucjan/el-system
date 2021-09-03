@@ -6,7 +6,7 @@ import { Wrapper } from './Header.styles';
 
 const Header = ({ visibleHamburger, handleChangeActiveMobileNav, mobile }) => (
   <Wrapper>
-    <Logo />
+    <Logo mobile={mobile} />
     <Navigation
       visibleHamburger={visibleHamburger}
       handleChangeActiveMobileNav={handleChangeActiveMobileNav}
@@ -15,6 +15,14 @@ const Header = ({ visibleHamburger, handleChangeActiveMobileNav, mobile }) => (
   </Wrapper>
 );
 
-Header.propTypes = { visibleHamburger: PropTypes.bool.isRequired };
+Header.defaultProps = {
+  mobile: false,
+};
+
+Header.propTypes = {
+  visibleHamburger: PropTypes.bool.isRequired,
+  handleChangeActiveMobileNav: PropTypes.func.isRequired,
+  mobile: PropTypes.bool,
+};
 
 export default Header;

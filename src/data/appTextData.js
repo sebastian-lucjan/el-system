@@ -20,8 +20,7 @@ export const elSystemInfo = {
           'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO . Świadczymy usługi dla sektora energetyki zawodowej, przemysłu i budownictwa ogólnego (budynki handlowe, użyteczności publicznej, budynki mieszkalne).',
       },
       {
-        headline:
-          'Kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych',
+        headline: 'Kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych',
         iconName: 'si-glyph:magnifier',
         description:
           'Wykonujemy badania odbiorcze i okresowe instalacji i urządzeń elektroenergetycznych oraz instalacji odgromowych.',
@@ -88,8 +87,8 @@ export const elSystemInfo = {
       'In Loft Deweloper',
       'Kwadrat Deweloper',
       'Elekromontaż S.A',
-      'Trakcja PRKII',
-      'Elektroinstal Chełm ',
+      'Trakcja PRKII S.A',
+      'Elektro-Instal Chełm Sp.j',
     ],
   },
   contact: {
@@ -128,7 +127,7 @@ export const elSystemInfo = {
 export const websiteData = {
   logo: 'el system',
   navigation: [
-    { buttonText: 'O firmie', name: 'company', path: '/firma' },
+    { buttonText: 'O firmie', name: 'about', path: '/firma' },
     { buttonText: 'Oferta', name: 'offer', path: '/oferta' },
     { buttonText: 'Współpraca', name: 'cooperation', path: '/wspolpraca' },
     { buttonText: 'Kontakt', name: 'contact', path: '/kontakt' },

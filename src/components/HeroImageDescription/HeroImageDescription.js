@@ -1,9 +1,13 @@
 import React from 'react';
-import { elSystemInfo } from '../../data/appTextData';
+import * as PropTypes from 'prop-types';
 import StyledHeroImageDescription from './HeroImageDescription.styles';
 
 const HeroImageDescription = ({ description }) => (
   <StyledHeroImageDescription>{description}</StyledHeroImageDescription>
 );
+
+HeroImageDescription.defaultProps = { description: '' };
+
+HeroImageDescription.propTypes = { description: PropTypes.string };
 
 export default HeroImageDescription;

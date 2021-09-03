@@ -4,8 +4,9 @@ import { Link } from 'react-scroll';
 const StyledIcon = styled(Link)`
   position: fixed;
   bottom: 6px;
-  right: 20px;
-  color: white;
+  right: ${({ theme }) => theme.baseSpacing};
+  color: ${({ theme }) => theme.colors.white};
+  z-index: ${({ theme }) => theme.zIndex.superiorPriority};
 
   .scrollToTopIcon {
     width: 30px;

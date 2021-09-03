@@ -5,16 +5,8 @@ import { StyledOfferItem } from './OfferItem.styles';
 import OfferItemTitle from '../OfferItemTitle/OfferItemTitle';
 import OfferItemDescription from '../OfferItemDescription/OfferItemDescription';
 
-const OfferItem = ({
-  title,
-  iconName,
-  description,
-  othersArray,
-  activeDescription,
-  mobile,
-}) => {
-  const [activeOfferDescription, setActiveOfferDescription] =
-    useState(activeDescription);
+const OfferItem = ({ title, iconName, description, othersArray, activeDescription, mobile }) => {
+  const [activeOfferDescription, setActiveOfferDescription] = useState(activeDescription);
 
   const handleClickOfferItem = () => {
     if (mobile) {
@@ -24,7 +16,7 @@ const OfferItem = ({
 
   return (
     <StyledOfferItem>
-      <div className="offerItem__headline">
+      <header className="offerItem__headline">
         {mobile ? (
           <Icon
             style={{
@@ -44,12 +36,9 @@ const OfferItem = ({
           title={title}
           onClick={handleClickOfferItem}
         />
-      </div>
+      </header>
       {activeOfferDescription && (
-        <OfferItemDescription
-          description={description}
-          othersArray={othersArray}
-        />
+        <OfferItemDescription description={description} othersArray={othersArray} />
       )}
     </StyledOfferItem>
   );

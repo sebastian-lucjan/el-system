@@ -4,8 +4,8 @@ export const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   position: fixed;
-  height: 64px;
   width: 100vw;
+  height: ${({ theme }) => theme.headerHeight};
   background-color: ${({ theme }) => theme.colors.black};
-  z-index: 3;
+  z-index: ${({ theme }) => theme.zIndex.superiorPriority};
 `;

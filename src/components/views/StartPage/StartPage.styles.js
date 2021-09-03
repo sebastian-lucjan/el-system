@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledStartPage = styled.div`
+  // mobile
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -14,6 +15,7 @@ export const StyledStartPage = styled.div`
     z-index: ${({ theme }) => theme.zIndex.highPriority};
   }
 
+  // mobile large
   @media (${({ theme }) => theme.devices.sm}) {
     .start-page__image {
       width: 50vw;
@@ -21,13 +23,7 @@ export const StyledStartPage = styled.div`
     }
   }
 
-  @media (${({ theme }) => theme.devices.xxl}) {
-    display: block;
-    .start-page__image {
-      position: static;
-    }
-  }
-
+  // mobile small and medium landscape
   @media (orientation: landscape) {
     .start-page__image {
       height: 60vh;

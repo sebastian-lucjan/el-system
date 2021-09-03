@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import * as PropTypes from 'prop-types';
 import Wrapper from './HeroInfo.styles';
 import HeroImageButton from '../HeroButton/HeroButton';
 import HeroImageTitle from '../HeroImageTitle/HeroImageTitle';
@@ -8,7 +9,7 @@ import { SliderIndexContext } from '../Hero/Hero';
 const HeroInfo = ({ servicesToSlider }) => {
   const slideIndex = useContext(SliderIndexContext);
 
-  const { headline, description, sliderImgName } = servicesToSlider[slideIndex];
+  const { headline, description } = servicesToSlider[slideIndex];
 
   return (
     <Wrapper>
@@ -17,6 +18,10 @@ const HeroInfo = ({ servicesToSlider }) => {
       <HeroImageButton />
     </Wrapper>
   );
+};
+
+HeroInfo.propTypes = {
+  servicesToSlider: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default HeroInfo;
