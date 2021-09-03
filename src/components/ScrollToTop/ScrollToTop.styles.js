@@ -6,6 +6,7 @@ const StyledIcon = styled(Link)`
   bottom: 6px;
   right: ${({ theme }) => theme.baseSpacing};
   color: ${({ theme }) => theme.colors.white};
+  z-index: ${({ theme }) => theme.zIndex.superiorPriority};
 
   .scrollToTopIcon {
     width: 30px;
