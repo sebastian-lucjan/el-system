@@ -16,15 +16,19 @@ const ShortContact = ({ onClick, isClicked }) => {
 
   return (
     <StyledShortContact isClicked={isClicked}>
-      <div className="short-contact-column">
-        <p>tel.:</p>
-        <p>email:</p>
-      </div>
-      <div className="short-contact-column">
-        <p>{`${phoneNumber}`}</p>
-        <p>{`${email}`}</p>
-      </div>
-      <Icon onClick={onClick} className="short-contact-exit" icon="feather:x" />
+      {isClicked && (
+        <>
+          <div className="short-contact-column">
+            <p>tel.:</p>
+            <p>email:</p>
+          </div>
+          <div className="short-contact-column">
+            <p>{`${phoneNumber}`}</p>
+            <p>{`${email}`}</p>
+          </div>
+          <Icon onClick={onClick} className="short-contact-exit" icon="feather:x" />
+        </>
+      )}
     </StyledShortContact>
   );
 };

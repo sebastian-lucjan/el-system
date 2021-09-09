@@ -23,20 +23,13 @@ const Navigation = ({ visibleHamburger, handleChangeActiveMobileNav, mobile: mob
         handleChangeActiveMobileNav();
         setIsActiveMobileNav(!isActiveMobileNav);
       }}
-      tabIndex={index + 1}
+      tabIndex={0}
       ref={navLinkRef}
       onKeyDown={(e) => simulateClick(e, navLinkRef, name)}
     >
       {buttonText}
     </StyledNavLink>
   ));
-
-  const setHamburgerWith = () => {
-    // const windowWidth = window.innerWidth;
-    // console.log(windowWidth); // TODO: handle Hamburger icon resizing
-  };
-
-  setHamburgerWith();
 
   return (
     <>

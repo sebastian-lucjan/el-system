@@ -36,6 +36,8 @@ const Cookies = ({ handleCookiesPolicyAgree, handleDismissCookiesPopUp }) => (
         }}
         className="short-contact-exit"
         icon="feather:x"
+        aria-hidden={false}
+        alt="zamknij okno cookies bez podejmowania decyzji"
       />
     </div>
   </StyledCookies>
