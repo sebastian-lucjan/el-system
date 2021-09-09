@@ -58,14 +58,14 @@ const Root = () => {
   window.onscroll = handleScroll;
 
   const isSliderVisible = () => !visibleHamburger && window.innerWidth >= size.width.md;
-  console.log(cookiesPopUp);
+
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Wrapper>
-          <Switch>
-            <Route exact path="/">
+        <Switch>
+          <Route exact path="/">
+            <Wrapper>
               <Header
                 visibleHamburger={visibleHamburger}
                 handleChangeActiveMobileNav={handleChangeActiveMobileNav}
@@ -89,12 +89,12 @@ const Root = () => {
                   handleDismissCookiesPopUp={setCookiesPopUp}
                 />
               )}
-            </Route>
-            <Route to="*">
-              <Redirect to="/" />
-            </Route>
-          </Switch>
-        </Wrapper>
+            </Wrapper>
+          </Route>
+          <Route to="*">
+            <Redirect to="/" />
+          </Route>
+        </Switch>
       </ThemeProvider>
     </Router>
   );

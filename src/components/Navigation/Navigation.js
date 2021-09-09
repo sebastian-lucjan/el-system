@@ -1,15 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { HamburgerSqueeze } from 'react-animated-burgers';
 import { websiteData } from '../../data/appTextData';
 import { StyledNavigation, StyledNavLink } from './Navigation.styles';
+
 import { simulateClick } from '../../helpers/simulateClick';
 
 const Navigation = ({ visibleHamburger, handleChangeActiveMobileNav, mobile: mobileDevice }) => {
   const [isActiveMobileNav, setIsActiveMobileNav] = useState(false);
   const { navigation: buttonsDataArray } = websiteData;
 
-  const navLinkRef = useRef(null);
+  const navLinkRef = useRef(null); // ref necessary for focus -> enter action
 
   const navButtons = buttonsDataArray.map(({ buttonText, name }, index) => (
     <StyledNavLink
