@@ -15,7 +15,7 @@ const Hero = () => {
     offer: { offers: services },
   } = elSystemInfo;
 
-  const servicesToSlider = services.filter((service) => service.sliderImgName);
+  const servicesToSlider = services.filter((service) => service.hasSlide);
 
   const handleChangeSlideIndex = (newIndex) => setSlideIndex(newIndex);
 

@@ -6,15 +6,24 @@ import HeroImageTitle from '../HeroImageTitle/HeroImageTitle';
 import HeroImageDescription from '../HeroImageDescription/HeroImageDescription';
 import { SliderIndexContext } from '../Hero/Hero';
 
+const isTitleToLong = (title) => title.length > 70;
+const isDescriptionToLong = (description) => description.length > 200;
+
 const HeroInfo = ({ servicesToSlider }) => {
   const slideIndex = useContext(SliderIndexContext);
 
-  const { headline, description } = servicesToSlider[slideIndex];
+  const { headline, headlineShort, description, descriptionShort } = servicesToSlider[slideIndex];
 
   return (
     <Wrapper>
-      <HeroImageTitle headline={headline} />
-      <HeroImageDescription description={description} />
+      <HeroImageTitle
+        smaller={isTitleToLong(headline)}
+        headline={isTitleToLong(headline) ? headlineShort : headline}
+      />
+      <HeroImageDescription
+        smaller={isDescriptionToLong(description)}
+        description={isDescriptionToLong(description) ? descriptionShort : description}
+      />
       <HeroImageButton />
     </Wrapper>
   );
