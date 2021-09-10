@@ -25,3 +25,6 @@ yarn-error.log*
 
 # workflow
 todos.js
+
+# temporary
+robots.txt
