@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import * as PropTypes from 'prop-types';
 import bulbImg from '../../../../public/images/bulb-mobile-381-623.jpeg';
-// import Hero from '../../Hero/Hero';
 import { StyledStartPage } from './StartPage.styles';
 
 const Hero = lazy(() => import('../../Hero/Hero'));
