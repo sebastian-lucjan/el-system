@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { size } from '../assets/styles/theme';
 import Header from '../components/Header/Header';
-import StartPage from '../components/views/StartPage/StartPage';
-import AboutPage from '../components/views/AboutPage/AboutPage';
-import Offer from '../components/views/Offer/Offer';
-import Cooperation from '../components/views/Cooperation/Cooperation';
-import Contact from '../components/views/Contact/Contact';
+import StartPage from '../views/StartPage/StartPage';
+import AboutPage from '../views/AboutPage/AboutPage';
+import Offer from '../views/Offer/Offer';
+import Cooperation from '../views/Cooperation/Cooperation';
+import Contact from '../views/Contact/Contact';
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 import Cookies from '../components/Cookies/Cookies';
 import { Wrapper } from '../components/Root/Root.styles';

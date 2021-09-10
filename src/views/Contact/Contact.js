@@ -1,13 +1,13 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import Title from '../../Title/Title';
-import ContentDivider from '../../ContentDivider/ContentDivider';
-import { elSystemInfo } from '../../../data/appTextData';
-import ContactInfoOffice from '../../ContactInfoOffice/ContactInfoOffice';
-import { ContentWrapper } from '../../ContentWrapper/ContentWrapper.styles';
-import { ViewWrapper } from '../../ViewWrapper/ViewWrapper.styles';
-import photoMotorwayLightsM from '../../../../public/images/motorway-lights-1200.jpeg';
-import photoMotorwayLightsL from '../../../../public/images/motorway-lights-1920.jpeg';
+import Title from '../../components/Title/Title';
+import ContentDivider from '../../components/ContentDivider/ContentDivider';
+import { elSystemInfo } from '../../data/appTextData';
+import ContactInfoOffice from '../../components/ContactInfoOffice/ContactInfoOffice';
+import { ContentWrapper } from '../../components/ContentWrapper/ContentWrapper.styles';
+import { ViewWrapper } from '../../components/ViewWrapper/ViewWrapper.styles';
+import photoMotorwayLightsM from '../../../public/images/motorway-lights-1200.jpeg';
+import photoMotorwayLightsL from '../../../public/images/motorway-lights-1920.jpeg';
 
 const ContactBackground = ({ mobile }) => (
   <>

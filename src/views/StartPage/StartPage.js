@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from 'react';
 import * as PropTypes from 'prop-types';
-import bulbImg from '../../../../public/images/bulb-mobile-381-623.jpeg';
+import bulbImg from '../../../public/images/bulb-mobile-381-623.jpeg';
 import { StyledStartPage } from './StartPage.styles';
 
-const Hero = lazy(() => import('../../Hero/Hero'));
+const Hero = lazy(() => import('../../components/Hero/Hero'));
 
 const StartPage = ({ name, visibleSlider }) => (
   <StyledStartPage name={name}>
