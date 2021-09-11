@@ -33,6 +33,21 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins: [
+            [
+              'styled-components',
+              {
+                displayName: false,
+              },
+            ],
+            [
+              'transform-react-remove-prop-types',
+              {
+                mode: 'wrap',
+                ignoreFilenames: ['node_modules'],
+              },
+            ],
+          ],
         },
       },
       {
