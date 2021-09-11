@@ -1,0 +1,15 @@
+{
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "styled-components",
+          {
+            "displayName": false
+          },
+          "babel-plugin-styled-components"
+        ]
+      ]
+    }
+  }
+}

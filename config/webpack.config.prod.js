@@ -10,13 +10,6 @@ module.exports = {
     filename: 'index-[contenthash:6].js',
     path: path.resolve(__dirname, '../dist'),
   },
-  devServer: {
-    open: true,
-    historyApiFallback: true,
-    contentBase: path.resolve(__dirname, '../dist'),
-    port: 8080,
-    hot: true,
-  },
   module: {
     rules: [
       {
