@@ -43,7 +43,7 @@ module.exports = {
             [
               'transform-react-remove-prop-types',
               {
-                mode: 'wrap',
+                mode: 'unsafe-wrap',
                 ignoreFilenames: ['node_modules'],
               },
             ],
