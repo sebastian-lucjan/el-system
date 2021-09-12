@@ -1,25 +1,30 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
+import debounce from 'lodash.debounce';
 import { size } from '../assets/styles/theme';
 import Header from '../components/Header/Header';
 import StartPage from '../views/StartPage/StartPage';
-// import AboutPage from '../views/AboutPage/AboutPage';
-// import Offer from '../views/Offer/Offer';
-// import Cooperation from '../views/Cooperation/Cooperation';
-// import Contact from '../views/Contact/Contact';
-// import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 import Cookies from '../components/Cookies/Cookies';
 import { Wrapper } from '../components/Root/Root.styles';
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 const AboutPage = lazy(() => import('../views/AboutPage/AboutPage'));
 const Offer = lazy(() => import('../views/Offer/Offer'));
 const Cooperation = lazy(() => import('../views/Cooperation/Cooperation'));
 const Contact = lazy(() => import('../views/Contact/Contact'));
-const ScrollToTop = lazy(() => import('../components/ScrollToTop/ScrollToTop'));
-// const Cookies = lazy(() => import('../components/Cookies/Cookies'));
 
 const borderMediaValue = size.width.md;
 
 const checkNeedBurgerMenu = () => window.innerWidth < borderMediaValue;
+
+export const PageContext = React.createContext({
+  visibleHamburger: false,
+  mobile: false,
+  activeMobileNavigation: false,
+  visibleSlider: false,
+  handleChangeActiveMobileNav: () => {},
+  handleCookiesPolicyAgree: () => {},
+  handleDismissCookiesPopUp: () => {},
+});
 
 const MainTemplate = () => {
   const [pageY, setPageY] = useState(0);
@@ -51,44 +56,40 @@ const MainTemplate = () => {
     };
   }, [visibleHamburger]);
 
-  const handleScroll = () => {
-    // TODO: better performance ?
-    // console.log('handleScroll');
-    setPageY(window.pageYOffset);
-  };
+  const handleScroll = () => setPageY(window.pageYOffset);
 
-  window.onscroll = handleScroll;
+  useEffect(() => {
+    window.addEventListener('scroll', debounce(handleScroll, 50));
+    return () => window.removeEventListener('scroll', throttle(handleScroll));
+  }, [pageY]);
 
   const isSliderVisible = () => !visibleHamburger && window.innerWidth >= size.width.md;
 
   return (
-    <Wrapper>
-      <Header
-        visibleHamburger={visibleHamburger}
-        handleChangeActiveMobileNav={handleChangeActiveMobileNav}
-        mobile={visibleHamburger}
-      />
-      <StartPage
-        name="home"
-        visibleSlider={isSliderVisible()}
-        activeMobileNavigation={activeMobileNavigation}
-        handleChangeActiveMobileNav={handleChangeActiveMobileNav}
-      />
-      <Suspense fallback={<div>loading</div>}>
-        <AboutPage name="about" />
-        <Offer name="offer" mobile={visibleHamburger} />
-        <Cooperation name="cooperation" />
-        <Contact name="contact" mobile={visibleHamburger} />
-        {pageY > 100 && <ScrollToTop mobile={visibleHamburger} to="" />}
-      </Suspense>
-      {cookiesPopUp && (
-        <Cookies
-          handleCookiesA
-          handleCookiesPolicyAgree={handleCookiesPolicyAgree}
-          handleDismissCookiesPopUp={setCookiesPopUp}
-        />
-      )}
-    </Wrapper>
+    <PageContext.Provider
+      value={{
+        mobile: visibleHamburger,
+        visibleHamburger,
+        handleChangeActiveMobileNav,
+        activeMobileNavigation,
+        handleCookiesPolicyAgree,
+        handleDismissCookiesPopUp: setCookiesPopUp,
+        visibleSlider: isSliderVisible(),
+      }}
+    >
+      <Wrapper>
+        <Suspense fallback={<div>loading</div>}>
+          <Header />
+          <StartPage />
+          <AboutPage />
+          <Offer />
+          <Cooperation />
+          <Contact />
+          {pageY > 100 && <ScrollToTop to="" />}
+        </Suspense>
+        {cookiesPopUp && <Cookies />}
+      </Wrapper>
+    </PageContext.Provider>
   );
 };
 
