@@ -60,7 +60,7 @@ const MainTemplate = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', debounce(handleScroll, 50));
-    return () => window.removeEventListener('scroll', throttle(handleScroll));
+    return () => window.removeEventListener('scroll', debounce(handleScroll));
   }, [pageY]);
 
   const isSliderVisible = () => !visibleHamburger && window.innerWidth >= size.width.md;
