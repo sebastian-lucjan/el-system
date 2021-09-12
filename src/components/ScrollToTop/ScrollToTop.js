@@ -1,12 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import { Icon } from '@iconify/react';
 import PropTypes from 'prop-types';
 import StyledIcon from './ScrollToTop.styles';
 import { simulateClick } from '../../helpers/simulateClick';
+import { PageContext } from '../../providers/MainTemplate';
 
-const ScrollToTop = ({ mobile }) => {
+const ScrollToTop = () => {
   const goTopRef = useRef(null);
-
+  const { mobile } = useContext(PageContext);
   return (
     <StyledIcon
       ref={goTopRef}

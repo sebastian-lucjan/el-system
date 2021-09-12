@@ -1,5 +1,4 @@
 import React from 'react';
-import * as PropTypes from 'prop-types';
 import { StyledParagraph } from './AboutPage.styles';
 import Title from '../../components/Title/Title';
 import ContentDivider from '../../components/ContentDivider/ContentDivider';
@@ -7,7 +6,7 @@ import { elSystemInfo } from '../../data/appTextData';
 import { ContentWrapper } from '../../components/ContentWrapper/ContentWrapper.styles';
 import { ViewWrapper } from '../../components/ViewWrapper/ViewWrapper.styles';
 
-const AboutPage = ({ name }) => {
+const AboutPage = () => {
   const {
     companyInfo,
     companyInfo: { textParagraphs },
@@ -24,7 +23,7 @@ const AboutPage = ({ name }) => {
   });
 
   return (
-    <ViewWrapper name={name}>
+    <ViewWrapper name="about">
       <ContentWrapper>
         <Title title={contentTitle} />
         <ContentDivider />
@@ -33,7 +32,5 @@ const AboutPage = ({ name }) => {
     </ViewWrapper>
   );
 };
-
-AboutPage.propTypes = { name: PropTypes.string.isRequired };
 
 export default AboutPage;

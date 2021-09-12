@@ -3,7 +3,6 @@ import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { theme } from '../../assets/styles/theme';
 import GlobalStyle from '../../assets/styles/globalStyles';
-
 import MainTemplate from '../../providers/MainTemplate';
 
 const Root = () => (

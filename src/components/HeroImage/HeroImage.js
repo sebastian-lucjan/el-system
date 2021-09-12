@@ -108,7 +108,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
           1700px,
           "
           src={photoHouseAutomationXL}
-          loading="lazy"
+          loading="preload"
           alt="automatyka domowa, smart dom"
         />
         <img
@@ -124,7 +124,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
           1920px,
           "
           src={photoPhotovoltaicXL}
-          rel="preload"
+          rel="lazy"
           alt="instalacje fotowoltaiczne, fotowoltaika"
         />
         <img

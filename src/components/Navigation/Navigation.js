@@ -1,18 +1,25 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { HamburgerSqueeze } from 'react-animated-burgers';
 import { websiteData } from '../../data/appTextData';
 import { StyledNavigation, StyledNavLink } from './Navigation.styles';
 
 import { simulateClick } from '../../helpers/simulateClick';
+import { PageContext } from '../../providers/MainTemplate';
 
-const Navigation = ({ visibleHamburger, handleChangeActiveMobileNav, mobile: mobileDevice }) => {
+const Navigation = () => {
   const [isActiveMobileNav, setIsActiveMobileNav] = useState(false);
   const { navigation: buttonsDataArray } = websiteData;
 
+  const {
+    visibleHamburger,
+    handleChangeActiveMobileNav,
+    mobile: mobileDevice,
+  } = useContext(PageContext);
+
   const navLinkRef = useRef(null); // ref necessary for focus -> enter action
 
-  const navButtons = buttonsDataArray.map(({ buttonText, name }, index) => (
+  const navButtons = buttonsDataArray.map(({ buttonText, name }) => (
     <StyledNavLink
       to={name}
       spy
@@ -48,14 +55,6 @@ const Navigation = ({ visibleHamburger, handleChangeActiveMobileNav, mobile: mob
       {(isActiveMobileNav || !mobileDevice) && <StyledNavigation>{navButtons}</StyledNavigation>}
     </>
   );
-};
-
-Navigation.defaultProps = { handleChangeActiveMobileNav: () => {}, mobile: false };
-
-Navigation.propTypes = {
-  visibleHamburger: PropTypes.bool.isRequired,
-  handleChangeActiveMobileNav: PropTypes.func,
-  mobile: PropTypes.bool,
 };
 
 export default Navigation;

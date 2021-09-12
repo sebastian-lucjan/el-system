@@ -1,5 +1,4 @@
-import React from 'react';
-import * as PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 import Title from '../../components/Title/Title';
 import ContentDivider from '../../components/ContentDivider/ContentDivider';
 import ContactInfoOffice from '../../components/ContactInfoOffice/ContactInfoOffice';
@@ -8,38 +7,37 @@ import { ViewWrapper } from '../../components/ViewWrapper/ViewWrapper.styles';
 import photoMotorwayLightsM from '../../../public/images/motorway-lights-800.jpeg';
 import photoMotorwayLightsL from '../../../public/images/motorway-lights-1200.jpeg';
 import { elSystemInfo } from '../../data/appTextData';
+import { PageContext } from '../../providers/MainTemplate';
 
-const ContactBackground = ({ mobile }) => (
-  <>
-    {!mobile && (
-      <img
-        className="image contact__image"
-        srcSet={`
+const ContactBackground = () => {
+  const { mobile } = useContext(PageContext);
+
+  return (
+    <>
+      {!mobile && (
+        <img
+          className="image contact__image"
+          srcSet={`
           ${photoMotorwayLightsM} 800w,
           ${photoMotorwayLightsL} 1200w,
           `}
-        sizes="
+          sizes="
           (max-width: 1500px) 800px,
           1500px,
           "
-        src={photoMotorwayLightsL}
-        alt="droga nocą rozmazane światła"
-      />
-    )}
-  </>
-);
-
-ContactBackground.defaultProps = { mobile: false };
-
-ContactBackground.propTypes = {
-  mobile: PropTypes.bool,
+          src={photoMotorwayLightsL}
+          alt="droga nocą rozmazane światła, tło dla działu kontakt"
+        />
+      )}
+    </>
+  );
 };
 
 const contentTitle = elSystemInfo.contact.headline.toUpperCase();
 
-const Contact = ({ name, mobile }) => (
-  <ViewWrapper contact name={name}>
-    <ContactBackground mobile={mobile} />
+const Contact = () => (
+  <ViewWrapper contact name="contact">
+    <ContactBackground />
     <ContentWrapper>
       <Title title={contentTitle} />
       <ContentDivider />
@@ -47,12 +45,5 @@ const Contact = ({ name, mobile }) => (
     </ContentWrapper>
   </ViewWrapper>
 );
-
-Contact.defaultProps = { mobile: false };
-
-Contact.propTypes = {
-  name: PropTypes.string.isRequired,
-  mobile: PropTypes.bool,
-};
 
 export default Contact;
