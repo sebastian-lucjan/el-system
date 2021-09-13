@@ -9,7 +9,7 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": ["error", { "endOfLine": "auto", "singleQuote": true, "printWidth": 100 }],
+    "prettier/prettier": ["error", { "endOfLine": "auto", "singleQuote": true, "printWidth": 120 }],
     "no-unused-vars": "warn",
     "no-use-before-define": ["error", { "functions": false, "classes": false }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useReducer, useState } from 'react';
 import debounce from 'lodash.debounce';
 import { size } from '../assets/styles/theme';
 import Header from '../components/Header/Header';
@@ -26,54 +26,85 @@ export const PageContext = React.createContext({
   handleDismissCookiesPopUp: () => {},
 });
 
+const mainInitialState = {
+  pageY: 0,
+  visibleHamburger: checkNeedBurgerMenu(),
+  activeMobileNavigation: false,
+  cookiesPopUp: localStorage.getItem('cookie-notice-accept') !== 'accepted',
+};
+
+const mainReducerActionTypes = {
+  setPageY: 'setPageY',
+  visibleHamburger: 'visibleHamburger',
+  activeMobileNavigation: 'activeMobileNavigation',
+  cookiesPopUp: 'cookiesPopUp',
+};
+
+const mainReducer = (state, action) => {
+  const { setPageY, visibleHamburger, activeMobileNavigation, cookiesPopUp } = mainReducerActionTypes;
+
+  switch (action.type) {
+    case setPageY:
+      return { ...state, pageY: window.pageYOffset };
+    case visibleHamburger:
+      return { ...state, visibleHamburger: checkNeedBurgerMenu() };
+    case activeMobileNavigation:
+      return { ...state, activeMobileNavigation: !state.activeMobileNavigation };
+    case cookiesPopUp:
+      return { ...state, cookiesPopUp: false };
+
+    default:
+      return state;
+  }
+};
+
 const MainTemplate = () => {
-  const [pageY, setPageY] = useState(0);
-  const [visibleHamburger, setVisibleHamburger] = useState(checkNeedBurgerMenu);
-  const [activeMobileNavigation, setActiveMobileNavigation] = useState(false);
-  const [cookiesPopUp, setCookiesPopUp] = useState(
-    localStorage.getItem('cookie-notice-accept') !== 'accepted'
-  );
+  const [mainState, dispatch] = useReducer(mainReducer, mainInitialState);
 
   const handleCookiesPolicyAgree = () => {
     localStorage.setItem('cookie-notice-accept', 'accepted');
-    setCookiesPopUp(false);
+    dispatch({ type: mainReducerActionTypes.cookiesPopUp });
   };
 
   const handleChangeActiveMobileNav = () => {
-    setActiveMobileNavigation(!activeMobileNavigation);
+    dispatch({ type: mainReducerActionTypes.activeMobileNavigation });
+  };
+
+  const handleDismissCookiesPopUp = () => {
+    dispatch({ type: mainReducerActionTypes.cookiesPopUp });
   };
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(`(min-width: ${borderMediaValue}px)`);
     mediaQuery.addEventListener('change', () => {
-      setVisibleHamburger(checkNeedBurgerMenu());
+      dispatch({ type: mainReducerActionTypes.visibleHamburger });
     });
 
     return () => {
       mediaQuery.removeEventListener('change', () => {
-        setVisibleHamburger(checkNeedBurgerMenu());
+        dispatch({ type: mainReducerActionTypes.visibleHamburger });
       });
     };
-  }, [visibleHamburger]);
+  }, [mainState.visibleHamburger]);
 
-  const handleScroll = () => setPageY(window.pageYOffset);
+  const handleScroll = () => dispatch({ type: 'setPageY' });
 
   useEffect(() => {
     window.addEventListener('scroll', debounce(handleScroll, 50));
     return () => window.removeEventListener('scroll', debounce(handleScroll));
-  }, [pageY]);
+  }, [mainState.pageY]);
 
-  const isSliderVisible = () => !visibleHamburger && window.innerWidth >= size.width.md;
+  const isSliderVisible = () => !mainState.visibleHamburger && window.innerWidth >= size.width.md;
 
   return (
     <PageContext.Provider
       value={{
-        mobile: visibleHamburger,
-        visibleHamburger,
+        mobile: mainState.visibleHamburger,
+        visibleHamburger: mainState.visibleHamburger,
         handleChangeActiveMobileNav,
-        activeMobileNavigation,
+        activeMobileNavigation: mainState.activeMobileNavigation,
         handleCookiesPolicyAgree,
-        handleDismissCookiesPopUp: setCookiesPopUp,
+        handleDismissCookiesPopUp,
         visibleSlider: isSliderVisible(),
       }}
     >
@@ -85,9 +116,9 @@ const MainTemplate = () => {
           <Offer />
           <Cooperation />
           <Contact />
-          {pageY > 100 && <ScrollToTop to="" />}
+          {mainState.pageY > 100 && <ScrollToTop to="" />}
         </Suspense>
-        {cookiesPopUp && <Cookies />}
+        {mainState.cookiesPopUp && <Cookies />}
       </Wrapper>
     </PageContext.Provider>
   );
