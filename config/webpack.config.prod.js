@@ -10,12 +10,6 @@ module.exports = {
     filename: 'index-[contenthash:6].js',
     path: path.resolve(__dirname, '../dist'),
   },
-  devServer: {
-    open: true,
-    contentBase: path.resolve(__dirname, '../dist'),
-    port: 8080,
-    hot: true,
-  },
   module: {
     rules: [
       {
@@ -39,6 +33,21 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins: [
+            [
+              'styled-components',
+              {
+                displayName: false,
+              },
+            ],
+            [
+              'transform-react-remove-prop-types',
+              {
+                mode: 'unsafe-wrap',
+                ignoreFilenames: ['node_modules'],
+              },
+            ],
+          ],
         },
       },
       {
@@ -55,7 +64,7 @@ module.exports = {
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
-                quality: '75',
+                quality: '70',
                 progressive: true,
               },
             },

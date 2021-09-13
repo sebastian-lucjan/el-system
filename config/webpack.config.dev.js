@@ -13,6 +13,7 @@ module.exports = {
   devServer: {
     open: true,
     contentBase: path.resolve(__dirname, '../dist'),
+    historyApiFallback: true,
     port: 8080,
     hot: true,
   },
@@ -49,7 +50,7 @@ module.exports = {
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
-                quality: '75',
+                quality: '70',
                 progressive: true,
               },
             },

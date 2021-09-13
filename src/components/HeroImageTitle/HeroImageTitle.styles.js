@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { size, maxResolutionFullSlider } from '../../assets/styles/theme';
 
 const StyledHeroImageTitle = styled.div`
-  font-size: ${({ theme }) => theme.fontSize.xl};
+  font-size: ${({ theme, smaller }) => (smaller ? theme.fontSize.l : theme.fontSize.xl)};
   font-weight: ${({ theme }) => theme.fontWeight.extraLight};
 
   @media (orientation: landscape) and (${({ theme }) =>

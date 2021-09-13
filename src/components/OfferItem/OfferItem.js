@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import * as PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import { StyledOfferItem } from './OfferItem.styles';
 import OfferItemTitle from '../OfferItemTitle/OfferItemTitle';
 import OfferItemDescription from '../OfferItemDescription/OfferItemDescription';
+import { PageContext } from '../../providers/MainTemplate';
 
-const OfferItem = ({ title, iconName, description, othersArray, activeDescription, mobile }) => {
+const OfferItem = ({ offer }) => {
+  const { headline: title, iconName, description, othersArray } = offer;
+  const { mobile } = useContext(PageContext);
+  const activeDescription = !mobile;
+
   const [activeOfferDescription, setActiveOfferDescription] = useState(activeDescription);
 
   const handleClickOfferItem = () => {
@@ -45,18 +50,16 @@ const OfferItem = ({ title, iconName, description, othersArray, activeDescriptio
 };
 
 OfferItem.defaultProps = {
-  othersArray: [],
-  activeDescription: true,
-  mobile: false,
+  offer: {},
 };
 
 OfferItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  iconName: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  othersArray: PropTypes.instanceOf(Array),
-  activeDescription: PropTypes.bool,
-  mobile: PropTypes.bool,
+  offer: PropTypes.shape({
+    headline: PropTypes.string,
+    iconName: PropTypes.string,
+    description: PropTypes.string,
+    othersArray: PropTypes.arrayOf(PropTypes.string),
+  }),
 };
 
 export default OfferItem;

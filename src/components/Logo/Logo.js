@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 import { websiteData } from '../../data/appTextData';
 import StyledLogo from './Logo.styles';
+import { PageContext } from '../../providers/MainTemplate';
 
-const Logo = ({ mobile }) => (
-  <StyledLogo to="home" spy smooth duration={mobile ? 0 : 800}>
-    <h1>{websiteData.logo}</h1>
-  </StyledLogo>
-);
+const Logo = () => {
+  const { mobile } = useContext(PageContext);
 
-Logo.defaultProps = { mobile: false };
-
-Logo.propTypes = { mobile: PropTypes.bool };
+  return (
+    <StyledLogo to="home" spy smooth duration={mobile ? 0 : 800}>
+      <h1>{websiteData.logo}</h1>
+    </StyledLogo>
+  );
+};
 
 export default Logo;

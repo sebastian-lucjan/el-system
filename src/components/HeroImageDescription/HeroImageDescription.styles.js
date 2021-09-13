@@ -4,7 +4,7 @@ import { size, maxResolutionFullSlider } from '../../assets/styles/theme';
 const StyledHeroImageDescription = styled.div`
   //mobile
   width: 100%;
-  font-size: ${({ theme }) => theme.fontSize.m};
+  font-size: ${({ theme, smaller }) => (smaller ? theme.fontSize.s : theme.fontSize.m)};
   letter-spacing: 0.5px;
   font-weight: ${({ theme }) => theme.fontWeight.extraLight};
 
@@ -23,7 +23,7 @@ const StyledHeroImageDescription = styled.div`
   @media (${({ theme }) =>
       theme.devices
         .xl}) and (${`max-width: ${size.width.xxl}px`}) and (${`max-height: ${size.width.md}px`}) {
-    font-size: ${({ theme }) => theme.fontSize.s};
+    font-size: ${({ theme, smaller }) => (smaller ? theme.fontSize.xs : theme.fontSize.s)};
   }
 `;
 
