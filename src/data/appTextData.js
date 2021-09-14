@@ -4,7 +4,7 @@ export const elSystemInfo = {
   companyInfo: {
     headline: 'O firmie',
     textParagraphs: [
-      'Przedsiębiorstwo Techniczno–Usługowe Elsystem jest firmą istniejącą w branży elektroenergetycznej od ponad 10 lat. Jako wykwalifikowany i doświadczony zespół inżynierów świadczymy szeroki zakres usług projektowych i wdrożeniowych w zakresie sieci, urządzeń i instalacji elektroenergetycznych oraz instalacji teletechnicznych dla energetyki zawodowej, przemysłu i budownictwa. Świadczymy również usługi w zakresie badań i kontroli instalacji i urządzeń elektroenergetycznych.',
+      'Przedsiębiorstwo Techniczno–Usługowe Elsystem jest firmą istniejącą w branży elektroenergetycznej od ponad 10 lat. Jako wykwalifikowany i doświadczony zespół inżynierów świadczymy szeroki zakres usług dla energetyki zawodowej, przemysłu i budownictwa, w zakresie projektowania i wykonawstwa sieci, urządzeń i instalacji elektroenergetycznych oraz instalacji teletechnicznych. Świadczymy również usługi w zakresie badań i kontroli stanu technicznego instalacji i urządzeń elektroenergetycznych.',
       'Oferujemy usługi w zakresie nadzoru inwestorskiego, prowadzenia inwestycji, doradztwa i kierowania robotami budowlanymi w branży elektroenergetycznej.',
       'Serdecznie zachęcamy Państwa do zapoznania się z informacjami o naszej działalności lub złożenia konkretnego zapytania dotyczącego oferty. Skontaktujemy się z Państwem tak szybko jak to będzie możliwe.',
     ],
@@ -13,10 +13,14 @@ export const elSystemInfo = {
     headline: 'Oferta',
     offers: [
       {
-        headline: 'Automatyka budynkowa.',
-        iconName: 'fluent:device-meeting-room-remote-32-regular',
+        headline:
+          'Projektowanie i wykonawstwo sieci, instalacji i urządzeń elektroenergetycznych oraz instalacji teletechnicznych',
+        headlineShort: 'Projektowanie i wykonawstwo sieci, instalacji i urządzeń elektroenergetycznych',
+        iconName: 'clarity:design-line',
         description:
-          'Projektujemy i wdrażamy rozwiązania z zakresu automatyki budynkowej dopasowane do potrzeb i oczekiwań klienta.',
+          'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO. Świadczymy usługi dla sektora energetyki zawodowej, przemysłu i budownictwa ogólnego (budynki handlowe, użyteczności publicznej, budynki mieszkalne).',
+        descriptionShort:
+          'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO.',
         hasSlide: 'true',
       },
       {
@@ -27,15 +31,18 @@ export const elSystemInfo = {
         hasSlide: 'true',
       },
       {
-        headline:
-          'Projektowanie i wykonawstwo sieci, instalacji i urządzeń elektroenergetycznych oraz instalacji teletechnicznych',
-        headlineShort:
-          'Projektowanie i wykonawstwo sieci, instalacji i urządzeń elektroenergetycznych',
-        iconName: 'clarity:design-line',
+        headline: 'Automatyka budynkowa.',
+        iconName: 'fluent:device-meeting-room-remote-32-regular',
         description:
-          'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO. Świadczymy usługi dla sektora energetyki zawodowej, przemysłu i budownictwa ogólnego (budynki handlowe, użyteczności publicznej, budynki mieszkalne).',
-        descriptionShort:
-          'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO.',
+          'Projektujemy i wdrażamy rozwiązania z zakresu automatyki budynkowej dopasowane do potrzeb i oczekiwań klienta.',
+        hasSlide: 'true',
+      },
+      {
+        headline: 'Kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych',
+        headlineShort: 'Kontrola stanu technicznego instalacji elektroenergetycznych',
+        iconName: 'si-glyph:magnifier',
+        description:
+          'Wykonujemy badania odbiorcze i okresowe instalacji i urządzeń elektroenergetycznych oraz instalacji odgromowych.',
         hasSlide: 'true',
       },
       {
@@ -50,14 +57,6 @@ export const elSystemInfo = {
         iconName: 'mdi:help-network-outline',
         description:
           'Oferujemy kompleksowy i fachowy nadzór nad wszelkiego rodzaju pracami elektroinstalacyjnymi. Świadczymy usługi w zakresie pełnienia nadzoru inwestorskiego i kierowania robotami budowlanymi.',
-        hasSlide: 'true',
-      },
-      {
-        headline: 'Kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych',
-        headlineShort: 'Kontrola stanu technicznego instalacji elektroenergetycznych',
-        iconName: 'si-glyph:magnifier',
-        description:
-          'Wykonujemy badania odbiorcze i okresowe instalacji i urządzeń elektroenergetycznych oraz instalacji odgromowych.',
         hasSlide: 'true',
       },
       {
@@ -89,11 +88,13 @@ export const elSystemInfo = {
     headline: 'Współpraca',
     companies: [
       'PGE Dystrybucja S.A',
-      'MPWiK Sp. z o.o. Lublin',
+      'MPWiK w Lublinie Sp. z o.o.',
+      'Murator IBS Sp. z o.o.',
+      'ZRE Energetyka S.A.',
       '081 Architekci',
       'Biuro Architektoniczne Marcin Tatar',
-      'In Loft Deweloper',
-      'Kwadrat Deweloper',
+      'In Loft Deweloper sp. z o.o.',
+      'Kwadrat Deweloper sp. z o.o., sp. k.',
       'Elekromontaż S.A',
       'Trakcja PRKII S.A',
       'Elektro-Instal Chełm Sp.j',
@@ -109,7 +110,7 @@ export const elSystemInfo = {
         city: 'Lublin',
       },
       phoneNrs: ['603 095 642', '535 920 293'],
-      email: 'podany.jak@będzie.domena',
+      email: 'elsystem.lublin@gmail.com',
     },
     companiesData: {
       headline: 'Dane Firmy',

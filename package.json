@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/sebastian-lucjan/el-system/issues"
   },
-  "homepage": "https://github.com/sebastian-lucjan/el-system#readme",
+  "homepage": "https://www.elsystem.tech",
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",

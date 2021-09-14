@@ -98,18 +98,18 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
         <img
           className="hero-image__image"
           srcSet={`
-          ${photoHouseAutomationM} 960w,
-          ${photoHouseAutomationL} 1200w,
-          ${photoHouseAutomationXL} 1700w,
+          ${photoInstallationProjectingM} 960w,
+          ${photoInstallationProjectingL} 1200w,
+          ${photoInstallationProjectingXL} 1700w,
           `}
           sizes="
           (max-width: 1920px) 960px,
           (max-width: 2400px) 1200px,
           1700px,
           "
-          src={photoHouseAutomationXL}
-          loading="preload"
-          alt="automatyka domowa, smart dom"
+          src={photoInstallationProjectingXL}
+          loading="lazy"
+          alt="projektowanie sieci, instalacji i urządzeń elektroenergetycznych"
         />
         <img
           className="hero-image__image"
@@ -130,18 +130,34 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
         <img
           className="hero-image__image"
           srcSet={`
-          ${photoInstallationProjectingM} 960w,
-          ${photoInstallationProjectingL} 1200w,
-          ${photoInstallationProjectingXL} 1700w,
+          ${photoHouseAutomationM} 960w,
+          ${photoHouseAutomationL} 1200w,
+          ${photoHouseAutomationXL} 1700w,
           `}
           sizes="
           (max-width: 1920px) 960px,
           (max-width: 2400px) 1200px,
           1700px,
           "
-          src={photoInstallationProjectingXL}
+          src={photoHouseAutomationXL}
+          loading="preload"
+          alt="automatyka domowa, smart dom"
+        />
+        <img
+          className="hero-image__image"
+          srcSet={`
+          ${photoTechnicalControlM} 960w,
+          ${photoTechnicalControlL} 1200w,
+          ${photoTechnicalControlXL} 1700w,
+          `}
+          sizes="
+          (max-width: 1920px) 960px,
+          (max-width: 2400px) 1200px,
+          1700px,
+          "
+          src={photoTechnicalControlXL}
           loading="lazy"
-          alt="projektowanie sieci, instalacji i urządzeń elektroenergetycznych"
+          alt="kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych"
         />
         <img
           className="hero-image__image"
@@ -174,22 +190,6 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
           src={photoInspectionXL}
           loading="lazy"
           alt="doradztwo techniczne nadzory inwestoreskie"
-        />
-        <img
-          className="hero-image__image"
-          srcSet={`
-          ${photoTechnicalControlM} 960w,
-          ${photoTechnicalControlL} 1200w,
-          ${photoTechnicalControlXL} 1700w,
-          `}
-          sizes="
-          (max-width: 1920px) 960px,
-          (max-width: 2400px) 1200px,
-          1700px,
-          "
-          src={photoTechnicalControlXL}
-          loading="lazy"
-          alt="kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych"
         />
       </Slider>
     </StyledHeroImage>

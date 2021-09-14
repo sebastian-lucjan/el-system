@@ -86,6 +86,7 @@ module.exports = {
       patterns: [
         { from: 'public/images', to: 'images' },
         { from: 'public/icons', to: 'icons' },
+        { from: '.htaccess', to: '' },
       ],
     }),
   ],
