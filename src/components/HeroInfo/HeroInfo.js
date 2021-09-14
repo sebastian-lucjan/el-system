@@ -16,10 +16,7 @@ const HeroInfo = ({ servicesToSlider }) => {
 
   return (
     <Wrapper>
-      <HeroImageTitle
-        smaller={isTitleToLong(headline)}
-        headline={isTitleToLong(headline) ? headlineShort : headline}
-      />
+      <HeroImageTitle smaller={isTitleToLong(headline)} headline={isTitleToLong(headline) ? headlineShort : headline} />
       <HeroImageDescription
         smaller={isDescriptionToLong(description)}
         description={isDescriptionToLong(description) ? descriptionShort : description}

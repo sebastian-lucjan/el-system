@@ -31,7 +31,8 @@ const OfferItem = ({ offer }) => {
               flexShrink: '0',
               color: `${activeOfferDescription ? '#fff' : '#777'}`,
             }}
-            icon={`ph:caret-${activeOfferDescription ? 'down' : 'up'}-bold`}
+            icon={`ph:caret-${activeOfferDescription ? 'down' : 'right'}-bold`}
+            onClick={handleClickOfferItem}
           />
         ) : (
           <Icon className="offerItem__icon" icon={iconName} />
