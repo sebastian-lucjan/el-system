@@ -7,6 +7,7 @@ const StyledOfferItemDescription = styled.div`
 
   .offerItem__othersList {
     list-style: disc;
+    width: calc(100% - 20px);
     transform: translateX(${({ theme }) => theme.baseSpacing});
   }
 

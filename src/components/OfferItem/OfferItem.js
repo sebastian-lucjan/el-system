@@ -7,7 +7,7 @@ import OfferItemDescription from '../OfferItemDescription/OfferItemDescription';
 import { PageContext } from '../../providers/MainTemplate';
 
 const OfferItem = ({ offer }) => {
-  const { headline: title, iconName, description, othersArray } = offer;
+  const { headline: title, iconName, description, others } = offer;
   const { mobile } = useContext(PageContext);
   const activeDescription = !mobile;
 
@@ -36,15 +36,9 @@ const OfferItem = ({ offer }) => {
         ) : (
           <Icon className="offerItem__icon" icon={iconName} />
         )}
-        <OfferItemTitle
-          activeOfferDescription={activeOfferDescription}
-          title={title}
-          onClick={handleClickOfferItem}
-        />
+        <OfferItemTitle activeOfferDescription={activeOfferDescription} title={title} onClick={handleClickOfferItem} />
       </header>
-      {activeOfferDescription && (
-        <OfferItemDescription description={description} othersArray={othersArray} />
-      )}
+      {activeOfferDescription && <OfferItemDescription description={description} othersArray={others} />}
     </StyledOfferItem>
   );
 };
