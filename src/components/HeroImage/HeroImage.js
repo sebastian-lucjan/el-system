@@ -82,7 +82,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     beforeChange: (current, next) => handleChangeSlideIndex(next),
     appendDots: (dots) => <DotsWrapper dots={dots} />,

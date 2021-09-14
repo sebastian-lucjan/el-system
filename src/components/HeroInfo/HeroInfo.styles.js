@@ -14,8 +14,7 @@ const Wrapper = styled.div`
   padding: 120px 60px 120px 120px;
 
   //iPad and large mobile landscape
-  @media (orientation: landscape) and (${({ theme }) =>
-      theme.devices.md}) and (${maxResolutionFullSlider}) {
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.md}) and (${maxResolutionFullSlider}) {
     width: 100%;
     height: ${({ theme }) => theme.headerHeight};
     padding: 0 ${({ theme }) => theme.baseSpacing};
@@ -38,14 +37,25 @@ const Wrapper = styled.div`
 
   //Desktop landscape for small resolution like laptop
   @media (${({ theme }) =>
-      theme.devices
-        .xl}) and (${`max-width: ${size.width.xxl}px`}) and (${`max-height: ${size.width.md}px`}) {
+      theme.devices.xl}) and (${`max-width: ${size.width.xxl}px`}) and (${`max-height: ${size.width.md}px`}) {
     padding: 60px 60px 60px 120px;
   }
 
   //Desktop landscape for medium resolution
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
     padding: 100px 160px 100px 160px;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
+    padding: 100px 160px 100px 160px;
+  }
+
+  //MacBook Air 13" (1440x900) landscape
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) and (${`max-height: ${size.width.lg}px`}) {
+    width: 50%;
+    height: 50vh;
+    flex-direction: column;
+    padding: 80px 60px 80px 120px;
   }
 
   //Desktop landscape for high resolution
