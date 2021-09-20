@@ -6,8 +6,8 @@ const HeroImageDescription = ({ description, smaller }) => (
   <StyledHeroImageDescription smaller={smaller}>{description}</StyledHeroImageDescription>
 );
 
-HeroImageDescription.defaultProps = { description: '' };
+HeroImageDescription.defaultProps = { description: '', smaller: false };
 
-HeroImageDescription.propTypes = { description: PropTypes.string };
+HeroImageDescription.propTypes = { description: PropTypes.string, smaller: PropTypes.bool };
 
 export default HeroImageDescription;

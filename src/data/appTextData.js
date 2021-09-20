@@ -24,7 +24,7 @@ export const elSystemInfo = {
         hasSlide: 'true',
       },
       {
-        headline: 'Automatyka budynkowa.',
+        headline: 'Automatyka budynkowa',
         iconName: 'fluent:device-meeting-room-remote-32-regular',
         description:
           'Projektujemy i wdrażamy rozwiązania z  zakresu automatyki budynkowej, oraz inetegracji instalacji budynkowych (BMS).',

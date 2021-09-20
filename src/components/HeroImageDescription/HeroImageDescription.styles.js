@@ -4,12 +4,13 @@ import { size, maxResolutionFullSlider } from '../../assets/styles/theme';
 const StyledHeroImageDescription = styled.div`
   //base
   width: 100%;
-  font-size: ${({ theme }) => theme.fontSize.m};
+  font-size: ${({ theme }) => theme.fontSize.s};
   letter-spacing: 0.5px;
   font-weight: ${({ theme }) => theme.fontWeight.extraLight};
 
   //iPad and large mobile landscape
   @media (orientation: landscape) and (${({ theme }) => theme.devices.md}) and (${maxResolutionFullSlider}) {
+    font-size: ${({ theme }) => theme.fontSize.m};
     display: none;
   }
 
