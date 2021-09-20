@@ -5,6 +5,7 @@ import HeroImageButton from '../HeroButton/HeroButton';
 import HeroImageTitle from '../HeroImageTitle/HeroImageTitle';
 import HeroImageDescription from '../HeroImageDescription/HeroImageDescription';
 import { SliderIndexContext } from '../Hero/Hero';
+import addNonBreakableSpaces from '../../helpers/addNonBreakableSpaces';
 
 const isTitleToLong = (title) => title.length > 70;
 const isDescriptionToLong = (description) => description.length > 200;
@@ -12,7 +13,14 @@ const isDescriptionToLong = (description) => description.length > 200;
 const HeroInfo = ({ servicesToSlider }) => {
   const slideIndex = useContext(SliderIndexContext);
 
-  const { headline, headlineShort, description, descriptionShort } = servicesToSlider[slideIndex];
+  const {
+    headline,
+    headlineShort,
+    description: rawDescription,
+    descriptionShort: rawDescriptionShort,
+  } = servicesToSlider[slideIndex];
+  const description = rawDescription && addNonBreakableSpaces(rawDescription);
+  const descriptionShort = rawDescriptionShort && addNonBreakableSpaces(rawDescriptionShort);
 
   return (
     <Wrapper>

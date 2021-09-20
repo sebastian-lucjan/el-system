@@ -41,17 +41,18 @@ const Wrapper = styled.div`
     padding: 60px 60px 60px 120px;
   }
 
+  //Desktop landscape for small resolution
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) and (${`max-height: ${size.width.lg}px`}) {
+    padding: 60px 60px 60px 120px;
+  }
+
   //Desktop landscape for medium resolution
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
     padding: 100px 160px 100px 160px;
   }
 
-  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
-    padding: 100px 160px 100px 160px;
-  }
-
   //MacBook Air 13" (1440x900) landscape
-  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) and (${`max-height: ${size.width.lg}px`}) {
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) and (${`max-height: ${size.width.lg}px`}) {
     width: 50%;
     height: 50vh;
     flex-direction: column;
@@ -60,7 +61,11 @@ const Wrapper = styled.div`
 
   //Desktop landscape for high resolution
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) {
-    padding: 160px;
+    padding: 140px 160px;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) and (${'max-height: 1079px'}) {
+    padding: 120px 160px;
   }
 `;
 

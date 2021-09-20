@@ -18,9 +18,16 @@ export const elSystemInfo = {
         headlineShort: 'Projektowanie i wykonawstwo sieci, instalacji i urządzeń elektroenergetycznych',
         iconName: 'clarity:design-line',
         description:
-          'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO. Świadczymy usługi dla sektora energetyki zawodowej, przemysłu i budownictwa ogólnego (budynki handlowe, użyteczności publicznej, budynki mieszkalne).',
+          'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych. Świadczymy usługi dla sektora energetyki zawodowej, przemysłu i budownictwa ogólnego (budynki handlowe, użyteczności publicznej, budynki mieszkalne).',
         descriptionShort:
-          'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych – SSP, KD, CCTV, DSO.',
+          'Zajmujemy się projektowaniem i wykonawstwem sieci elektroenergetycznych SN i nn, stacji transformatorowych, rozdzielnic SN i nn oraz instalacji elektroenergetycznych i teletechnicznych. Świadczymy usługi dla sektora energetyki zawodowej, przemysłu i budownictwa ogólnego (budynki handlowe, użyteczności publicznej, budynki mieszkalne).',
+        hasSlide: 'true',
+      },
+      {
+        headline: 'Automatyka budynkowa.',
+        iconName: 'fluent:device-meeting-room-remote-32-regular',
+        description:
+          'Projektujemy i wdrażamy rozwiązania z  zakresu automatyki budynkowej, oraz inetegracji instalacji budynkowych (BMS).',
         hasSlide: 'true',
       },
       {
@@ -28,13 +35,6 @@ export const elSystemInfo = {
         iconName: 'mdi:solar-power',
         description:
           'Projektujemy i wdrażamy rozwiązania z zakresu instalacji fotowoltaicznych – od mikroinstalacji do farm fotowoltaicznych.',
-        hasSlide: 'true',
-      },
-      {
-        headline: 'Automatyka budynkowa.',
-        iconName: 'fluent:device-meeting-room-remote-32-regular',
-        description:
-          'Projektujemy i wdrażamy rozwiązania z zakresu automatyki budynkowej dopasowane do potrzeb i oczekiwań klienta.',
         hasSlide: 'true',
       },
       {

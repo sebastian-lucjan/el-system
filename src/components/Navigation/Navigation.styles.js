@@ -62,7 +62,7 @@ export const StyledNavLink = styled(Link).attrs({ activeClass })`
   //Desktop landscape for small resolution like laptop
   @media (${({ theme }) => theme.devices.xl}) {
     font-size: ${({ theme }) => theme.fontSize.s};
-    margin: ${({ theme }) => theme.baseSpacing};
+    margin: ${({ theme }) => theme.baseSpacing} 0;
     cursor: pointer;
     overflow: hidden;
     color: ${({ theme }) => theme.colors.white};
