@@ -64,7 +64,7 @@ module.exports = {
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
-                quality: '70',
+                quality: '75',
                 progressive: true,
               },
             },
@@ -84,8 +84,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'public/images', to: 'images' },
-        { from: 'public/icons', to: 'icons' },
+        { from: 'public', to: '' },
         { from: '.htaccess', to: '' },
       ],
     }),

@@ -7,7 +7,6 @@ const addNonBreakableSpaces = (rawDescription) => {
     }
     return `${next}\xa0${acc}`;
   }, '');
-
   return description;
 };
 
