@@ -1,13 +1,16 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import StyledHeroImageDescription from './HeroImageDescription.styles';
+import addNonBreakableSpaces from '../../helpers/addNonBreakableSpaces';
 
-const HeroImageDescription = ({ description, smaller }) => (
-  <StyledHeroImageDescription smaller={smaller}>{description}</StyledHeroImageDescription>
-);
+const HeroImageDescription = ({ description: rawDescription, smaller }) => {
+  const description = addNonBreakableSpaces(rawDescription);
 
-HeroImageDescription.defaultProps = { description: '' };
+  return <StyledHeroImageDescription smaller={smaller}>{description}</StyledHeroImageDescription>;
+};
 
-HeroImageDescription.propTypes = { description: PropTypes.string };
+HeroImageDescription.defaultProps = { description: '', smaller: false };
+
+HeroImageDescription.propTypes = { description: PropTypes.string, smaller: PropTypes.bool };
 
 export default HeroImageDescription;

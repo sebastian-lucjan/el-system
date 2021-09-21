@@ -4,24 +4,24 @@ import styled from 'styled-components';
 import * as PropTypes from 'prop-types';
 import StyledHeroImage from './HeroImage.styles';
 import SliderArrow from '../SliderArrow/SliderArrow';
-import photoHouseAutomationM from '../../../public/images/house-automation-960x640.jpeg';
-import photoHouseAutomationL from '../../../public/images/house-automation-1200x800.jpeg';
-import photoHouseAutomationXL from '../../../public/images/house-automation-1700x1133.jpeg';
-import photoPhotovoltaicM from '../../../public/images/photovoltaic-power-960-639.jpeg';
-import photoPhotovoltaicL from '../../../public/images/photovoltaic-power-1200-799.jpeg';
-import photoPhotovoltaicXL from '../../../public/images/photovoltaic-power-1920-1080.jpeg';
-import photoInstallationProjectingM from '../../../public/images/network-installation-projecting-960x628.jpg';
-import photoInstallationProjectingL from '../../../public/images/network-installation-projecting-1200x785.jpg';
-import photoInstallationProjectingXL from '../../../public/images/network-installation-projecting-1700x1111.jpg';
-import photoFactoryM from '../../../public/images/factory-960-640.jpeg';
-import photoFactoryL from '../../../public/images/factory-1200-800.jpeg';
-import photoFactoryXL from '../../../public/images/factory-1920-1280.jpeg';
-import photoInspectionM from '../../../public/images/inspection-person-960-640.jpeg';
-import photoInspectionL from '../../../public/images/inspection-person-1200-800.jpeg';
-import photoInspectionXL from '../../../public/images/inspection-person-1920-1280.jpeg';
-import photoTechnicalControlM from '../../../public/images/technical-control-960x688.jpg';
-import photoTechnicalControlL from '../../../public/images/technical-control-1200x860.jpg';
-import photoTechnicalControlXL from '../../../public/images/technical-control-1700x1219.jpg';
+import photoHouseAutomationM from '../../../public/images/house-automation-960.jpeg';
+import photoHouseAutomationL from '../../../public/images/house-automation-1200.jpeg';
+import photoHouseAutomationXL from '../../../public/images/house-automation-1700.jpeg';
+import photoPhotovoltaicM from '../../../public/images/photovoltaic-power-960.jpeg';
+import photoPhotovoltaicL from '../../../public/images/photovoltaic-power-1200.jpeg';
+import photoPhotovoltaicXL from '../../../public/images/photovoltaic-power-1920.jpeg';
+import photoInstallationProjectingM from '../../../public/images/network-installation-projecting-960.jpg';
+import photoInstallationProjectingL from '../../../public/images/network-installation-projecting-1200.jpg';
+import photoInstallationProjectingXL from '../../../public/images/network-installation-projecting-1700.jpg';
+import photoFactoryM from '../../../public/images/factory-960.jpeg';
+import photoFactoryL from '../../../public/images/factory-1200.jpeg';
+import photoFactoryXL from '../../../public/images/factory-1920.jpeg';
+import photoInspectionM from '../../../public/images/inspection-person-960.jpeg';
+import photoInspectionL from '../../../public/images/inspection-person-1200.jpeg';
+import photoInspectionXL from '../../../public/images/inspection-person-1920.jpeg';
+import photoTechnicalControlM from '../../../public/images/technical-control-960.jpg';
+import photoTechnicalControlL from '../../../public/images/technical-control-1200.jpg';
+import photoTechnicalControlXL from '../../../public/images/technical-control-1700.jpg';
 
 const StyledDot = styled.div`
   width: 8px;
@@ -82,7 +82,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     beforeChange: (current, next) => handleChangeSlideIndex(next),
     appendDots: (dots) => <DotsWrapper dots={dots} />,
@@ -95,6 +95,22 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
     <StyledHeroImage>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Slider {...settings}>
+        <img
+          className="hero-image__image"
+          srcSet={`
+          ${photoInstallationProjectingM} 960w,
+          ${photoInstallationProjectingL} 1200w,
+          ${photoInstallationProjectingXL} 1700w,
+          `}
+          sizes="
+          (max-width: 1920px) 960px,
+          (max-width: 2400px) 1200px,
+          1700px,
+          "
+          src={photoInstallationProjectingXL}
+          loading="lazy"
+          alt="projektowanie sieci, instalacji i urządzeń elektroenergetycznych"
+        />
         <img
           className="hero-image__image"
           srcSet={`
@@ -130,18 +146,18 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
         <img
           className="hero-image__image"
           srcSet={`
-          ${photoInstallationProjectingM} 960w,
-          ${photoInstallationProjectingL} 1200w,
-          ${photoInstallationProjectingXL} 1700w,
+          ${photoTechnicalControlM} 960w,
+          ${photoTechnicalControlL} 1200w,
+          ${photoTechnicalControlXL} 1700w,
           `}
           sizes="
           (max-width: 1920px) 960px,
           (max-width: 2400px) 1200px,
           1700px,
           "
-          src={photoInstallationProjectingXL}
+          src={photoTechnicalControlXL}
           loading="lazy"
-          alt="projektowanie sieci, instalacji i urządzeń elektroenergetycznych"
+          alt="kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych"
         />
         <img
           className="hero-image__image"
@@ -174,22 +190,6 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
           src={photoInspectionXL}
           loading="lazy"
           alt="doradztwo techniczne nadzory inwestoreskie"
-        />
-        <img
-          className="hero-image__image"
-          srcSet={`
-          ${photoTechnicalControlM} 960w,
-          ${photoTechnicalControlL} 1200w,
-          ${photoTechnicalControlXL} 1700w,
-          `}
-          sizes="
-          (max-width: 1920px) 960px,
-          (max-width: 2400px) 1200px,
-          1700px,
-          "
-          src={photoTechnicalControlXL}
-          loading="lazy"
-          alt="kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych"
         />
       </Slider>
     </StyledHeroImage>

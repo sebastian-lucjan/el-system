@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack serve --config ./config/webpack.config.dev.js",
     "prod": "webpack --mode production --config config/webpack.config.prod.js",
+    "gzip": "webpack --mode production --config config/webpack.config.gzip.js",
     "dev": "webpack --mode development --config config/webpack.config.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:fix": "./node_modules/.bin/eslint . --fix"
@@ -20,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/sebastian-lucjan/el-system/issues"
   },
-  "homepage": "https://github.com/sebastian-lucjan/el-system#readme",
+  "homepage": "https://www.elsystem.tech",
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
@@ -30,6 +31,7 @@
     "babel-plugin-styled-components": "^1.13.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "compression-webpack-plugin": "^9.0.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
@@ -62,6 +64,7 @@
     "react-router-dom": "^5.2.1",
     "react-scroll": "^1.8.3",
     "react-slick": "^0.28.1",
+    "react-spinners": "^0.11.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.1"
   }

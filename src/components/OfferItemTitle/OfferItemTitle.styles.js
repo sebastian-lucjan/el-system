@@ -5,7 +5,7 @@ const StyledOfferItemTitle = styled.h3`
     activeOfferDescription ? fontWeight.light : fontWeight.extraLight};
   width: 100%;
   cursor: pointer;
-
+  text-align: left;
   //iPad
   @media (${({ theme }) => theme.devices.md}) {
     height: 100%;
@@ -15,6 +15,9 @@ const StyledOfferItemTitle = styled.h3`
     font-weight: ${({ theme }) => theme.fontWeight.light};
     cursor: text;
     font-size: ${({ theme }) => theme.fontSize.m};
+  }
+  @media (${({ theme }) => theme.devices.lg}) {
+    text-align: justify;
   }
 `;
 

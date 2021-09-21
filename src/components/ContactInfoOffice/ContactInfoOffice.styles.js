@@ -25,6 +25,10 @@ const StyledContactOffice = styled.section`
     padding-top: ${({ theme }) => theme.baseSpacing};
   }
 
+  .contact-info__email-link {
+    color: ${({ theme }) => theme.colors.white};
+  }
+
   //mobile small
   @media (${({ theme }) => theme.devices.xxs}) {
     font-size: ${({ theme }) => theme.fontSize.xs};
