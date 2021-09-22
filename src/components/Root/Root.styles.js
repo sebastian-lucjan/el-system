@@ -5,5 +5,4 @@ export const Wrapper = styled.main`
   flex-wrap: wrap;
   width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden;
 `;

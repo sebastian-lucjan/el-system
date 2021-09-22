@@ -37,8 +37,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
     color: ${(props) => props.theme.colors.white};
     background-color: ${(props) => props.theme.colors.black};
-  }
-  main{
     overflow-x: hidden;
   }
   ol, ul {
