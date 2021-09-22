@@ -12,7 +12,6 @@ export const StyledNavigation = styled.div`
   align-items: center;
   width: 100%;
   height: calc(100% - ${({ theme }) => theme.headerHeight});
-  overflow: hidden;
   padding: calc(25vh - ${({ theme }) => theme.headerHeight}) 0 25vh 0;
   background-color: ${({ theme }) => theme.colors.black};
   z-index: ${({ theme }) => theme.zIndex.superiorPriority};
@@ -24,10 +23,9 @@ export const StyledNavigation = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 50vw;
+    width: 50%;
     height: 100%;
-    margin-right: 30px;
-    padding: 0;
+    padding: 0 30px 0 0;
   }
 
   //Desktop landscape for medium resolution

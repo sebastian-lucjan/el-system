@@ -23,11 +23,11 @@ const StyledArrow = styled(Icon)`
   }
 
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
-    left: ${({ direction }) => (direction === 'right' ? 'calc(50vw - 80px)' : 0)};
+    left: ${({ direction }) => (direction === 'right' ? 'calc(100% - 50px)' : 0)};
   }
 
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) {
-    left: ${({ direction }) => (direction === 'right' ? 'calc(50vw - 60px)' : 0)};
+    left: ${({ direction }) => (direction === 'right' ? 'calc(100% - 30px)' : 0)};
     transform: translateY(-50%);
   }
 `;

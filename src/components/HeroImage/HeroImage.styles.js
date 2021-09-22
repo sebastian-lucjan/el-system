@@ -3,11 +3,12 @@ import { maxResolutionFullSlider } from '../../assets/styles/theme';
 
 const StyledHeroImage = styled.div`
   //base
-  position: relative;
   width: 50%;
   height: 100%;
   overflow: hidden;
-
+  .slider__wrapper {
+    position: relative;
+  }
   .hero-image__image {
     width: 100%;
     margin-right: 30px;
