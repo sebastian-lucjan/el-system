@@ -38,6 +38,9 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.white};
     background-color: ${(props) => props.theme.colors.black};
   }
+  main{
+    overflow-x: hidden;
+  }
   ol, ul {
     list-style: none;
   }
