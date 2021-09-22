@@ -1,6 +1,7 @@
 {
+  "name": "elsystem",
   "short_name": "elsystem",
-  "name": "elsystem - usługi z branży elektroenergetycznej",
+  "description": "elsystem - usługi z branży elektroenergetycznej",
   "icons": [
     {
       "src": "favicon.ico",
