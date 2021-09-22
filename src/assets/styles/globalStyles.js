@@ -32,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
+  html {
+    overflow-y: scroll;
+    width: 100vh;
+  }
   body {
     line-height: 1;
     font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
