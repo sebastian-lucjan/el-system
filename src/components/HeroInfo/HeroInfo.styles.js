@@ -56,7 +56,7 @@ const Wrapper = styled.div`
     width: 50%;
     height: 50vh;
     flex-direction: column;
-    padding: 80px 60px 80px 120px;
+    padding: 60px 60px 60px 120px;
   }
 
   //Desktop landscape for high resolution
