@@ -6,7 +6,7 @@ const maxResolutionFullSlider = `max-width: ${size.width.xxl}px`;
 const Wrapper = styled.div`
   // base
   position: relative;
-  width: 50%;
+  width: 50vw;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -29,10 +29,10 @@ const Wrapper = styled.div`
 
   //iPad PRO (1366x1024) landscape
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
-    width: 50%;
+    width: 50vw;
     height: 50vh;
     flex-direction: column;
-    padding: 120px 60px 120px 120px;
+    padding: 110px 60px 110px 120px;
   }
 
   //Desktop landscape for small resolution like laptop
@@ -42,6 +42,7 @@ const Wrapper = styled.div`
   }
 
   //Desktop landscape for small resolution
+
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) and (${`max-height: ${size.width.lg}px`}) {
     padding: 60px 60px 60px 120px;
   }
@@ -53,10 +54,14 @@ const Wrapper = styled.div`
 
   //MacBook Air 13" (1440x900) landscape
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxl}) and (${`max-height: ${size.width.lg}px`}) {
-    width: 50%;
+    width: 50vw;
     height: 50vh;
     flex-direction: column;
     padding: 60px 60px 60px 120px;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) and (${`max-height: ${size.width.md}px`}) {
+    padding: 50px 60px 50px 120px;
   }
 
   //Desktop landscape for high resolution
@@ -66,6 +71,10 @@ const Wrapper = styled.div`
 
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) and (${'max-height: 1079px'}) {
     padding: 120px 160px;
+  }
+
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.xxxl}) and (${'max-height: 940px'}) {
+    padding: 100px 160px;
   }
 `;
 

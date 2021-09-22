@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ViewWrapper = styled.div`
   //mobile
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 84px 20px 20px 20px; //84px -> 64px (header height) + 20px (baseSpace)
