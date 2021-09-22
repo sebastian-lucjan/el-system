@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useContext } from 'react';
+import { lazy, Suspense, useContext } from 'react';
 import bulbImgL from '../../../public/images/bulb-mobile-240-392.jpeg';
 import bulbImgXL from '../../../public/images/bulb-mobile-381-623.jpeg';
 import { StyledStartPage } from './StartPage.styles';

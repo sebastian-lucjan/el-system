@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Title from '../../components/Title/Title';
 import ContentDivider from '../../components/ContentDivider/ContentDivider';
 import ContactInfoOffice from '../../components/ContactInfoOffice/ContactInfoOffice';

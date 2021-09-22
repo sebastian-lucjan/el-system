@@ -1,5 +1,5 @@
 export const elSystemInfo = {
-  name: 'el system',
+  name: 'elsystem',
   owner: 'Tomasz Pietras',
   companyInfo: {
     headline: 'O firmie',
@@ -87,7 +87,7 @@ export const elSystemInfo = {
   cooperation: {
     headline: 'Współpraca',
     companies: [
-      'PGE Dystrybucja S.A',
+      'PGE Dystrybucja S.A.',
       'MPWiK w Lublinie Sp. z o.o.',
       'Murator IBS Sp. z o.o.',
       'ZRE Energetyka S.A.',
@@ -95,8 +95,7 @@ export const elSystemInfo = {
       'Biuro Architektoniczne Marcin Tatar',
       'In Loft Deweloper sp. z o.o.',
       'Kwadrat Deweloper sp. z o.o., sp. k.',
-      'Elekromontaż S.A',
-      'Trakcja PRKII S.A',
+      'Trakcja PRKII S.A.',
       'Elektro-Instal Chełm Sp.j',
     ],
   },
@@ -110,7 +109,7 @@ export const elSystemInfo = {
         city: 'Lublin',
       },
       phoneNrs: ['603 095 642', '535 920 293'],
-      email: 'elsystem.lublin@gmail.com',
+      email: 'biuro@elsystem.tech',
     },
     companiesData: {
       headline: 'Dane Firmy',
@@ -134,7 +133,7 @@ export const elSystemInfo = {
 };
 
 export const websiteData = {
-  logo: 'el system',
+  logo: 'elsystem',
   navigation: [
     { buttonText: 'O firmie', name: 'about', path: '/firma' },
     { buttonText: 'Oferta', name: 'offer', path: '/oferta' },

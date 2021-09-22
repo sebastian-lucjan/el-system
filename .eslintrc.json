@@ -13,6 +13,7 @@
     "no-unused-vars": "warn",
     "no-use-before-define": ["error", { "functions": false, "classes": false }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/react-in-jsx-scope": "off",
     "comma-dangle": ["error", "only-multiline"],
     "implicit-arrow-linebreak": "off",
     "no-confusing-arrow": "off",

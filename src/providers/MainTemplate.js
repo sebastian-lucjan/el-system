@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, createContext } from 'react';
+import { lazy, Suspense, createContext } from 'react';
 import Header from '../components/Header/Header';
 import StartPage from '../views/StartPage/StartPage';
 import Cookies from '../components/Cookies/Cookies';

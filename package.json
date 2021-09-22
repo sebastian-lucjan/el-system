@@ -1,14 +1,13 @@
 {
-  "name": "el-system",
-  "version": "1.0.0",
-  "description": "el system - www",
+  "name": "elsystem",
+  "version": "1.0.1",
+  "description": "elsystem - usługi z branży elektroenergetycznej",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --config ./config/webpack.config.dev.js",
     "prod": "webpack --mode production --config config/webpack.config.prod.js",
     "gzip": "webpack --mode production --config config/webpack.config.gzip.js",
     "dev": "webpack --mode development --config config/webpack.config.dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint:fix": "./node_modules/.bin/eslint . --fix"
   },
   "repository": {

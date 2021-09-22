@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyledParagraph } from './AboutPage.styles';
 import Title from '../../components/Title/Title';
 import ContentDivider from '../../components/ContentDivider/ContentDivider';

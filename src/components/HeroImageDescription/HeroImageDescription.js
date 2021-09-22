@@ -1,4 +1,3 @@
-import React from 'react';
 import * as PropTypes from 'prop-types';
 import StyledHeroImageDescription from './HeroImageDescription.styles';
 import addNonBreakableSpaces from '../../helpers/addNonBreakableSpaces';

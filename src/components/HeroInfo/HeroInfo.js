@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import * as PropTypes from 'prop-types';
 import Wrapper from './HeroInfo.styles';
 import HeroImageButton from '../HeroButton/HeroButton';

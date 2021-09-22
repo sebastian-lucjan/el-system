@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import * as PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import { StyledOfferItem } from './OfferItem.styles';

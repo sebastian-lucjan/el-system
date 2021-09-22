@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { theme } from '../../assets/styles/theme';
