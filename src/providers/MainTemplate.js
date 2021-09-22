@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, createContext } from 'react';
+import { lazy, Suspense, createContext } from 'react';
 import Header from '../components/Header/Header';
 import StartPage from '../views/StartPage/StartPage';
 import Cookies from '../components/Cookies/Cookies';
@@ -8,6 +8,7 @@ import { initialPageContextValue } from '../data/pageContextData';
 import { useCookies } from '../hooks/useCookies';
 import { useCurrentY } from '../hooks/useCurrentY';
 import { useIsActive } from '../hooks/useIsActive';
+import Loader from '../components/Loader/Loader';
 
 const AboutPage = lazy(() => import('../views/AboutPage/AboutPage'));
 const Offer = lazy(() => import('../views/Offer/Offer'));
@@ -34,7 +35,7 @@ const MainTemplate = () => {
       }}
     >
       <Wrapper>
-        <Suspense fallback={<div>loading</div>}>
+        <Suspense fallback={<Loader />}>
           <Header />
           <StartPage />
           <AboutPage />

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import * as PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import { StyledOfferItem } from './OfferItem.styles';
@@ -7,7 +7,7 @@ import OfferItemDescription from '../OfferItemDescription/OfferItemDescription';
 import { PageContext } from '../../providers/MainTemplate';
 
 const OfferItem = ({ offer }) => {
-  const { headline: title, iconName, description, othersArray } = offer;
+  const { headline: title, iconName, description, others } = offer;
   const { mobile } = useContext(PageContext);
   const activeDescription = !mobile;
 
@@ -31,20 +31,15 @@ const OfferItem = ({ offer }) => {
               flexShrink: '0',
               color: `${activeOfferDescription ? '#fff' : '#777'}`,
             }}
-            icon={`ph:caret-${activeOfferDescription ? 'down' : 'up'}-bold`}
+            icon={`ph:caret-${activeOfferDescription ? 'down' : 'right'}-bold`}
+            onClick={handleClickOfferItem}
           />
         ) : (
           <Icon className="offerItem__icon" icon={iconName} />
         )}
-        <OfferItemTitle
-          activeOfferDescription={activeOfferDescription}
-          title={title}
-          onClick={handleClickOfferItem}
-        />
+        <OfferItemTitle activeOfferDescription={activeOfferDescription} title={title} onClick={handleClickOfferItem} />
       </header>
-      {activeOfferDescription && (
-        <OfferItemDescription description={description} othersArray={othersArray} />
-      )}
+      {activeOfferDescription && <OfferItemDescription description={description} othersArray={others} />}
     </StyledOfferItem>
   );
 };

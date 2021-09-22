@@ -1,11 +1,6 @@
-import React from 'react';
 import { HamburgerSqueeze } from 'react-animated-burgers';
 
-const HamburgerIcon = ({
-  isActive,
-  toggleButton,
-  handleChangeActiveMobileNav,
-}) => (
+const HamburgerIcon = ({ isActive, toggleButton, handleChangeActiveMobileNav }) => (
   <HamburgerSqueeze
     barColor="white"
     toggleButton={toggleButton}

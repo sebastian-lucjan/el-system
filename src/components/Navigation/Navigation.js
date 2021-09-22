@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { HamburgerSqueeze } from 'react-animated-burgers';
 import { websiteData } from '../../data/appTextData';
 import { StyledNavigation, StyledNavLink } from './Navigation.styles';

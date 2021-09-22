@@ -2,6 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -32,7 +33,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['@babel/preset-env', ['@babel/preset-react', { runtime: 'automatic' }]],
+          presets: ['@babel/preset-env', '@babel/preset-react'],
           plugins: [
             [
               'styled-components',
@@ -64,7 +65,7 @@ module.exports = {
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
-                quality: '75',
+                quality: '80',
                 progressive: true,
               },
             },
@@ -84,9 +85,17 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'public', to: '' },
+        { from: 'public/images', to: 'images' },
+        { from: 'public/icons', to: 'icons' },
         { from: '.htaccess', to: '' },
       ],
+    }),
+    new CompressionPlugin({
+      filename: '[path][base].gz',
+      algorithm: 'gzip',
+      test: /\.js$/,
+      threshold: 10240,
+      minRatio: 0.8,
     }),
   ],
 };

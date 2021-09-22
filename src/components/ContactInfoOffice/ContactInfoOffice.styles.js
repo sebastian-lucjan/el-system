@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import React from 'react';
 
 const StyledContactOffice = styled.section`
   //base
@@ -23,6 +22,10 @@ const StyledContactOffice = styled.section`
 
   .contact-info__office {
     padding-top: ${({ theme }) => theme.baseSpacing};
+  }
+
+  .contact-info__email-link {
+    color: ${({ theme }) => theme.colors.white};
   }
 
   //mobile small

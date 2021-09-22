@@ -1,8 +1,9 @@
-import React, { lazy, Suspense, useContext } from 'react';
+import { lazy, Suspense, useContext } from 'react';
 import bulbImgL from '../../../public/images/bulb-mobile-240-392.jpeg';
 import bulbImgXL from '../../../public/images/bulb-mobile-381-623.jpeg';
 import { StyledStartPage } from './StartPage.styles';
 import { PageContext } from '../../providers/MainTemplate';
+import Loader from '../../components/Loader/Loader';
 
 const Hero = lazy(() => import('../../components/Hero/Hero'));
 
@@ -11,7 +12,7 @@ const StartPage = () => {
 
   return (
     <StyledStartPage name="home">
-      <Suspense fallback={<div>loading</div>}>
+      <Suspense fallback={<Loader />}>
         {visibleSlider ? (
           <Hero />
         ) : (

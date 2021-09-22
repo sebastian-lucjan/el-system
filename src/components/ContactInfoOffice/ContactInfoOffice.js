@@ -1,4 +1,3 @@
-import React from 'react';
 import * as PropTypes from 'prop-types';
 import StyledContactOffice from './ContactInfoOffice.styles';
 import { elSystemInfo } from '../../data/appTextData';
@@ -36,7 +35,12 @@ const ContactInfoOffice = () => {
           <p>{`${street},`}</p>
           <p>{`${postalCode} ${city},`}</p>
           <p>{`tel.: ${phoneNrs[0]}, ${phoneNrs[1]}`}</p>
-          <p>{`email: ${email}`}</p>
+          <p>
+            email:{' '}
+            <a className="contact-info__email-link email-link" href={`mailto:${email}`}>
+              {email}
+            </a>
+          </p>
         </address>
       </article>
 
