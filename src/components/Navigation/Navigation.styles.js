@@ -26,7 +26,7 @@ export const StyledNavigation = styled.div`
     align-items: center;
     width: 50vw;
     height: 100%;
-    margin-right: ${({ theme }) => theme.baseSpacing};
+    margin-right: 30px;
     padding: 0;
   }
 
