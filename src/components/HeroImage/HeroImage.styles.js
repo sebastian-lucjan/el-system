@@ -4,7 +4,7 @@ import { maxResolutionFullSlider } from '../../assets/styles/theme';
 const StyledHeroImage = styled.div`
   //base
   position: relative;
-  width: 50vw;
+  width: 50%;
   height: 100%;
   overflow: hidden;
 
@@ -18,7 +18,7 @@ const StyledHeroImage = styled.div`
 
   //iPad portrait
   @media (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
-    width: 100vw;
+    width: 100%;
     .hero-image__image {
       height: 60vh;
       object-position: left bottom;
@@ -28,7 +28,7 @@ const StyledHeroImage = styled.div`
 
   //iPad and large mobile landscape
   @media (orientation: landscape) and (${({ theme }) => theme.devices.md}) and (${maxResolutionFullSlider}) {
-    width: 100vw;
+    width: 100%;
     object-position: left bottom;
 
     .hero-image__image {
@@ -38,9 +38,9 @@ const StyledHeroImage = styled.div`
 
   //Desktop landscape for small resolution like laptop
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
-    padding: 0 30px;
+    padding: 0 30px 0 0;
     .hero-image__image {
-      width: 50vw;
+      width: 50%;
       height: 50vh;
     }
   }
