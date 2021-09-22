@@ -83,6 +83,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
+    className: 'slider__wrapper',
     beforeChange: (current, next) => handleChangeSlideIndex(next),
     appendDots: (dots) => <DotsWrapper dots={dots} />,
     customPaging: () => <StyledDot />,

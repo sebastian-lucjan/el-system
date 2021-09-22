@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledStartPage = styled.div`
   // mobile
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
 
