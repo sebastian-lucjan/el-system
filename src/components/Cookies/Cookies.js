@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Icon } from '@iconify/react';
 import { StyledCookies } from './Cookies.styles';
 import { PageContext } from '../../providers/MainTemplate';

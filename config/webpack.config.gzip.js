@@ -77,7 +77,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'el-system strona firmowa',
+      title: 'elsystem - usługi z branży elektroenergetycznej',
       template: 'src/templates/template.html',
       minify: {
         collapseWhitespace: true,

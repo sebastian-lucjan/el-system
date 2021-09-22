@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { Icon } from '@iconify/react';
 import PropTypes from 'prop-types';
 import StyledIcon from './ScrollToTop.styles';

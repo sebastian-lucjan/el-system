@@ -1,4 +1,3 @@
-import React from 'react';
 import * as PropTypes from 'prop-types';
 import StyledContactOffice from './ContactInfoOffice.styles';
 import { elSystemInfo } from '../../data/appTextData';

@@ -1,5 +1,4 @@
 import { Icon } from '@iconify/react';
-import React from 'react';
 import styled from 'styled-components';
 import { PropTypes } from 'prop-types';
 import { size, maxResolutionLargeArrows } from '../../assets/styles/theme';
@@ -15,9 +14,7 @@ const StyledArrow = styled(Icon)`
   opacity: 0.33;
   cursor: pointer;
 
-  //
-  @media (orientation: landscape) and (${({ theme }) =>
-      theme.devices.md}) and (${maxResolutionLargeArrows}),
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.md}) and (${maxResolutionLargeArrows}),
     (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
     left: ${({ direction }) => (direction === 'right' ? 'calc(100vw - 70px)' : '20px')};
     height: ${size.arrowSlider.lg};

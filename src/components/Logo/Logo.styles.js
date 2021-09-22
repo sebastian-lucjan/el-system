@@ -6,6 +6,8 @@ const StyledLogo = styled(Link)`
   font-weight: ${({ theme }) => theme.fontWeight.light};
   font-size: ${({ theme }) => theme.fontSize.l};
   line-height: ${({ theme }) => theme.fontSize.l};
+  //letter-spacing: 1px;
+  letter-spacing: 2px;
   margin: ${({ theme }) => theme.baseSpacing};
   cursor: default;
 `;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import StyledHeroImageButton from './HeroButton.styles';
 import { websiteData } from '../../data/appTextData';
@@ -14,8 +14,7 @@ const StyledButtonContainer = styled.div`
   overflow: hidden;
 
   //iPad landscape and portrait
-  @media (orientation: landscape) and (${({ theme }) =>
-      theme.devices.md}) and (${maxResolutionFullSlider}),
+  @media (orientation: landscape) and (${({ theme }) => theme.devices.md}) and (${maxResolutionFullSlider}),
     (orientation: portrait) and (${({ theme }) => theme.devices.md}) {
     display: none;
   }
