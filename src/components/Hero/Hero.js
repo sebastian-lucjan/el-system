@@ -9,6 +9,8 @@ import { elSystemInfo } from '../../data/appTextData';
 export const SliderIndexContext = React.createContext(0);
 
 const Hero = () => {
+  // console.log('API_KEY_DATOCMS_TOKEN');
+  // console.log('API_KEY_DATOCMS_TOKEN', process.env.API_KEY_DATOCMS_TOKEN);
   const [slideIndex, setSlideIndex] = useState(0);
 
   const {

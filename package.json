@@ -8,11 +8,15 @@
     "prod": "webpack --mode production --config config/webpack.config.prod.js",
     "gzip": "webpack --mode production --config config/webpack.config.gzip.js",
     "dev": "webpack --mode development --config config/webpack.config.dev.js",
-    "lint:fix": "./node_modules/.bin/eslint . --fix"
+    "lint:fix": "./node_modules/.bin/eslint . --fix",
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sebastian-lucjan/el-system.git"
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
   },
   "browserslist": "> 0.1%",
   "author": "Sebastian Łucjan",
@@ -46,6 +50,7 @@
     "image-webpack-loader": "^7.0.1",
     "node-sass": "^6.0.1",
     "prettier": "^2.3.2",
+    "react-error-overlay": "6.0.9",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "webpack": "^5.51.1",
@@ -55,6 +60,7 @@
   "dependencies": {
     "imagemin-mozjpeg": "^9.0.0",
     "lodash.debounce": "^4.0.8",
+    "npm-force-resolutions": "^0.0.10",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-animated-burgers": "^1.2.8",
