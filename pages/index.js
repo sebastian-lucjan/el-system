@@ -1,10 +1,15 @@
-import styled from 'styled-components';
+import MainTemplate from 'providers/MainTemplate';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-export default function Home() {
-  return <Title>My page</Title>;
+export default function Root() {
+  return (
+    <>
+      <MainTemplate />
+    </>
+  );
 }
+
+// export default Root;
+
+/*  <Route to="*"> */
+/*    <Redirect to="/" /> */
+/*  </Route> */
