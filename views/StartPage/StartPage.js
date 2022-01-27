@@ -16,6 +16,8 @@ const StartPage = () => {
         <div className="image start-page__image">
           <Image
             layout="responsive"
+            width={381}
+            height={623}
             src={bulbImgXL}
             quality={75}
             alt="żarówka"
