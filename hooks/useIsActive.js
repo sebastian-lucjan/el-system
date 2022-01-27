@@ -1,6 +1,6 @@
-import { useEffect, useReducer } from 'react';
+import { useReducer } from 'react';
 import { useMedia } from 'use-media';
-import { borderMediaValue, checkNeedBurgerMenu } from 'helpers/mainTemplate';
+import checkNeedBurgerMenu from 'helpers/mainTemplate';
 import { mainInitialState, mainReducerActionTypes } from 'data/mainReducerData';
 import { size } from 'styles/theme';
 
@@ -20,26 +20,14 @@ export const mainReducer = (state, action) => {
 export const useIsActive = () => {
   const [mainState, dispatch] = useReducer(mainReducer, mainInitialState);
 
-  const isSliderVisible = useMedia({ minWidth: size.width.md });
+  const isSliderVisible = checkNeedBurgerMenu();
 
   const handleChangeActiveMobileNav = () => {
     dispatch({ type: mainReducerActionTypes.isActiveMobileNavigation });
   };
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(`(min-width: ${borderMediaValue}px)`);
-    mediaQuery.addEventListener('change', () => {
-      dispatch({ type: mainReducerActionTypes.isVisibleHamburger });
-    });
-
-    return () => {
-      mediaQuery.removeEventListener('change', () => {
-        dispatch({ type: mainReducerActionTypes.isVisibleHamburger });
-      });
-    };
-  }, [mainState.isVisibleHamburger]);
-
-  const { isActiveMobileNavigation, isVisibleHamburger } = mainState;
+  const isVisibleHamburger = useMedia({ maxWidth: size.width.md });
+  const { isActiveMobileNavigation } = mainState;
 
   return { isVisibleHamburger, isSliderVisible, isActiveMobileNavigation, handleChangeActiveMobileNav };
 };

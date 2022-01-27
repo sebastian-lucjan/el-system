@@ -1,10 +1,6 @@
 import { size } from 'styles/theme';
+import { useMedia } from 'use-media';
 
-export const borderMediaValue = size.width.md;
+const checkNeedBurgerMenu = () => useMedia({ minWidth: size.width.md });
 
-export const checkNeedBurgerMenu = () => {
-  if (typeof window !== 'undefined') {
-    return window?.innerWidth < borderMediaValue;
-  }
-  return null; // todo: check if it works
-};
+export default checkNeedBurgerMenu;
