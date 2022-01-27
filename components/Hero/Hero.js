@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import SliderIndexContext from 'context/sliderIndexContext';
-import StyledHero from './Hero.styles';
-import HeroImage from '../HeroImage/HeroImage';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { elSystemInfo } from '../../data/appTextData';
-import HeroInfo from '../HeroInfo/HeroInfo';
+import SliderIndexContext from 'context/sliderIndexContext';
+import HeroImage from 'components/HeroImage/HeroImage';
+import { elSystemInfo } from 'data/appTextData';
+import HeroInfo from 'components/HeroInfo/HeroInfo';
+import StyledHero from './Hero.styles';
 
 const Hero = () => {
   // console.log('API_KEY_DATOCMS_TOKEN');

@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
+import { elSystemInfo } from 'data/appTextData';
 import StyledContactOffice from './ContactInfoOffice.styles';
-import { elSystemInfo } from '../../data/appTextData';
 
 const ContactInfoOffice = () => {
   const {

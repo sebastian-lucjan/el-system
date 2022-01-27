@@ -1,5 +1,5 @@
-import Logo from '../Logo/Logo';
-import Navigation from '../Navigation/Navigation';
+import Logo from 'components/Logo/Logo';
+import Navigation from 'components/Navigation/Navigation';
 import { Wrapper } from './Header.styles';
 
 const Header = () => (

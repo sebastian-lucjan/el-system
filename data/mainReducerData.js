@@ -1,4 +1,4 @@
-import { checkNeedBurgerMenu } from '../helpers/mainTemplate';
+import { checkNeedBurgerMenu } from 'helpers/mainTemplate';
 
 const SSRcondition = typeof window !== 'undefined';
 

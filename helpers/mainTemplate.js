@@ -1,4 +1,4 @@
-import { size } from '../styles/theme';
+import { size } from 'styles/theme';
 
 export const borderMediaValue = size.width.md;
 

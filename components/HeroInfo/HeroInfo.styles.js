@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { size } from '../../styles/theme';
+import { size } from 'styles/theme';
 
 const maxResolutionFullSlider = `max-width: ${size.width.xxl}px`;
 

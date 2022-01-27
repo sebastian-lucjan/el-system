@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
+import addNonBreakableSpaces from 'helpers/addNonBreakableSpaces';
 import StyledHeroImageDescription from './HeroImageDescription.styles';
-import addNonBreakableSpaces from '../../helpers/addNonBreakableSpaces';
 
 const HeroImageDescription = ({ description: rawDescription, smaller }) => {
   const description = addNonBreakableSpaces(rawDescription);

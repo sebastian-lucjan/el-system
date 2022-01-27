@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
+import addNonBreakableSpaces from 'helpers/addNonBreakableSpaces';
 import StyledOfferItemDescription from './OfferItemDescription.styles';
-import addNonBreakableSpaces from '../../helpers/addNonBreakableSpaces';
 
 const listOthers = (othersArray) => {
   const others = othersArray.map((item, index) => <li key={`other-offer-${index + 1}`}>{item}</li>);

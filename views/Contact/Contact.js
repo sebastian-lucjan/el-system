@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import PageContext from 'data/pageContextData';
-import Title from '../../components/Title/Title';
-import ContentDivider from '../../components/ContentDivider/ContentDivider';
-import ContactInfoOffice from '../../components/ContactInfoOffice/ContactInfoOffice';
-import { ContentWrapper } from '../../components/ContentWrapper/ContentWrapper.styles';
-import { ViewWrapper } from '../../components/ViewWrapper/ViewWrapper.styles';
-import photoMotorwayLightsM from '../../public/images/motorway-lights-800.jpeg';
-import photoMotorwayLightsL from '../../public/images/motorway-lights-1200.jpeg';
-import { elSystemInfo } from '../../data/appTextData';
+import Title from 'components/Title/Title';
+import ContentDivider from 'components/ContentDivider/ContentDivider';
+import ContactInfoOffice from 'components/ContactInfoOffice/ContactInfoOffice';
+import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
+import { ViewWrapper } from 'components/ViewWrapper/ViewWrapper.styles';
+import photoMotorwayLightsM from 'public/images/motorway-lights-800.jpeg';
+import photoMotorwayLightsL from 'public/images/motorway-lights-1200.jpeg';
+import { elSystemInfo } from 'data/appTextData';
 
 const ContactBackground = () => {
   const { mobile } = useContext(PageContext);

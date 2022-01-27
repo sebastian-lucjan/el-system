@@ -2,9 +2,9 @@ import { useContext, useState } from 'react';
 import * as PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import PageContext from 'data/pageContextData';
+import OfferItemTitle from 'components/OfferItemTitle/OfferItemTitle';
+import OfferItemDescription from 'components/OfferItemDescription/OfferItemDescription';
 import { StyledOfferItem } from './OfferItem.styles';
-import OfferItemTitle from '../OfferItemTitle/OfferItemTitle';
-import OfferItemDescription from '../OfferItemDescription/OfferItemDescription';
 
 const OfferItem = ({ offer }) => {
   const { headline: title, iconName, description, others } = offer;

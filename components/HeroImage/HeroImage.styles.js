@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { maxResolutionFullSlider } from '../../styles/theme';
+import { maxResolutionFullSlider } from 'styles/theme';
 
 const StyledHeroImage = styled.div`
   //base

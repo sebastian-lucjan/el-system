@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PageContext from 'data/pageContextData';
-import { websiteData } from '../../data/appTextData';
+import { websiteData } from 'data/appTextData';
 import StyledLogo from './Logo.styles';
 
 const Logo = () => {

@@ -1,9 +1,9 @@
-import Title from '../../components/Title/Title';
-import ContentDivider from '../../components/ContentDivider/ContentDivider';
-import { elSystemInfo } from '../../data/appTextData';
-import OfferItem from '../../components/OfferItem/OfferItem';
-import { ContentWrapper } from '../../components/ContentWrapper/ContentWrapper.styles';
-import { ViewWrapper } from '../../components/ViewWrapper/ViewWrapper.styles';
+import Title from 'components/Title/Title';
+import ContentDivider from 'components/ContentDivider/ContentDivider';
+import { elSystemInfo } from 'data/appTextData';
+import OfferItem from 'components/OfferItem/OfferItem';
+import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
+import { ViewWrapper } from 'components/ViewWrapper/ViewWrapper.styles';
 
 const OfferPage = () => {
   const { offer: offersData } = elSystemInfo;

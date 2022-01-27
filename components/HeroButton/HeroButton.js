@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import { websiteData } from 'data/appTextData';
+import { maxResolutionFullSlider } from 'styles/theme';
+import ShortContact from 'components/ShortContact/ShortContact';
 import StyledHeroImageButton from './HeroButton.styles';
-import { websiteData } from '../../data/appTextData';
-import ShortContact from '../ShortContact/ShortContact';
-import { size, maxResolutionFullSlider } from '../../styles/theme';
 
 const StyledButtonContainer = styled.div`
   //base

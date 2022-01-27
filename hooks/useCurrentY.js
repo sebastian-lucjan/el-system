@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import debounce from 'lodash.debounce';
-import { mainInitialState } from '../data/mainReducerData';
+import { mainInitialState } from 'data/mainReducerData';
 
 export const useCurrentY = () => {
   const [currentPositionY, setCurrentPositionY] = useState(mainInitialState.pageY);

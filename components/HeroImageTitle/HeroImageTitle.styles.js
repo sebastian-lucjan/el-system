@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { size, maxResolutionFullSlider } from '../../styles/theme';
+import { size, maxResolutionFullSlider } from 'styles/theme';
 
 const StyledHeroImageTitle = styled.div`
   font-size: ${({ theme, smaller }) => (smaller ? theme.fontSize.l : theme.fontSize.xl)};

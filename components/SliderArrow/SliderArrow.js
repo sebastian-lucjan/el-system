@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import styled from 'styled-components';
 import { PropTypes } from 'prop-types';
-import { size, maxResolutionLargeArrows } from '../../styles/theme';
+import { size, maxResolutionLargeArrows } from 'styles/theme';
 
 const StyledArrow = styled(Icon)`
   position: absolute;

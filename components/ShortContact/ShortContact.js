@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import { PropTypes } from 'prop-types';
+import { elSystemInfo } from 'data/appTextData';
 import { StyledShortContact } from './ShortContact.styles';
-import { elSystemInfo } from '../../data/appTextData';
 
 const ShortContact = ({ onClick, isClicked }) => {
   const {

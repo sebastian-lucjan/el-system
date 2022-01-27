@@ -1,6 +1,6 @@
-import HeroImageTitle from '../HeroImageTitle/HeroImageTitle';
+import HeroImageTitle from 'HeroImageTitle/HeroImageTitle';
+import HeroImageDescription from 'HeroImageDescription/HeroImageDescription';
 import StyledHeroText from './HeroText.styles';
-import HeroImageDescription from '../HeroImageDescription/HeroImageDescription';
 
 const HeroText = () => (
   <StyledHeroText>

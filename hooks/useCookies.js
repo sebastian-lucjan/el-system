@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { mainInitialState } from '../data/mainReducerData';
+import { mainInitialState } from 'data/mainReducerData';
 
 export const useCookies = () => {
   const [isActiveCookiePopUp, setIsActiveCookiePopUp] = useState(mainInitialState.cookiesPopUp);

@@ -1,10 +1,9 @@
 import { useContext, useRef } from 'react';
 import { HamburgerSqueeze } from 'react-animated-burgers';
 import PageContext from 'data/pageContextData';
-import { websiteData } from '../../data/appTextData';
+import { websiteData } from 'data/appTextData';
+import { simulateClick } from 'helpers/simulateClick';
 import { StyledNavigation, StyledNavLink } from './Navigation.styles';
-
-import { simulateClick } from '../../helpers/simulateClick';
 
 const Navigation = () => {
   const { navigation: buttonsDataArray } = websiteData;

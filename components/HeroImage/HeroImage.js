@@ -19,7 +19,7 @@ import photoInspectionXL from 'public/images/inspection-person-1920.jpeg';
 import photoTechnicalControlM from 'public/images/technical-control-960.jpg';
 import photoTechnicalControlL from 'public/images/technical-control-1200.jpg';
 import photoTechnicalControlXL from 'public/images/technical-control-1700.jpg';
-import SliderArrow from '../SliderArrow/SliderArrow';
+import SliderArrow from 'components/SliderArrow/SliderArrow';
 import StyledHeroImage from './HeroImage.styles';
 
 const StyledDot = styled.div`
