@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import * as PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import PageContext from 'data/pageContextData';
@@ -13,10 +13,12 @@ const OfferItem = ({ offer }) => {
 
   const [activeOfferDescription, setActiveOfferDescription] = useState(activeDescription);
 
+  useEffect(() => {
+    setActiveOfferDescription(!mobile);
+  }, [mobile]);
+
   const handleClickOfferItem = () => {
-    if (mobile) {
-      setActiveOfferDescription(!activeOfferDescription);
-    }
+    setActiveOfferDescription((prevState) => !prevState);
   };
 
   return (
