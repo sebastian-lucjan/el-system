@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import * as PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
-import { PageContext } from 'data/pageContextData';
+import PageContext from 'data/pageContextData';
 import { StyledOfferItem } from './OfferItem.styles';
 import OfferItemTitle from '../OfferItemTitle/OfferItemTitle';
 import OfferItemDescription from '../OfferItemDescription/OfferItemDescription';

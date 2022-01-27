@@ -2,13 +2,13 @@ import AboutPage from 'views/AboutPage/AboutPage';
 import Offer from 'views/Offer/Offer';
 import Cooperation from 'views/Cooperation/Cooperation';
 import Contact from 'views/Contact/Contact';
+import StartPage from 'views/StartPage/StartPage';
 import Header from '../components/Header/Header';
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 import { useCurrentY } from '../hooks/useCurrentY';
 import { useCookies } from '../hooks/useCookies';
 import { useIsActive } from '../hooks/useIsActive';
-import { PageContext } from '../data/pageContextData';
-import StartPage from '../views/StartPage/StartPage';
+import PageContext from '../data/pageContextData';
 import Cookies from '../components/Cookies/Cookies';
 
 const MainTemplate = () => {
@@ -23,19 +23,19 @@ const MainTemplate = () => {
     isActiveMobileNavigation,
     handleCookiesPolicyAgree,
     handleDismissCookiesPopUp,
-    visibleSlider: isSliderVisible(),
+    visibleSlider: isSliderVisible,
   };
 
   return (
     <PageContext.Provider value={providedObject}>
       <Header />
       <StartPage />
-      {/* <AboutPage /> */}
-      {/* <Offer /> */}
-      {/* <Cooperation /> */}
-      {/* <Contact /> */}
-      {/* {currentPositionY > 100 && <ScrollToTop to="" />} */}
-      {/* {isActiveCookiePopUp && <Cookies />} */}
+      <AboutPage />
+      <Offer />
+      <Cooperation />
+      <Contact />
+      {currentPositionY > 100 && <ScrollToTop to="" />}
+      {isActiveCookiePopUp && <Cookies />}
     </PageContext.Provider>
   );
 };

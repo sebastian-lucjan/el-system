@@ -1,6 +1,6 @@
 import { useContext, useRef } from 'react';
 import { HamburgerSqueeze } from 'react-animated-burgers';
-import { PageContext } from 'data/pageContextData';
+import PageContext from 'data/pageContextData';
 import { websiteData } from '../../data/appTextData';
 import { StyledNavigation, StyledNavLink } from './Navigation.styles';
 

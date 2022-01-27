@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from 'react';
+import { useMedia } from 'use-media';
 import { borderMediaValue, checkNeedBurgerMenu } from '../helpers/mainTemplate';
 import { mainInitialState, mainReducerActionTypes } from '../data/mainReducerData';
 import { size } from '../styles/theme';
@@ -19,8 +20,7 @@ export const mainReducer = (state, action) => {
 export const useIsActive = () => {
   const [mainState, dispatch] = useReducer(mainReducer, mainInitialState);
 
-  const isSliderVisible = () =>
-    !mainState.visibleHamburger && typeof window !== 'undefined' && window.innerWidth >= size.width.md;
+  const isSliderVisible = useMedia({ minWidth: 767 });
 
   const handleChangeActiveMobileNav = () => {
     dispatch({ type: mainReducerActionTypes.isActiveMobileNavigation });

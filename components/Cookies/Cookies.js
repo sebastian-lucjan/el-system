@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Icon } from '@iconify/react';
-import { PageContext } from 'data/pageContextData';
+import PageContext from 'data/pageContextData';
 import { StyledCookies } from './Cookies.styles';
 
 const Cookies = () => {

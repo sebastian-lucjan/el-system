@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-export const initialPageContextValue = {
+const initialPageContextValue = {
   visibleHamburger: false,
   mobile: false,
   activeMobileNavigation: false,
@@ -10,4 +10,6 @@ export const initialPageContextValue = {
   handleDismissCookiesPopUp: () => {},
 };
 
-export const PageContext = createContext(initialPageContextValue);
+const PageContext = createContext(initialPageContextValue);
+
+export default PageContext;

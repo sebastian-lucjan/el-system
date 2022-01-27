@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { PageContext } from 'data/pageContextData';
+import PageContext from 'data/pageContextData';
 import Title from '../../components/Title/Title';
 import ContentDivider from '../../components/ContentDivider/ContentDivider';
 import ContactInfoOffice from '../../components/ContactInfoOffice/ContactInfoOffice';
