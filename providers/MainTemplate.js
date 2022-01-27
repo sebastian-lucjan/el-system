@@ -5,8 +5,8 @@ import Contact from 'views/Contact/Contact';
 import StartPage from 'views/StartPage/StartPage';
 import Header from 'components/Header/Header';
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
-import { useCurrentY } from 'hooks/useCurrentY';
-import { useCookies } from 'hooks/useCookies';
+import useCurrentY from 'hooks/useCurrentY';
+import useCookies from 'hooks/useCookies';
 import { useIsActive } from 'hooks/useIsActive';
 import PageContext from 'data/pageContextData';
 import Cookies from 'components/Cookies/Cookies';
@@ -19,11 +19,11 @@ const MainTemplate = () => {
   const providedObject = {
     mobile: isVisibleHamburger,
     isVisibleHamburger,
-    handleChangeActiveMobileNav,
     isActiveMobileNavigation,
+    visibleSlider: isSliderVisible,
+    handleChangeActiveMobileNav,
     handleCookiesPolicyAgree,
     handleDismissCookiesPopUp,
-    visibleSlider: isSliderVisible,
   };
 
   return (

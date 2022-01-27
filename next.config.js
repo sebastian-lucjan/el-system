@@ -1,10 +1,11 @@
-const { PHASE_PRODUCTION_BUILD } = require('next/constants');
+// const { PHASE_PRODUCTION_BUILD } = require('next/constants');
 
-module.exports = (phase) => {
+// module.exports = (phase) => {
+module.exports = () => {
   const reactStrictMod = true;
 
   // const isDev = phase === PHASE_DEVELOPMENT_SERVER;
-  const isProd = phase === PHASE_PRODUCTION_BUILD;
+  // const isProd = phase === PHASE_PRODUCTION_BUILD;
 
   const images = {
     deviceSizes: [360, 480, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledShortContact = styled.div`
+const StyledShortContact = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
@@ -32,3 +32,5 @@ export const StyledShortContact = styled.div`
     cursor: pointer;
   }
 `;
+
+export default StyledShortContact;

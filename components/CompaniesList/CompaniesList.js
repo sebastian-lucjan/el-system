@@ -1,5 +1,5 @@
 import * as PropTypes from 'prop-types';
-import { StyledCompaniesList } from './CompaniesList.styles';
+import StyledCompaniesList from './CompaniesList.styles';
 
 const CompaniesList = ({ companiesList }) => {
   const companies = companiesList.map((company, index) => {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledOfferItem = styled.article`
+const StyledOfferItem = styled.article`
   
   //mobile
   display: flex;
@@ -60,3 +60,5 @@ export const StyledOfferItem = styled.article`
   }
 
 `;
+
+export default StyledOfferItem;

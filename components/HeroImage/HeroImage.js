@@ -187,7 +187,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
           "
           src={photoInspectionXL}
           loading="lazy"
-          alt="doradztwo techniczne nadzory inwestoreskie"
+          alt="doradztwo techniczne nadzory inwestorskie"
         />
       </Slider>
     </StyledHeroImage>

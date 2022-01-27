@@ -9,7 +9,7 @@ const listOthers = (othersArray) => {
 };
 
 const OfferItemDescription = ({ description, othersArray }) => {
-  const offerContent = (description, othersArray) => {
+  const offerContent = () => {
     if (description) {
       const editedDescription = addNonBreakableSpaces(description);
       return <p>{editedDescription}</p>;

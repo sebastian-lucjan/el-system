@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledCompaniesList = styled.ul`
+const StyledCompaniesList = styled.ul`
   //mobile
   width: 100%;
   flex-grow: 1;
@@ -34,3 +34,5 @@ export const StyledCompaniesList = styled.ul`
     }
   }
 `;
+
+export default StyledCompaniesList;

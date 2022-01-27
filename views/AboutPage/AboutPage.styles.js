@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledParagraph = styled.p`
+const StyledParagraph = styled.p`
   //mobile small
   font-weight: ${({ theme }) => theme.fontWeight.extraLight};
   text-align: justify;
@@ -29,3 +29,5 @@ export const StyledParagraph = styled.p`
     font-size: ${({ theme }) => theme.fontSize.s};
   }
 `;
+
+export default StyledParagraph;

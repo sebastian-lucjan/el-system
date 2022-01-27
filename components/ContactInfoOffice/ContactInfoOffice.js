@@ -1,4 +1,3 @@
-import * as PropTypes from 'prop-types';
 import { elSystemInfo } from 'data/appTextData';
 import StyledContactOffice from './ContactInfoOffice.styles';
 
@@ -7,7 +6,6 @@ const ContactInfoOffice = () => {
     contact: {
       headline: title,
       office: {
-        headline: officeHeadline,
         address: { street, postalCode, city },
         phoneNrs,
         email,
