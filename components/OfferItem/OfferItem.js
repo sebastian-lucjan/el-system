@@ -1,10 +1,10 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import * as PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import PageContext from 'data/pageContextData';
 import OfferItemTitle from 'components/OfferItemTitle/OfferItemTitle';
 import OfferItemDescription from 'components/OfferItemDescription/OfferItemDescription';
-import { StyledOfferItem } from './OfferItem.styles';
+import StyledOfferItem from './OfferItem.styles';
 
 const OfferItem = ({ offer }) => {
   const { headline: title, iconName, description, others } = offer;
@@ -13,10 +13,12 @@ const OfferItem = ({ offer }) => {
 
   const [activeOfferDescription, setActiveOfferDescription] = useState(activeDescription);
 
+  useEffect(() => {
+    setActiveOfferDescription(!mobile);
+  }, [mobile]);
+
   const handleClickOfferItem = () => {
-    if (mobile) {
-      setActiveOfferDescription(!activeOfferDescription);
-    }
+    setActiveOfferDescription((prevState) => !prevState);
   };
 
   return (

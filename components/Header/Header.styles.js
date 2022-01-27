@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.header`
+const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -9,3 +9,5 @@ export const Wrapper = styled.header`
   background-color: ${({ theme }) => theme.colors.black};
   z-index: ${({ theme }) => theme.zIndex.superiorPriority};
 `;
+
+export default Wrapper;

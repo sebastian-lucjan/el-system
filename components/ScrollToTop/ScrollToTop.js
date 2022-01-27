@@ -1,8 +1,7 @@
 import { useContext, useRef } from 'react';
 import { Icon } from '@iconify/react';
-import PropTypes from 'prop-types';
 import PageContext from 'data/pageContextData';
-import { simulateClick } from 'helpers/simulateClick';
+import simulateClick from 'helpers/simulateClick';
 import StyledIcon from './ScrollToTop.styles';
 
 const ScrollToTop = () => {
@@ -22,9 +21,5 @@ const ScrollToTop = () => {
     </StyledIcon>
   );
 };
-
-ScrollToTop.defaultProps = { mobile: false };
-
-ScrollToTop.propTypes = { mobile: PropTypes.bool };
 
 export default ScrollToTop;

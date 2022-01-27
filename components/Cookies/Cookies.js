@@ -1,7 +1,8 @@
 import { useContext } from 'react';
 import { Icon } from '@iconify/react';
 import PageContext from 'data/pageContextData';
-import { StyledCookies } from './Cookies.styles';
+import StyledCookies from './Cookies.styles';
+// todo: no cycles - check that out
 
 const Cookies = () => {
   const { handleCookiesPolicyAgree, handleDismissCookiesPopUp } = useContext(PageContext);

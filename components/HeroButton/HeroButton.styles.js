@@ -5,8 +5,7 @@ const StyledHeroImageButton = styled.button.attrs({ tabIndex: '-1' })`
   height: 100%;
   border: none;
   font-size: ${({ theme }) => theme.fontSize.m};
-  background-color: ${({ isClicked, theme }) =>
-    isClicked ? theme.colors.blue : theme.colors.white};
+  background-color: ${({ isClicked, theme }) => (isClicked ? theme.colors.blue : theme.colors.white)};
   color: ${({ isClicked, theme }) => (isClicked ? theme.colors.white : theme.colors.black)};
   font-family: ${({ theme }) => theme.fontFamily};
   font-weight: ${({ theme }) => theme.fontWeight.bold};

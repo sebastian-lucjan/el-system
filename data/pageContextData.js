@@ -1,9 +1,9 @@
 import { createContext } from 'react';
 
 const initialPageContextValue = {
-  visibleHamburger: false,
   mobile: false,
-  activeMobileNavigation: false,
+  isVisibleHamburger: false,
+  isActiveMobileNavigation: false,
   visibleSlider: false,
   handleChangeActiveMobileNav: () => {},
   handleCookiesPolicyAgree: () => {},

@@ -2,8 +2,8 @@ import Title from 'components/Title/Title';
 import ContentDivider from 'components/ContentDivider/ContentDivider';
 import { elSystemInfo } from 'data/appTextData';
 import CompaniesList from 'components/CompaniesList/CompaniesList';
-import { ContentWrapper } from 'components/ContentWrapper/ContentWrapper.styles';
-import { ViewWrapper } from 'components/ViewWrapper/ViewWrapper.styles';
+import ContentWrapper from 'components/ContentWrapper/ContentWrapper.styles';
+import ViewWrapper from 'components/ViewWrapper/ViewWrapper.styles';
 
 const Cooperation = () => {
   const { cooperation } = elSystemInfo;

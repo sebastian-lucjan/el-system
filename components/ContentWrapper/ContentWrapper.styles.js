@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContentWrapper = styled.section`
+const ContentWrapper = styled.section`
   // mobile small
   width: 100%;
   height: 100%;
@@ -43,3 +43,5 @@ export const ContentWrapper = styled.section`
     justify-content: center;
   }
 `;
+
+export default ContentWrapper;

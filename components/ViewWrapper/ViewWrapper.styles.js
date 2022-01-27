@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ViewWrapper = styled.div`
+const ViewWrapper = styled.div`
   //mobile
   min-height: 100vh;
   width: 100%;
@@ -34,3 +34,5 @@ export const ViewWrapper = styled.div`
     line-height: 24px;
   }
 `;
+
+export default ViewWrapper;

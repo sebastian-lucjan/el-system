@@ -4,6 +4,8 @@ const StyledOfferItemDescription = styled.div`
   //mobile
   font-weight: ${({ theme }) => theme.fontWeight.extraLight};
   padding: 10px 0 0 30px;
+  text-align: left;
+  line-height: 18px;
 
   .offerItem__othersList {
     list-style: disc;
@@ -14,6 +16,7 @@ const StyledOfferItemDescription = styled.div`
   //iPad and large mobile landscape
   @media (${({ theme }) => theme.devices.md}) {
     padding: 10px 0;
+    line-height: 24px;
   }
 
   //Desktop landscape for medium resolution

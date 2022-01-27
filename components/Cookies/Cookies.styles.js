@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledCookies = styled.aside`
+const StyledCookies = styled.aside`
   //mobile small
   position: fixed;
   bottom: 0;
@@ -77,3 +77,5 @@ export const StyledCookies = styled.aside`
     }
   } ;
 `;
+
+export default StyledCookies;

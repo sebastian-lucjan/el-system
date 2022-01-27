@@ -1,15 +1,20 @@
-import AboutPage from 'views/AboutPage/AboutPage';
-import Offer from 'views/Offer/Offer';
-import Cooperation from 'views/Cooperation/Cooperation';
-import Contact from 'views/Contact/Contact';
-import StartPage from 'views/StartPage/StartPage';
-import Header from 'components/Header/Header';
-import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
-import { useCurrentY } from 'hooks/useCurrentY';
-import { useCookies } from 'hooks/useCookies';
+import useCurrentY from 'hooks/useCurrentY';
+import useCookies from 'hooks/useCookies';
 import { useIsActive } from 'hooks/useIsActive';
 import PageContext from 'data/pageContextData';
-import Cookies from 'components/Cookies/Cookies';
+import dynamic from 'next/dynamic';
+
+const Header = dynamic(() => import('components/Header/Header'));
+const StartPage = dynamic(() => import('views/StartPage/StartPage'));
+const AboutPage = dynamic(() => import('views/AboutPage/AboutPage'));
+const Offer = dynamic(() => import('views/Offer/Offer'));
+const Cooperation = dynamic(() => import('views/Cooperation/Cooperation'));
+const Contact = dynamic(() => import('views/Contact/Contact'));
+const ScrollToTop = dynamic(() => import('components/ScrollToTop/ScrollToTop'));
+const Cookies = dynamic(() => import('components/Cookies/Cookies'));
+
+// import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
+// import Cookies from 'components/Cookies/Cookies';
 
 const MainTemplate = () => {
   const { isActiveCookiePopUp, handleCookiesPolicyAgree, handleDismissCookiesPopUp } = useCookies();
@@ -19,11 +24,11 @@ const MainTemplate = () => {
   const providedObject = {
     mobile: isVisibleHamburger,
     isVisibleHamburger,
-    handleChangeActiveMobileNav,
     isActiveMobileNavigation,
+    visibleSlider: isSliderVisible,
+    handleChangeActiveMobileNav,
     handleCookiesPolicyAgree,
     handleDismissCookiesPopUp,
-    visibleSlider: isSliderVisible,
   };
 
   return (

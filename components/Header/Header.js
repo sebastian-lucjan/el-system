@@ -1,6 +1,6 @@
 import Logo from 'components/Logo/Logo';
 import Navigation from 'components/Navigation/Navigation';
-import { Wrapper } from './Header.styles';
+import Wrapper from './Header.styles';
 
 const Header = () => (
   <Wrapper>
