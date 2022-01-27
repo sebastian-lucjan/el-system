@@ -24,7 +24,7 @@ export const theme = {
     white: '#FFFFFF',
     blue: '#47A6ff',
     gray: '#777777',
-    black: '#121212',
+    black: '#111111',
   },
   fontSize: {
     xxxs: '10px',

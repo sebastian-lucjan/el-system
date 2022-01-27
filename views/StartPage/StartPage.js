@@ -14,7 +14,14 @@ const StartPage = () => {
         <Hero />
       ) : (
         <div className="image start-page__image">
-          <Image width={381} height={623} layout="responsive" src={bulbImgXL} quality={75} alt="żarówka" priority />
+          <Image
+            layout="responsive"
+            src={bulbImgXL}
+            quality={75}
+            alt="żarówka"
+            sizes="(min-width: 0px) 25vw" // 25vh because retina retina 2x property
+            priority
+          />
         </div>
       )}
     </StyledStartPage>
