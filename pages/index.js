@@ -8,8 +8,7 @@ export default function Root() {
   );
 }
 
-// export default Root;
-
+// todo: fix routing -> all other paths redirect to "/"
 /*  <Route to="*"> */
 /*    <Redirect to="/" /> */
 /*  </Route> */

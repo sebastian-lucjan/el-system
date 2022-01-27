@@ -6,6 +6,10 @@ module.exports = (phase) => {
   // const isDev = phase === PHASE_DEVELOPMENT_SERVER;
   const isProd = phase === PHASE_PRODUCTION_BUILD;
 
+  const images = {
+    deviceSizes: [360, 480, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+  };
+
   const env = {
     API_KEY_DATOCMS_TOKEN: process.env.API_KEY_DATOCMS_TOKEN,
   };
@@ -20,6 +24,7 @@ module.exports = (phase) => {
   // };
 
   return {
+    images,
     reactStrictMod,
     env,
     // rewrites,
