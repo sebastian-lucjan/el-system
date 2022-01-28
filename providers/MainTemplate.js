@@ -13,9 +13,6 @@ const Contact = dynamic(() => import('views/Contact/Contact'));
 const ScrollToTop = dynamic(() => import('components/ScrollToTop/ScrollToTop'));
 const Cookies = dynamic(() => import('components/Cookies/Cookies'));
 
-// import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
-// import Cookies from 'components/Cookies/Cookies';
-
 const MainTemplate = () => {
   const { isActiveCookiePopUp, handleCookiesPolicyAgree, handleDismissCookiesPopUp } = useCookies();
   const { isVisibleHamburger, isSliderVisible, isActiveMobileNavigation, handleChangeActiveMobileNav } = useIsActive();

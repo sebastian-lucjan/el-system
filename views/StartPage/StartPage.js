@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import PageContext from 'data/pageContextData';
 import Hero from 'components/Hero/Hero';
 import Image from 'next/image';
-import bulbImgXL from 'public/images/bulb-mobile-381-623.jpeg';
+import bulbImg from 'public/images/bulb-mobile-381-623.jpeg';
 import StyledStartPage from './StartPage.styles';
 
 const StartPage = () => {
@@ -18,7 +18,7 @@ const StartPage = () => {
             layout="responsive"
             width={381}
             height={623}
-            src={bulbImgXL}
+            src={bulbImg}
             quality={70}
             alt="żarówka"
             sizes="(min-width: 0px) 40vw" // 40vh because retina retina 2x property

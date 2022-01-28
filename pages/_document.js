@@ -32,7 +32,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pl">
         <Head />
-
         <body>
           <Main />
           <NextScript />
