@@ -1,12 +1,12 @@
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import * as PropTypes from 'prop-types';
-import photoHouseAutomationL from 'public/images/house-automation-1200.jpeg';
-import photoPhotovoltaicL from 'public/images/photovoltaic-power-1200.jpeg';
-import photoInstallationProjectingL from 'public/images/network-installation-projecting-1200.jpg';
-import photoFactoryL from 'public/images/factory-1200.jpeg';
-import photoInspectionL from 'public/images/inspection-person-1200.jpeg';
-import photoTechnicalControlL from 'public/images/technical-control-1200.jpg';
+import photoHouseAutomation from 'public/images/house-automation-1200.jpeg';
+import photoPhotovoltaic from 'public/images/photovoltaic-power-1200.jpeg';
+import photoInstallationProjecting from 'public/images/network-installation-projecting-1200.jpg';
+import photoFactory from 'public/images/factory-1200.jpeg';
+import photoInspection from 'public/images/inspection-person-1200.jpeg';
+import photoTechnicalControl from 'public/images/technical-control-1200.jpg';
 import SliderArrow from 'components/SliderArrow/SliderArrow';
 import Image from 'next/image';
 import StyledHeroImage from './HeroImage.styles';
@@ -85,7 +85,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
         <div className="hero-image__image">
           <Image
             layout="fill"
-            src={photoInstallationProjectingL}
+            src={photoInstallationProjecting}
             objectFit="cover"
             objectPosition="center bottom"
             quality={75}
@@ -97,7 +97,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
         <div className="hero-image__image">
           <Image
             layout="fill"
-            src={photoHouseAutomationL}
+            src={photoHouseAutomation}
             objectFit="cover"
             objectPosition="center bottom"
             quality={75}
@@ -108,7 +108,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
         <div className="hero-image__image">
           <Image
             layout="fill"
-            src={photoPhotovoltaicL}
+            src={photoPhotovoltaic}
             objectFit="cover"
             objectPosition="center bottom"
             quality={75}
@@ -119,7 +119,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
         <div className="hero-image__image">
           <Image
             layout="fill"
-            src={photoTechnicalControlL}
+            src={photoTechnicalControl}
             objectFit="cover"
             objectPosition="center bottom"
             quality={75}
@@ -130,7 +130,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
         <div className="hero-image__image">
           <Image
             layout="fill"
-            src={photoFactoryL}
+            src={photoFactory}
             objectFit="cover"
             objectPosition="center bottom"
             quality={75}
@@ -141,7 +141,7 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
         <div className="hero-image__image">
           <Image
             layout="fill"
-            src={photoInspectionL}
+            src={photoInspection}
             objectFit="cover"
             objectPosition="center bottom"
             quality={75}

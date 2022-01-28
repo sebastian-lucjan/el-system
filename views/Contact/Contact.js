@@ -5,7 +5,7 @@ import ContentDivider from 'components/ContentDivider/ContentDivider';
 import ContactInfoOffice from 'components/ContactInfoOffice/ContactInfoOffice';
 import ContentWrapper from 'components/ContentWrapper/ContentWrapper.styles';
 import ViewWrapper from 'components/ViewWrapper/ViewWrapper.styles';
-import photoMotorwayLightsL from 'public/images/motorway-lights-1200.jpeg';
+import photoMotorwayLights from 'public/images/motorway-lights-1200.jpeg';
 import { elSystemInfo } from 'data/appTextData';
 import Image from 'next/image';
 
@@ -19,7 +19,7 @@ const ContactBackground = () => {
           <div className="contact__image">
             <Image
               layout="fill"
-              src={photoMotorwayLightsL}
+              src={photoMotorwayLights}
               width={1200}
               height={323}
               objectFit="scale-down"
