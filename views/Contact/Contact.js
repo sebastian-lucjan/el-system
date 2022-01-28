@@ -20,8 +20,6 @@ const ContactBackground = () => {
             <Image
               layout="fill"
               src={photoMotorwayLights}
-              width={1200}
-              height={323}
               objectFit="scale-down"
               objectPosition="center bottom"
               quality={75}
