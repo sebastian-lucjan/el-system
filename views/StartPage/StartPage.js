@@ -19,9 +19,9 @@ const StartPage = () => {
             width={381}
             height={623}
             src={bulbImgXL}
-            quality={75}
+            quality={70}
             alt="żarówka"
-            sizes="(min-width: 0px) 25vw" // 25vh because retina retina 2x property
+            sizes="(min-width: 0px) 40vw" // 40vh because retina retina 2x property
             priority
           />
         </div>
