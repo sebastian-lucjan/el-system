@@ -103,7 +103,6 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
             quality={75}
             alt="automatyka domowa, smart dom"
             sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-            priority
           />
         </div>
         <div className="hero-image__image">
@@ -115,7 +114,6 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
             quality={75}
             alt="instalacje fotowoltaiczne, fotowoltaika"
             sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-            priority
           />
         </div>
         <div className="hero-image__image">
@@ -127,7 +125,6 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
             quality={75}
             alt="kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych"
             sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-            priority
           />
         </div>
         <div className="hero-image__image">
@@ -139,7 +136,6 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
             quality={75}
             alt="rozwiązania dla przemysłu"
             sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-            priority
           />
         </div>
         <div className="hero-image__image">
@@ -151,7 +147,6 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
             quality={75}
             alt="doradztwo techniczne nadzory inwestorskie"
             sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-            priority
           />
         </div>
       </Slider>
