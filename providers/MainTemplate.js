@@ -3,6 +3,7 @@ import useCookies from 'hooks/useCookies';
 import { useIsActive } from 'hooks/useIsActive';
 import PageContext from 'data/pageContextData';
 import dynamic from 'next/dynamic';
+import { useMemo } from 'react';
 
 const Header = dynamic(() => import('components/Header/Header'));
 const StartPage = dynamic(() => import('views/StartPage/StartPage'));
@@ -18,15 +19,25 @@ const MainTemplate = () => {
   const { isVisibleHamburger, isSliderVisible, isActiveMobileNavigation, handleChangeActiveMobileNav } = useIsActive();
   const currentPositionY = useCurrentY();
 
-  const providedObject = {
-    mobile: isVisibleHamburger,
-    isVisibleHamburger,
-    isActiveMobileNavigation,
-    visibleSlider: isSliderVisible,
-    handleChangeActiveMobileNav,
-    handleCookiesPolicyAgree,
-    handleDismissCookiesPopUp,
-  };
+  const providedObject = useMemo(
+    () => ({
+      mobile: isVisibleHamburger,
+      isVisibleHamburger,
+      isActiveMobileNavigation,
+      visibleSlider: isSliderVisible,
+      handleChangeActiveMobileNav,
+      handleCookiesPolicyAgree,
+      handleDismissCookiesPopUp,
+    }),
+    [
+      isVisibleHamburger,
+      isActiveMobileNavigation,
+      isSliderVisible,
+      handleChangeActiveMobileNav,
+      handleCookiesPolicyAgree,
+      handleDismissCookiesPopUp,
+    ],
+  );
 
   return (
     <PageContext.Provider value={providedObject}>
