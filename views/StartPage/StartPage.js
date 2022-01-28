@@ -3,36 +3,30 @@ import PageContext from 'data/pageContextData';
 import Hero from 'components/Hero/Hero';
 import Image from 'next/image';
 import bulbImgXL from 'public/images/bulb-mobile-381-623.jpeg';
-import { Head } from 'next/document';
 import StyledStartPage from './StartPage.styles';
 
 const StartPage = () => {
   const { visibleSlider } = useContext(PageContext);
 
   return (
-    <>
-      <Head>
-        <title>elsystem | usługi z branży elektroenergetycznej</title>
-      </Head>
-      <StyledStartPage name="home">
-        {visibleSlider ? (
-          <Hero />
-        ) : (
-          <div className="image start-page__image">
-            <Image
-              layout="responsive"
-              width={381}
-              height={623}
-              src={bulbImgXL}
-              quality={75}
-              alt="żarówka"
-              sizes="(min-width: 0px) 25vw" // 25vh because retina retina 2x property
-              priority
-            />
-          </div>
-        )}
-      </StyledStartPage>
-    </>
+    <StyledStartPage name="home">
+      {visibleSlider ? (
+        <Hero />
+      ) : (
+        <div className="image start-page__image">
+          <Image
+            layout="responsive"
+            width={381}
+            height={623}
+            src={bulbImgXL}
+            quality={75}
+            alt="żarówka"
+            sizes="(min-width: 0px) 25vw" // 25vh because retina retina 2x property
+            priority
+          />
+        </div>
+      )}
+    </StyledStartPage>
   );
 };
 

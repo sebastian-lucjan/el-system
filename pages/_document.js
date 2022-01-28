@@ -1,28 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-// import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
-
-// class MyDocument extends Document {
-//   static async getInitialProps(ctx) {
-//     const initialProps = await Document.getInitialProps(ctx);
-//     return { ...initialProps };
-//   }
-//
-//   render() {
-//     return (
-//       <Html lang="pl-PL">
-//         <Head />
-//         <body>
-//           <Main />
-//           <NextScript />
-//         </body>
-//       </Html>
-//     );
-//   }
-// }
-//
-// export default MyDocument;
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -63,6 +41,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png" />
           <link rel="manifest" href="./icons/site.webmanifest" />
           <link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#5bbad5" />
+          <title>elsystem | usługi z branży elektroenergetycznej</title>
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
           <meta name="title" content="elsystem | usługi z branży elektroenergetycznej" />
@@ -82,7 +61,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <meta name="robots" content="noindex" />
-          <title>elsystem | usługi z branży elektroenergetycznej</title>
         </Head>
         <body>
           <Main />
@@ -93,7 +71,6 @@ export default class MyDocument extends Document {
   }
 }
 
-// import Document, { Html, Head, Main, NextScript } from 'next/document';
 // // Import styled components ServerStyleSheet
 // import { ServerStyleSheet } from 'styled-components';
 //
@@ -111,20 +88,3 @@ export default class MyDocument extends Document {
 //     // Step 4: Pass styleTags as a prop
 //     return { ...page, styleTags };
 //   }
-//
-//   render() {
-//     return (
-//       <Html lang="pl">
-//         <Head>
-//           <title>My page</title>
-//           {/* Step 5: Output the styles in the head  */}
-//           {this.props.styleTags}
-//         </Head>
-//         <body>
-//         <Main />
-//         <NextScript />
-//         </body>
-//       </Html>
-//     );
-//   }
-// }
