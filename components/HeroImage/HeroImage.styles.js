@@ -44,6 +44,7 @@ const StyledHeroImage = styled.div`
     .hero-image__image {
       width: 50%;
       height: 50vh;
+      max-height: 800px;
     }
     .slider__wrapper {
       padding: 0;
