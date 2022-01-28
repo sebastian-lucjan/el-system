@@ -6,9 +6,6 @@ import { Head } from 'next/document';
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <title>elsystem | usługi z branży elektroenergetycznej</title>
-      </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
