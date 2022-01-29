@@ -3,8 +3,8 @@ import { Link } from 'react-scroll';
 
 const StyledIcon = styled(Link)`
   position: fixed;
-  bottom: 6px;
-  right: ${({ theme }) => theme.baseSpacing};
+  bottom: ${({ theme }) => theme.baseSpacing};
+  right: 30px;
   color: ${({ theme }) => theme.colors.white};
   z-index: ${({ theme }) => theme.zIndex.superiorPriority};
 
@@ -12,10 +12,6 @@ const StyledIcon = styled(Link)`
     width: 30px;
     height: 30px;
     cursor: pointer;
-  }
-
-  @media (${({ theme }) => theme.devices.xxl}) {
-    bottom: 15px;
   }
 `;
 

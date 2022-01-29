@@ -24,7 +24,7 @@ export const theme = {
     white: '#FFFFFF',
     blue: '#47A6ff',
     gray: '#777777',
-    black: '#111111',
+    black: '#111',
   },
   fontSize: {
     xxxs: '10px',
@@ -46,6 +46,7 @@ export const theme = {
   },
   headerHeight: '64px',
   baseSpacing: '20px',
+  doubleSpacing: '40px',
   transition: '0.3s',
   devices: {
     xxs: `min-width: ${size.width.xxs}px`,

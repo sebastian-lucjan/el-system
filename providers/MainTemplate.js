@@ -3,6 +3,7 @@ import useCookies from 'hooks/useCookies';
 import { useIsActive } from 'hooks/useIsActive';
 import PageContext from 'data/pageContextData';
 import dynamic from 'next/dynamic';
+import { useMemo } from 'react';
 
 const Header = dynamic(() => import('components/Header/Header'));
 const StartPage = dynamic(() => import('views/StartPage/StartPage'));
@@ -13,23 +14,30 @@ const Contact = dynamic(() => import('views/Contact/Contact'));
 const ScrollToTop = dynamic(() => import('components/ScrollToTop/ScrollToTop'));
 const Cookies = dynamic(() => import('components/Cookies/Cookies'));
 
-// import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
-// import Cookies from 'components/Cookies/Cookies';
-
 const MainTemplate = () => {
   const { isActiveCookiePopUp, handleCookiesPolicyAgree, handleDismissCookiesPopUp } = useCookies();
   const { isVisibleHamburger, isSliderVisible, isActiveMobileNavigation, handleChangeActiveMobileNav } = useIsActive();
   const currentPositionY = useCurrentY();
 
-  const providedObject = {
-    mobile: isVisibleHamburger,
-    isVisibleHamburger,
-    isActiveMobileNavigation,
-    visibleSlider: isSliderVisible,
-    handleChangeActiveMobileNav,
-    handleCookiesPolicyAgree,
-    handleDismissCookiesPopUp,
-  };
+  const providedObject = useMemo(
+    () => ({
+      mobile: isVisibleHamburger,
+      isVisibleHamburger,
+      isActiveMobileNavigation,
+      visibleSlider: isSliderVisible,
+      handleChangeActiveMobileNav,
+      handleCookiesPolicyAgree,
+      handleDismissCookiesPopUp,
+    }),
+    [
+      isVisibleHamburger,
+      isActiveMobileNavigation,
+      isSliderVisible,
+      handleChangeActiveMobileNav,
+      handleCookiesPolicyAgree,
+      handleDismissCookiesPopUp,
+    ],
+  );
 
   return (
     <PageContext.Provider value={providedObject}>

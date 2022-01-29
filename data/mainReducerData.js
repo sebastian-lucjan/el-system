@@ -2,7 +2,7 @@ const SSRcondition = typeof window !== 'undefined';
 
 export const mainInitialState = {
   pageY: 0,
-  isVisibleHamburger: false,
+  isVisibleHamburger: true,
   isActiveMobileNavigation: false,
   cookiesPopUp: SSRcondition ? localStorage.getItem('cookie-notice-accept') !== 'accepted' : null,
 };

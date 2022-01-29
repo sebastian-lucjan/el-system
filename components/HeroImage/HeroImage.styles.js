@@ -8,6 +8,7 @@ const StyledHeroImage = styled.div`
   overflow: hidden;
   .slider__wrapper {
     position: relative;
+    padding: 0 20px;
   }
   .hero-image__image {
     width: 100%;
@@ -37,12 +38,16 @@ const StyledHeroImage = styled.div`
     }
   }
 
-  //Desktop landscape for small resolution like laptop
+  //Desktop landscape for big resolution like laptop
   @media (orientation: landscape) and (${({ theme }) => theme.devices.xl}) {
     padding: 0 30px 0 0;
     .hero-image__image {
       width: 50%;
       height: 50vh;
+      max-height: 800px;
+    }
+    .slider__wrapper {
+      padding: 0;
     }
   }
 `;

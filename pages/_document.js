@@ -1,28 +1,6 @@
-import Document from 'next/document';
-// import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
-
-// class MyDocument extends Document {
-//   static async getInitialProps(ctx) {
-//     const initialProps = await Document.getInitialProps(ctx);
-//     return { ...initialProps };
-//   }
-//
-//   render() {
-//     return (
-//       <Html lang="pl-PL">
-//         <Head />
-//         <body>
-//           <Main />
-//           <NextScript />
-//         </body>
-//       </Html>
-//     );
-//   }
-// }
-//
-// export default MyDocument;
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -49,9 +27,20 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
+
+  render() {
+    return (
+      <Html lang="pl">
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
 
-// import Document, { Html, Head, Main, NextScript } from 'next/document';
 // // Import styled components ServerStyleSheet
 // import { ServerStyleSheet } from 'styled-components';
 //
@@ -69,20 +58,3 @@ export default class MyDocument extends Document {
 //     // Step 4: Pass styleTags as a prop
 //     return { ...page, styleTags };
 //   }
-//
-//   render() {
-//     return (
-//       <Html lang="pl">
-//         <Head>
-//           <title>My page</title>
-//           {/* Step 5: Output the styles in the head  */}
-//           {this.props.styleTags}
-//         </Head>
-//         <body>
-//         <Main />
-//         <NextScript />
-//         </body>
-//       </Html>
-//     );
-//   }
-// }

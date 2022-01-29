@@ -19,7 +19,12 @@ const ViewWrapper = styled.div`
     max-height: 40vh;
   }
 
+  .contact__image-wrapper {
+    background-color: #fff;
+    max-width: 1200px;
+  }
   .contact__image {
+    max-width: 1200px;
     max-height: 30vh;
   }
 
