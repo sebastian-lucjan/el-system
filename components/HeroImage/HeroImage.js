@@ -9,7 +9,9 @@ import photoInspection from 'public/images/inspection-person-1200.jpeg';
 import photoTechnicalControl from 'public/images/technical-control-1200.jpg';
 import SliderArrow from 'components/SliderArrow/SliderArrow';
 import Image from 'next/image';
+import { useContext } from 'react';
 import StyledHeroImage from './HeroImage.styles';
+import SliderIndexContext from '../../context/sliderIndexContext';
 
 const StyledDot = styled.div`
   width: 8px;
@@ -59,8 +61,8 @@ const StyledDotsWrapper = styled.div`
   }
 `;
 
-const HeroImage = ({ handleChangeSlideIndex }) => {
-  const settings = {
+const getSettings = (setSlideIndex = () => {}) => {
+  return {
     dots: true,
     infinite: true,
     lazyLoad: true,
@@ -72,16 +74,20 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
     autoplaySpeed: 5000,
     pauseOnHover: true,
     className: 'slider__wrapper',
-    beforeChange: (current, next) => handleChangeSlideIndex(next),
+    beforeChange: (current, next) => setSlideIndex(next),
     appendDots: (dots) => <DotsWrapper dots={dots} />,
     customPaging: () => <StyledDot />,
     nextArrow: <SliderArrow direction="right" />,
     prevArrow: <SliderArrow direction="left" />,
   };
+};
+
+const HeroImage = () => {
+  const { setSlideIndex } = useContext(SliderIndexContext);
 
   return (
     <StyledHeroImage>
-      <Slider {...settings}>
+      <Slider {...getSettings(setSlideIndex)}>
         <div className="hero-image__image">
           <Image
             layout="fill"

@@ -10,7 +10,6 @@ import StyledHero from './Hero.styles';
 const Hero = () => {
   // console.log('API_KEY_DATOCMS_TOKEN');
   // console.log('API_KEY_DATOCMS_TOKEN', process.env.API_KEY_DATOCMS_TOKEN);
-  const [slideIndex, setSlideIndex] = useState(0);
 
   const {
     offer: { offers: services },
@@ -18,13 +17,13 @@ const Hero = () => {
 
   const servicesToSlider = services.filter((service) => service.hasSlide);
 
-  const handleChangeSlideIndex = (newIndex) => setSlideIndex(newIndex);
+  const [slideIndex, setSlideIndex] = useState(0);
 
   return (
-    <SliderIndexContext.Provider value={slideIndex}>
+    <SliderIndexContext.Provider value={{ slideIndex, setSlideIndex }}>
       <StyledHero>
         <HeroInfo servicesToSlider={servicesToSlider} />
-        <HeroImage handleChangeSlideIndex={handleChangeSlideIndex} />
+        <HeroImage />
       </StyledHero>
     </SliderIndexContext.Provider>
   );

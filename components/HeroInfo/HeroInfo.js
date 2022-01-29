@@ -11,7 +11,7 @@ const isTitleToLong = (title) => title.length > 70;
 const isDescriptionToLong = (description) => description.length > 200;
 
 const HeroInfo = ({ servicesToSlider }) => {
-  const slideIndex = useContext(SliderIndexContext);
+  const { slideIndex } = useContext(SliderIndexContext);
 
   const {
     headline,
