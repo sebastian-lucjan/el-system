@@ -8,9 +8,6 @@ import HeroInfo from 'components/HeroInfo/HeroInfo';
 import StyledHero from './Hero.styles';
 
 const Hero = () => {
-  // console.log('API_KEY_DATOCMS_TOKEN');
-  // console.log('API_KEY_DATOCMS_TOKEN', process.env.API_KEY_DATOCMS_TOKEN);
-
   const {
     offer: { offers: services },
   } = elSystemInfo;

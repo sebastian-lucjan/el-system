@@ -8,6 +8,7 @@ module.exports = () => {
   // const isProd = phase === PHASE_PRODUCTION_BUILD;
 
   const images = {
+    domains: ['www.datocms-assets.com'],
     deviceSizes: [360, 480, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   };
 

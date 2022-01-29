@@ -10,8 +10,9 @@ import photoTechnicalControl from 'public/images/technical-control-1200.jpg';
 import SliderArrow from 'components/SliderArrow/SliderArrow';
 import Image from 'next/image';
 import { useContext } from 'react';
+import SliderIndexContext from 'context/sliderIndexContext';
 import StyledHeroImage from './HeroImage.styles';
-import SliderIndexContext from '../../context/sliderIndexContext';
+import ImagesDataContext from '../../context/imagesDataContext';
 
 const StyledDot = styled.div`
   width: 8px;
@@ -84,82 +85,99 @@ const getSettings = (setSlideIndex = () => {}) => {
 
 const HeroImage = () => {
   const { setSlideIndex } = useContext(SliderIndexContext);
+  const { allSlides } = useContext(ImagesDataContext);
+
+  const slides = allSlides.map(({ image, altDescription }) => {
+    return (
+      <div className="hero-image__image">
+        <Image
+          layout="fill"
+          src={image.url}
+          objectFit="cover"
+          objectPosition="center bottom"
+          quality={75}
+          alt={altDescription}
+          sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
+          priority
+        />
+      </div>
+    );
+  });
 
   return (
     <StyledHeroImage>
       <Slider {...getSettings(setSlideIndex)}>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoInstallationProjecting}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="projektowanie sieci, instalacji i urządzeń elektroenergetycznych"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-            priority
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoHouseAutomation}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="automatyka domowa, smart dom"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoPhotovoltaic}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="instalacje fotowoltaiczne, fotowoltaika"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoTechnicalControl}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoFactory}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="rozwiązania dla przemysłu"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoInspection}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="doradztwo techniczne nadzory inwestorskie"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
+        {slides}
+        {/* <div className="hero-image__image"> */}
+        {/*  <Image */}
+        {/*    layout="fill" */}
+        {/*    src={photoInstallationProjecting} */}
+        {/*    objectFit="cover" */}
+        {/*    objectPosition="center bottom" */}
+        {/*    quality={75} */}
+        {/*    alt="projektowanie sieci, instalacji i urządzeń elektroenergetycznych" */}
+        {/*    sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh" */}
+        {/*    priority */}
+        {/*  /> */}
+        {/* </div> */}
+        {/* <div className="hero-image__image"> */}
+        {/*  <Image */}
+        {/*    layout="fill" */}
+        {/*    src={photoHouseAutomation} */}
+        {/*    objectFit="cover" */}
+        {/*    objectPosition="center bottom" */}
+        {/*    quality={75} */}
+        {/*    alt="automatyka domowa, smart dom" */}
+        {/*    sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh" */}
+        {/*  /> */}
+        {/* </div> */}
+        {/* <div className="hero-image__image"> */}
+        {/*  <Image */}
+        {/*    layout="fill" */}
+        {/*    src={photoPhotovoltaic} */}
+        {/*    objectFit="cover" */}
+        {/*    objectPosition="center bottom" */}
+        {/*    quality={75} */}
+        {/*    alt="instalacje fotowoltaiczne, fotowoltaika" */}
+        {/*    sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh" */}
+        {/*  /> */}
+        {/* </div> */}
+        {/* <div className="hero-image__image"> */}
+        {/*  <Image */}
+        {/*    layout="fill" */}
+        {/*    src={photoTechnicalControl} */}
+        {/*    objectFit="cover" */}
+        {/*    objectPosition="center bottom" */}
+        {/*    quality={75} */}
+        {/*    alt="kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych" */}
+        {/*    sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh" */}
+        {/*  /> */}
+        {/* </div> */}
+        {/* <div className="hero-image__image"> */}
+        {/*  <Image */}
+        {/*    layout="fill" */}
+        {/*    src={photoFactory} */}
+        {/*    objectFit="cover" */}
+        {/*    objectPosition="center bottom" */}
+        {/*    quality={75} */}
+        {/*    alt="rozwiązania dla przemysłu" */}
+        {/*    sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh" */}
+        {/*  /> */}
+        {/* </div> */}
+        {/* <div className="hero-image__image"> */}
+        {/*  <Image */}
+        {/*    layout="fill" */}
+        {/*    src={photoInspection} */}
+        {/*    objectFit="cover" */}
+        {/*    objectPosition="center bottom" */}
+        {/*    quality={75} */}
+        {/*    alt="doradztwo techniczne nadzory inwestorskie" */}
+        {/*    sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh" */}
+        {/*  /> */}
+        {/* </div> */}
       </Slider>
     </StyledHeroImage>
   );
 };
-
-HeroImage.propTypes = { handleChangeSlideIndex: PropTypes.func.isRequired };
 
 export default HeroImage;
