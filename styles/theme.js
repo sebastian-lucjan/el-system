@@ -46,6 +46,7 @@ export const theme = {
   },
   headerHeight: '64px',
   baseSpacing: '20px',
+  doubleSpacing: '40px',
   transition: '0.3s',
   devices: {
     xxs: `min-width: ${size.width.xxs}px`,
