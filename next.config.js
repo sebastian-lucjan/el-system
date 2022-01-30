@@ -8,6 +8,7 @@ module.exports = () => {
   // const isProd = phase === PHASE_PRODUCTION_BUILD;
 
   const images = {
+    domains: ['www.datocms-assets.com'],
     deviceSizes: [360, 480, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   };
 
@@ -18,8 +19,18 @@ module.exports = () => {
   // const rewrites = () => {
   //   return [
   //     {
-  //       source: '*',
+  //       source: '/(.*)',
   //       destination: '/',
+  //     },
+  //   ];
+  // };
+
+  // const redirects = () => {
+  //   return [
+  //     {
+  //       source: '/(.*)',
+  //       destination: '/',
+  //       permanent: true,
   //     },
   //   ];
   // };
@@ -29,5 +40,6 @@ module.exports = () => {
     reactStrictMod,
     env,
     // rewrites,
+    // redirects,
   };
 };
