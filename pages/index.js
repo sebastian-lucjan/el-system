@@ -1,7 +1,7 @@
 import MainTemplate from 'providers/MainTemplate';
 import HeadMeta from 'components/HeadMeta';
 import axios from 'axios';
-import ImagesDataContext from '../context/imagesDataContext';
+import ImagesDataContext from 'context/imagesDataContext';
 
 export const getStaticProps = async () => {
   const slidesData = await axios
@@ -14,8 +14,11 @@ export const getStaticProps = async () => {
               image {
                 url
               }
+              id
               altDescription
               title
+              description
+              slidesOrder
             }
           }
         `,
@@ -26,7 +29,9 @@ export const getStaticProps = async () => {
         },
       },
     )
-    .then(({ data: { data } }) => data)
+    .then(({ data: { data } }) =>
+      data.allSlides.sort((currSlide, nextSlide) => currSlide.slidesOrder - nextSlide.slidesOrder),
+    )
     .catch((error) => console.log(error.message)); // todo: handle with error
 
   return {

@@ -19,8 +19,18 @@ module.exports = () => {
   // const rewrites = () => {
   //   return [
   //     {
-  //       source: '*',
+  //       source: '/(.*)',
   //       destination: '/',
+  //     },
+  //   ];
+  // };
+
+  // const redirects = () => {
+  //   return [
+  //     {
+  //       source: '/(.*)',
+  //       destination: '/',
+  //       permanent: true,
   //     },
   //   ];
   // };
@@ -30,5 +40,6 @@ module.exports = () => {
     reactStrictMod,
     env,
     // rewrites,
+    // redirects,
   };
 };
