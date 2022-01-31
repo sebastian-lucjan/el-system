@@ -4,8 +4,7 @@ import * as PropTypes from 'prop-types';
 import SliderArrow from 'components/SliderArrow/SliderArrow';
 import Image from 'next/image';
 import { useContext } from 'react';
-import SliderIndexContext from 'context/sliderIndexContext';
-import ImagesDataContext from 'context/imagesDataContext';
+import SliderContext from 'context/sliderIndexContext';
 import StyledHeroImage from './HeroImage.styles';
 
 const StyledDot = styled.div`
@@ -78,8 +77,7 @@ const getSettings = (setSlideIndex = () => {}) => {
 };
 
 const HeroImage = () => {
-  const { setSlideIndex } = useContext(SliderIndexContext);
-  const slidesData = useContext(ImagesDataContext);
+  const { setSlideIndex, sliderDataUpdated: slidesData } = useContext(SliderContext);
 
   const slides = slidesData.map(({ image, altDescription, id }) => {
     return (

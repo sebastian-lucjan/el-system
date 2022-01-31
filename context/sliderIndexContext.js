@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const SliderIndexContext = createContext({ slideIndex: 0, setSlideIndex: () => {} });
+const SliderContext = createContext({ slideIndex: 0, setSlideIndex: () => {}, sliderDataUpdated: {} });
 
-export default SliderIndexContext;
+export default SliderContext;
