@@ -79,7 +79,7 @@ const getSettings = (setSlideIndex = () => {}) => {
 const HeroImage = () => {
   const { setSlideIndex, sliderDataUpdated: slidesData } = useContext(SliderContext);
 
-  const slides = slidesData.map(({ image, altDescription, id }) => {
+  const slides = slidesData.map(({ image, altDescription, id }, index) => {
     return (
       <div key={id} className="hero-image__image">
         <Image
@@ -90,7 +90,7 @@ const HeroImage = () => {
           quality={75}
           alt={altDescription}
           sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          priority
+          priority={index === 0}
         />
       </div>
     );
