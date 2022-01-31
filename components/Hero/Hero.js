@@ -1,32 +1,31 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import SliderIndexContext from 'context/sliderIndexContext';
+import SliderContext from 'context/sliderIndexContext';
 import HeroImage from 'components/HeroImage/HeroImage';
-import { elSystemInfo } from 'data/appTextData';
 import HeroInfo from 'components/HeroInfo/HeroInfo';
+import useSWR from 'swr';
+import ImagesDataContext from 'context/imagesDataContext';
+import axios from 'axios';
 import StyledHero from './Hero.styles';
 
+const dataFetcher = (url) => axios.get(url).then((res) => res.data);
+
 const Hero = () => {
-  // console.log('API_KEY_DATOCMS_TOKEN');
-  // console.log('API_KEY_DATOCMS_TOKEN', process.env.API_KEY_DATOCMS_TOKEN);
   const [slideIndex, setSlideIndex] = useState(0);
+  const slidesData = useContext(ImagesDataContext);
 
-  const {
-    offer: { offers: services },
-  } = elSystemInfo;
+  const { data: slidesDataCurrent } = useSWR('/api/slides', dataFetcher, { initialData: slidesData });
 
-  const servicesToSlider = services.filter((service) => service.hasSlide);
-
-  const handleChangeSlideIndex = (newIndex) => setSlideIndex(newIndex);
+  const sliderDataUpdated = typeof slidesDataCurrent !== 'undefined' ? slidesDataCurrent : slidesData;
 
   return (
-    <SliderIndexContext.Provider value={slideIndex}>
+    <SliderContext.Provider value={{ slideIndex, setSlideIndex, sliderDataUpdated }}>
       <StyledHero>
-        <HeroInfo servicesToSlider={servicesToSlider} />
-        <HeroImage handleChangeSlideIndex={handleChangeSlideIndex} />
+        <HeroInfo />
+        <HeroImage />
       </StyledHero>
-    </SliderIndexContext.Provider>
+    </SliderContext.Provider>
   );
 };
 

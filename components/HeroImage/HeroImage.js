@@ -1,14 +1,10 @@
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import * as PropTypes from 'prop-types';
-import photoHouseAutomation from 'public/images/house-automation-1200.jpeg';
-import photoPhotovoltaic from 'public/images/photovoltaic-power-1200.jpeg';
-import photoInstallationProjecting from 'public/images/network-installation-projecting-1200.jpg';
-import photoFactory from 'public/images/factory-1200.jpeg';
-import photoInspection from 'public/images/inspection-person-1200.jpeg';
-import photoTechnicalControl from 'public/images/technical-control-1200.jpg';
 import SliderArrow from 'components/SliderArrow/SliderArrow';
 import Image from 'next/image';
+import { useContext } from 'react';
+import SliderContext from 'context/sliderIndexContext';
 import StyledHeroImage from './HeroImage.styles';
 
 const StyledDot = styled.div`
@@ -59,8 +55,8 @@ const StyledDotsWrapper = styled.div`
   }
 `;
 
-const HeroImage = ({ handleChangeSlideIndex }) => {
-  const settings = {
+const getSettings = (setSlideIndex = () => {}) => {
+  return {
     dots: true,
     infinite: true,
     lazyLoad: true,
@@ -72,88 +68,39 @@ const HeroImage = ({ handleChangeSlideIndex }) => {
     autoplaySpeed: 5000,
     pauseOnHover: true,
     className: 'slider__wrapper',
-    beforeChange: (current, next) => handleChangeSlideIndex(next),
+    beforeChange: (current, next) => setSlideIndex(next),
     appendDots: (dots) => <DotsWrapper dots={dots} />,
     customPaging: () => <StyledDot />,
     nextArrow: <SliderArrow direction="right" />,
     prevArrow: <SliderArrow direction="left" />,
   };
+};
+
+const HeroImage = () => {
+  const { setSlideIndex, sliderDataUpdated: slidesData } = useContext(SliderContext);
+
+  const slides = slidesData.map(({ image, altDescription, id }, index) => {
+    return (
+      <div key={id} className="hero-image__image">
+        <Image
+          layout="fill"
+          src={image.url}
+          objectFit="cover"
+          objectPosition="center bottom"
+          quality={75}
+          alt={altDescription}
+          sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
+          priority={index === 0}
+        />
+      </div>
+    );
+  });
 
   return (
     <StyledHeroImage>
-      <Slider {...settings}>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoInstallationProjecting}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="projektowanie sieci, instalacji i urządzeń elektroenergetycznych"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-            priority
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoHouseAutomation}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="automatyka domowa, smart dom"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoPhotovoltaic}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="instalacje fotowoltaiczne, fotowoltaika"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoTechnicalControl}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="kontrola stanu technicznego instalacji i urządzeń elektroenergetycznych"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoFactory}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="rozwiązania dla przemysłu"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
-        <div className="hero-image__image">
-          <Image
-            layout="fill"
-            src={photoInspection}
-            objectFit="cover"
-            objectPosition="center bottom"
-            quality={75}
-            alt="doradztwo techniczne nadzory inwestorskie"
-            sizes="(min-width: 1200px) 50vw, (min-width: 768px) 100vh"
-          />
-        </div>
-      </Slider>
+      <Slider {...getSettings(setSlideIndex)}>{slides}</Slider>
     </StyledHeroImage>
   );
 };
-
-HeroImage.propTypes = { handleChangeSlideIndex: PropTypes.func.isRequired };
 
 export default HeroImage;
