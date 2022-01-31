@@ -1,9 +1,11 @@
 import { useContext } from 'react';
 import PageContext from 'data/pageContextData';
-import Hero from 'components/Hero/Hero';
 import Image from 'next/image';
 import bulbImg from 'public/images/bulb-mobile-381-623.jpeg';
+import dynamic from 'next/dynamic';
 import StyledStartPage from './StartPage.styles';
+
+const Hero = dynamic(() => import('components/Hero/Hero'));
 
 const StartPage = () => {
   const { visibleSlider } = useContext(PageContext);
@@ -19,9 +21,9 @@ const StartPage = () => {
             width={381}
             height={623}
             src={bulbImg}
-            quality={70}
+            quality={65}
             alt="żarówka"
-            sizes="(min-width: 0px) 40vw" // 40vh because retina retina 2x property
+            sizes="(min-width: 0px) 50vw" // 40vh because retina retina 2x property
             priority
           />
         </div>
