@@ -53,6 +53,7 @@
     "sass": "^1.49.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.3",
+    "swr": "^1.2.0",
     "use-media": "^1.4.0"
   }
 }

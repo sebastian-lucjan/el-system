@@ -1,47 +1,28 @@
 import MainTemplate from 'providers/MainTemplate';
 import HeadMeta from 'components/HeadMeta';
-import axios from 'axios';
 import ImagesDataContext from 'context/imagesDataContext';
+import getSlides from 'services/getSlides';
+import axios from 'axios';
+import useSWR from 'swr';
 
 export const getStaticProps = async () => {
-  const slidesData = await axios
-    .post(
-      'https://graphql.datocms.com/',
-      {
-        query: `
-          {
-            allSlides {
-              image {
-                url
-              }
-              id
-              altDescription
-              title
-              description
-              slidesOrder
-            }
-          }
-        `,
-      },
-      {
-        headers: {
-          authorization: `Bearer ${process.env.API_KEY_DATOCMS_TOKEN}`,
-        },
-      },
-    )
-    .then(({ data: { data } }) =>
-      data.allSlides.sort((currSlide, nextSlide) => currSlide.slidesOrder - nextSlide.slidesOrder),
-    )
-    .catch((error) => console.log(error.message)); // todo: handle with error
+  const slidesData = await getSlides();
 
   return {
+    // revalidate: 30,
     props: { slidesData },
   };
 };
 
+const dataFetcher = (url) => axios.get(url).then((res) => res.data);
+
 export default function Root({ slidesData }) {
+  const { data: slidesDataCurrent } = useSWR('/api/slides', dataFetcher, { initialData: slidesData });
+
+  const passedData = typeof slidesDataCurrent !== 'undefined' ? slidesDataCurrent : slidesData;
+
   return (
-    <ImagesDataContext.Provider value={slidesData}>
+    <ImagesDataContext.Provider value={passedData}>
       <HeadMeta title="elsystem | usługi z branży elektroenergetycznej" />
       <MainTemplate />
     </ImagesDataContext.Provider>
