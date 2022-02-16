@@ -9,6 +9,8 @@ const StyledLogo = styled(Link)`
   letter-spacing: 2px;
   margin: ${({ theme }) => theme.baseSpacing};
   cursor: default;
+  color: white;
+  text-decoration: none;
 
   @media (orientation: portrait), (orientation: landscape) and (${({ theme }) => theme.devices.md}) {
     margin-left: 24px;

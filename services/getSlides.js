@@ -29,7 +29,7 @@ const getSlides = async () => {
     .then(({ data: { data } }) =>
       data.allSlides.sort((currSlide, nextSlide) => currSlide.slidesOrder - nextSlide.slidesOrder),
     )
-    .catch((error) => console.log(error.message)); // todo: handle with error
+    .catch((error) => console.log('ERROR -> ', error.message)); // todo: handle with error
 
   return slides;
 };
