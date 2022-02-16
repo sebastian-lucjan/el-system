@@ -22,7 +22,7 @@ const ContactBackground = () => {
               src={photoMotorwayLights}
               objectFit="scale-down"
               objectPosition="center bottom"
-              quality={75}
+              // quality={75}
               alt="droga nocą rozmazane światła, tło dla działu kontakt"
               sizes="(min-width: 0px) 2x 25vw, (min-width: 0px) 1x 50vw"
               // 25vh because retina > 2.0 ratio
