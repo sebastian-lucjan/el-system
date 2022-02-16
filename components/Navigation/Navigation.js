@@ -22,6 +22,7 @@ const Navigation = () => {
       to={name}
       spy
       smooth
+      href="/"
       duration={mobileDevice && isActiveMobileNavigation ? 0 : 800}
       key={buttonText}
       onClick={() => {
